@@ -1,0 +1,28 @@
+{
+  "scopes": [
+    {
+      "label": "功能",
+      "description": "功能模块"
+    },
+    {
+      "label": "组件",
+      "description": "基础组件"
+    },
+    {
+      "label": "视图",
+      "description": "前端视图"
+    },
+    {
+      "label": "项目",
+      "description": "项目"
+    },
+    {
+      "label": "basic",
+      "description": "basic项目"
+    },
+    {
+      "label": "PiUI",
+      "description": "PiUI项目"
+    }
+  ]
+}

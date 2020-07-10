@@ -1,0 +1,14 @@
+{
+  "prettier.eslintIntegration": true,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "eslintIntegration": true,
+  "stylelintIntegration": true,
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "quoteProps": "consistent",
+  "htmlWhitespaceSensitivity": "ignore",
+  "endOfLine": "auto"
+}

@@ -1,9 +1,29 @@
 {
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "typeRoots": ["node_modules/@types", "src/**/typings"],
     "types": [
+      "webpack-env",
+      "@dcloudio/types/uni-app",
       "@dcloudio/types",
       "miniprogram-api-typings",
       "mini-types"
-    ]
-  }
+    ],
+    "paths": {
+      "vue": ["node_modules/vue/types"],
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "exclude": ["node_modules", "unpackage", "src/**/*.nvue"]
 }

@@ -1,0 +1,8 @@
+[submodule "src/PiUI-basic"]
+	path = src/PiUI-basic
+	url = http://git.sadais.com:8080/r/html/PiUI-basic.git
+	ignore = dirty
+[submodule "src/basic"]
+	path = src/basic
+	url = http://git.sadais.com:8080/r/html/basic.git
+	ignore = dirty

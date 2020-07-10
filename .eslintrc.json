@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": ["plugin:vue/essential", "@vue/prettier"],
+  "rules": {
+    "no-console": "off",
+    "no-undef": "off",
+    "spaced-comment": "error", // 注释前面必须有空格
+    "vue/attributes-order": "error", //标签属性必须按规则排序
+    "vue/order-in-components": "error", //组件的属性必须为一定的顺序
+    "vue/name-property-casing": ["error", "PascalCase"],
+    "vue/prop-name-casing": ["error", "camelCase"],
+    "vue/attribute-hyphenation": "error",
+    "vue/html-self-closing": [
+      "error",
+      {
+        "html": {
+          "void": "always",
+          "normal": "never",
+          "component": "always"
+        },
+        "svg": "always",
+        "math": "always"
+      }
+    ], // 单标签需要自闭合
+    "vue/component-name-in-template-casing": [
+      // 组件必须为短横杆命名
+      "error",
+      "kebab-case",
+      {
+        "registeredComponentsOnly": false,
+        "ignores": []
+      }
+    ],
+    "no-unused-vars": "off"
+  },
+  "parserOptions": {
+    "parser": "babel-eslint"
+  }
+}
