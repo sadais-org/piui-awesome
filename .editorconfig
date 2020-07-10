@@ -1,0 +1,12 @@
+[*]
+
+#缩进风格：空格
+indent_style = space
+
+#缩进大小2
+indent_size = 2
+
+#字符集utf-8
+charset = utf-8
+
+

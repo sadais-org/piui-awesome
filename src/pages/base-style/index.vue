@@ -1,8 +1,11 @@
 <template>
   <view class="pi-container">
     <image class="logo" src="/static/logo.png" />
-    <view>
-      <text class="title">{{ title }}</text>
+    <view class="pi-grid-6 pi-col-space-6 pi-grid-border">
+      <view v-for="i in 6" :key="i">{{ i }}</view>
+    </view>
+    <view class="pi-fixed-bottom pd-bottom-20">
+      <text class="pi-fz-20">{{ title }}</text>
     </view>
   </view>
 </template>
@@ -11,7 +14,7 @@
 export default {
   data() {
     return {
-      title: 'Hello2'
+      title: 'Hello4'
     }
   },
   onLoad() {},
