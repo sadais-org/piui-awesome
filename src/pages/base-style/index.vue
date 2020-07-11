@@ -1,10 +1,9 @@
 <template>
-  <view class="pi-container">
-    <image class="logo" src="/static/logo.png" />
-    <view class="pi-grid-6 border">
-      <view v-for="i in 12" :key="i">
-        <view class=" pi-square">
-          <view class="pi-flex-column-center">{{ i }}</view>
+  <view class="pi-scroll-container">
+    <view class="pi-grid-2 border">
+      <view v-for="style in baseStyles" :key="style.name">
+        <view class=" pi-square" @tap.stop="handleNavigate">
+          <view class="pi-flex-column-center">{{ style.zhName }}</view>
         </view>
       </view>
     </view>
@@ -21,25 +20,39 @@ export default {
       title: 'Hello4'
     }
   },
+  computed: {
+    baseStyles() {
+      return [
+        {
+          name: 'icon',
+          zhName: '图标'
+        },
+        {
+          name: 'layout',
+          zhName: '布局'
+        },
+        {
+          name: 'theme',
+          zhName: '主题'
+        },
+        {
+          name: 'font',
+          zhName: '字体'
+        },
+        {
+          name: 'border',
+          zhName: '边框'
+        },
+        {
+          name: 'gird',
+          zhName: '宫格'
+        }
+      ]
+    }
+  },
   onLoad() {},
   methods: {}
 }
 </script>
 
-<style>
-.content {
-  height: 400rpx;
-  text-align: center;
-}
-
-.logo {
-  width: 200rpx;
-  height: 200rpx;
-  margin-top: 200rpx;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>
+<style></style>
