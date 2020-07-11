@@ -1,8 +1,12 @@
 <template>
   <view class="pi-container">
     <image class="logo" src="/static/logo.png" />
-    <view class="pi-grid-6 pi-col-space-6 pi-grid-border">
-      <view v-for="i in 6" :key="i">{{ i }}</view>
+    <view class="pi-grid-6 border">
+      <view v-for="i in 12" :key="i">
+        <view class=" pi-square">
+          <view class="pi-flex-column-center">{{ i }}</view>
+        </view>
+      </view>
     </view>
     <view class="pi-fixed-bottom pd-bottom-20">
       <text class="pi-fz-20">{{ title }}</text>
