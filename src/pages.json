@@ -1,7 +1,5 @@
 {
   "pages": [
-    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-
     {
       "path": "pages/base-style/index",
       "style": {
@@ -13,6 +11,19 @@
       "style": {
         "navigationBarTitleText": "组件"
       }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/base-style/pages",
+      "pages": [
+        {
+          "path": "icon/index",
+          "style": {
+            "navigationBarTitleText": "图标"
+          }
+        }
+      ]
     }
   ],
   "globalStyle": {

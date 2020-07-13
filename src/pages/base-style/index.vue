@@ -2,7 +2,7 @@
   <view class="pi-scroll-container">
     <view class="pi-grid-2 border">
       <view v-for="style in baseStyles" :key="style.name">
-        <view class=" pi-square" @tap.stop="handleNavigate">
+        <view class=" pi-square" @tap.stop="handleNavigate(style.name)">
           <view class="pi-flex-column-center">{{ style.zhName }}</view>
         </view>
       </view>
@@ -51,7 +51,11 @@ export default {
     }
   },
   onLoad() {},
-  methods: {}
+  methods: {
+    handleNavigate(name) {
+      this.$piTools.navi.navigateTo(`pages/base-style/pages/${name}/index`)
+    }
+  }
 }
 </script>
 

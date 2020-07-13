@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App'
 
+import piui from './piui'
+Vue.use(piui)
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'
