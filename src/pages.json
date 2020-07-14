@@ -1,4 +1,9 @@
 {
+  // 使用easycom方式引入piui
+  "easycom": {
+    "^pi-(.*)": "@/piui/components/pi-$1/index.vue"
+  },
+  // 页面定义
   "pages": [
     {
       "path": "pages/base-style/index",
@@ -11,6 +16,12 @@
       "style": {
         "navigationBarTitleText": "组件"
       }
+    },
+    {
+      "path": "pages/tools/index",
+      "style": {
+        "navigationBarTitleText": "工具库"
+      }
     }
   ],
   "subPackages": [
@@ -20,16 +31,56 @@
         {
           "path": "icon/index",
           "style": {
+            "disableScroll": true,
             "navigationBarTitleText": "图标"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/components/pages",
+      "pages": [
+        {
+          "path": "navbar/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "自定义导航栏"
           }
         }
       ]
     }
   ],
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#ff6a00",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7f7",
+    "list": [
+      {
+        "pagePath": "pages/base-style/index",
+        "iconPath": "static/tabbar/barrage.png",
+        "selectedIconPath": "static/tabbar/barrage-fill.png",
+        "text": "基础样式"
+      },
+      {
+        "pagePath": "pages/components/index",
+        "iconPath": "static/tabbar/manage.png",
+        "selectedIconPath": "static/tabbar/manage-fill.png",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/tools/index",
+        "iconPath": "static/tabbar/tasklist.png",
+        "selectedIconPath": "static/tabbar/tasklist-fill.png",
+        "text": "工具库"
+      }
+    ]
+  },
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF",
+    "navigationStyle": "custom" // 自定义导航栏
   }
 }

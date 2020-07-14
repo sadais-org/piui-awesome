@@ -1,17 +1,20 @@
 <template>
-  <view class="pi-container">
-    <view class="pi-content pi-grid-3 border ">
-      <view v-for="glyph in glyphs" :key="glyph.id">
-        <view class=" pi-square">
-          <view class=" pi-flex-column-center">
-            <view :class="`pi-fz-48 pi-primary pi-icon-${glyph.font_class}`" />
-            <view class="pi-fz-8 pi-mg-top-8 pi-light-gray pi-text-nowrap">
-              {{ glyph.font_class }}
+  <view class="pi-scroll-container">
+    <pi-navbar title="图标" />
+    <scroll-view class="pi-scroll" scroll-y="">
+      <view class="pi-content pi-grid-3 border ">
+        <view v-for="glyph in glyphs" :key="glyph.id">
+          <view class=" pi-square">
+            <view class=" pi-flex-column-center">
+              <view :class="`pi-fz-48 pi-primary pi-icon-${glyph.font_class}`" />
+              <view class="pi-fz-8 pi-mg-top-8 pi-light-gray pi-text-nowrap">
+                {{ glyph.font_class }}
+              </view>
             </view>
           </view>
         </view>
       </view>
-    </view>
+    </scroll-view>
   </view>
 </template>
 
