@@ -46,6 +46,20 @@
             "disableScroll": true,
             "navigationBarTitleText": "自定义导航栏"
           }
+        },
+        {
+          "path": "search/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "搜索框"
+          }
+        },
+        {
+          "path": "mask/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "遮罩层"
+          }
         }
       ]
     }

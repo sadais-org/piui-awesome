@@ -28,12 +28,12 @@ export default {
           zhName: '自定义导航栏'
         },
         {
-          name: 'layout',
-          zhName: '布局'
+          name: 'search',
+          zhName: '搜索框'
         },
         {
-          name: 'theme',
-          zhName: '主题'
+          name: 'mask',
+          zhName: '遮罩层'
         },
         {
           name: 'font',

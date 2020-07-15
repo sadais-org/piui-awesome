@@ -2,10 +2,13 @@
   <view class="pi-scroll-container">
     <pi-navbar title="自定义导航栏" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <pi-navbar title="取消fixed" :fixed="false" />
+      <pi-navbar title="取消fixed" back-text="返回" :fixed="false" />
       <pi-navbar back-icon-name="barrage" :fixed="false">自定义图标</pi-navbar>
       <pi-navbar back-icon-name="barrage" back-text="笔芯" :fixed="false">
         自定义返回名称
+      </pi-navbar>
+      <pi-navbar :show-back="false" :fixed="false">
+        无返回
       </pi-navbar>
       <pi-navbar
         back-icon-name="barrage"
@@ -17,9 +20,10 @@
       </pi-navbar>
       <pi-navbar
         back-icon-name="barrage"
-        back-text="笔芯"
+        back-text="大笔芯"
         background="linear-gradient(to top, #200122, #6f0000)"
         back-icon-color="#ffffff"
+        back-icon-size="48rpx"
         :back-text-style="{ color: '#ffffff' }"
         title="自定义导航文字"
         :title-style="{ fontSize: '48rpx', fontWeight: 500, color: '#ffffff' }"
@@ -28,15 +32,20 @@
       <pi-navbar :fixed="false">
         <view>default slot</view>
       </pi-navbar>
-      <pi-navbar :fixed="false">
-        <view slot="right" class=" pi-pd-right-24">slot right</view>
+      <pi-navbar :fixed="false" :show-home="true">
+        <view>显示主页按钮</view>
+      </pi-navbar>
+      <pi-navbar :fixed="false" title="slot right">
+        <view slot="right" class=" pi-pd-right-24 pi-icon-add" />
       </pi-navbar>
     </scroll-view>
   </view>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Navbar'
+}
 </script>
 
 <style></style>
