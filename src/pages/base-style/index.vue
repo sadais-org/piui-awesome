@@ -1,14 +1,12 @@
 <template>
   <view class="pi-scroll-container">
+    <pi-navbar />
     <view class="pi-grid-2 border">
       <view v-for="style in baseStyles" :key="style.name">
         <view class=" pi-square" @tap.stop="handleNavigate(style.name)">
           <view class="pi-flex-column-center">{{ style.zhName }}</view>
         </view>
       </view>
-    </view>
-    <view class="pi-fixed-bottom pd-bottom-20">
-      <text class="pi-fz-20">{{ title }}</text>
     </view>
   </view>
 </template>

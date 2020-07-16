@@ -6,8 +6,8 @@
         <view v-for="glyph in glyphs" :key="glyph.id">
           <view class=" pi-square">
             <view class=" pi-flex-column-center">
-              <view :class="`pi-fz-48 pi-primary pi-icon-${glyph.font_class}`" />
-              <view class="pi-fz-8 pi-mg-top-8 pi-light-gray pi-text-nowrap">
+              <view :class="'pi-fz-48 pi-primary' + ' pi-icon-' + glyph.font_class" />
+              <view class="pi-fz-24 pi-mg-top-8 pi-light-gray pi-text-nowrap">
                 {{ glyph.font_class }}
               </view>
             </view>

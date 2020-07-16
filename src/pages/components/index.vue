@@ -1,14 +1,12 @@
 <template>
   <view class="pi-scroll-container">
+    <pi-navbar />
     <view class="pi-grid-2 border">
       <view v-for="components in baseComponents" :key="components.name">
         <view class=" pi-square" @tap.stop="handleNavigate(components.name)">
           <view class="pi-flex-column-center">{{ components.zhName }}</view>
         </view>
       </view>
-    </view>
-    <view class="pi-fixed-bottom pd-bottom-20">
-      <text class="pi-fz-20">{{ title }}</text>
     </view>
   </view>
 </template>
@@ -36,8 +34,8 @@ export default {
           zhName: '遮罩层'
         },
         {
-          name: 'font',
-          zhName: '字体'
+          name: 'popup',
+          zhName: '弹出层'
         },
         {
           name: 'border',

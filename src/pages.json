@@ -60,6 +60,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "遮罩层"
           }
+        },
+        {
+          "path": "popup/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "弹出层"
+          }
         }
       ]
     }
