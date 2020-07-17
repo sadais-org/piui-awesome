@@ -51,7 +51,7 @@ export default {
   onLoad() {},
   methods: {
     handleNavigate(name) {
-      this.$piTools.navi.navigateTo(`pages/base-style/pages/${name}/index`)
+      this.$pi.navi.navigateTo(`pages/base-style/pages/${name}/index`)
     }
   }
 }
