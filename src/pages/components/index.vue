@@ -1,13 +1,15 @@
 <template>
   <view class="pi-scroll-container">
     <pi-navbar />
-    <view class="pi-grid-2 border">
-      <view v-for="components in baseComponents" :key="components.name">
-        <view class=" pi-square" @tap.stop="handleNavigate(components.name)">
-          <view class="pi-flex-column-center">{{ components.zhName }}</view>
+    <scroll-view class="pi-scroll" scroll-y>
+      <view class="pi-grid-2 border">
+        <view v-for="components in baseComponents" :key="components.name">
+          <view class=" pi-square" @tap.stop="handleNavigate(components.name)">
+            <view class="pi-flex-column-center">{{ components.zhName }}</view>
+          </view>
         </view>
       </view>
-    </view>
+    </scroll-view>
   </view>
 </template>
 
@@ -44,6 +46,10 @@ export default {
         {
           name: 'loading',
           zhName: '加载中'
+        },
+        {
+          name: 'calender',
+          zhName: '日历'
         }
       ]
     }

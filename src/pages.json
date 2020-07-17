@@ -81,6 +81,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "加载中"
           }
+        },
+        {
+          "path": "calender/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "日历"
+          }
         }
       ]
     }

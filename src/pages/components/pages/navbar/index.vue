@@ -36,7 +36,10 @@
         <view>显示主页按钮</view>
       </pi-navbar>
       <pi-navbar :fixed="false" title="slot right">
-        <view slot="right" class=" pi-pd-right-24 pi-icon-add" />
+        <view slot="right" class=" pi-pd-right-24 pi-icon-add pi-fz-46 pi-primary" />
+      </pi-navbar>
+      <pi-navbar :fixed="false" title="slot left">
+        <view slot="left" class=" pi-pd-left-24 pi-icon-add pi-fz-46 pi-primary" />
       </pi-navbar>
     </scroll-view>
   </view>
