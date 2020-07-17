@@ -24,4 +24,3 @@ export default {
   name: 'Search'
 }
 </script>
-
