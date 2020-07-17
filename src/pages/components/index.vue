@@ -38,8 +38,8 @@ export default {
           zhName: '弹出层'
         },
         {
-          name: 'border',
-          zhName: '边框'
+          name: 'divider',
+          zhName: '分割线'
         },
         {
           name: 'gird',

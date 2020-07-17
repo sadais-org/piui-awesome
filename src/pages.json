@@ -67,6 +67,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "弹出层"
           }
+        },
+        {
+          "path": "divider/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "分割线"
+          }
         }
       ]
     }
