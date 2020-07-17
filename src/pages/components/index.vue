@@ -42,8 +42,8 @@ export default {
           zhName: '分割线'
         },
         {
-          name: 'gird',
-          zhName: '宫格'
+          name: 'loading',
+          zhName: '加载中'
         }
       ]
     }

@@ -74,6 +74,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "分割线"
           }
+        },
+        {
+          "path": "loading/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "加载中"
+          }
         }
       ]
     }
