@@ -5,11 +5,19 @@
       <view class="pi-content" style="height: 2048rpx;">
         <button type="primary" @tap="handleShowPopup('top')">上方弹出</button>
         <button type="primary" @tap="handleShowPopup('bottom')">下方弹出</button>
+        <button type="primary" @tap="handleShowPopup('bottom', 'br')">
+          下方弹出（关闭按钮在右下角）
+        </button>
         <button type="primary" @tap="handleShowPopup('left')">左侧弹出</button>
         <button type="primary" @tap="handleShowPopup('right')">右侧弹出</button>
       </view>
     </scroll-view>
-    <pi-popup v-model="showPopup" :position="popupPosition">
+    <pi-popup
+      v-model="showPopup"
+      :position="popupPosition"
+      close-icon-color="#ffffff"
+      :close-position="popupClosePosition"
+    >
       <view :style="[positionStyle, { background: '#ff508a' }]">
         <view class="pi-flex-column-center pi-pd-top-100 pi-white pi-fz-40 pi-fw-600">笔芯</view>
       </view>
@@ -23,7 +31,8 @@ export default {
   data() {
     return {
       showPopup: false,
-      popupPosition: 'bottom'
+      popupPosition: 'bottom',
+      popupClosePosition: ''
     }
   },
   computed: {
@@ -38,8 +47,9 @@ export default {
     }
   },
   methods: {
-    handleShowPopup(popupPosition = 'bottom') {
+    handleShowPopup(popupPosition = 'bottom', closePosition = '') {
       this.popupPosition = popupPosition
+      this.popupClosePosition = closePosition
       this.showPopup = true
     }
   }
