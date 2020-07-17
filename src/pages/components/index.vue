@@ -48,7 +48,7 @@ export default {
           zhName: '加载中'
         },
         {
-          name: 'calender',
+          name: 'calendar',
           zhName: '日历'
         }
       ]

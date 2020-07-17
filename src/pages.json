@@ -83,7 +83,7 @@
           }
         },
         {
-          "path": "calender/index",
+          "path": "calendar/index",
           "style": {
             "disableScroll": true,
             "navigationBarTitleText": "日历"

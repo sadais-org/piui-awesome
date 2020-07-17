@@ -3,7 +3,7 @@
     <pi-navbar title="搜索框" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
-        <pi-calender />
+        <pi-calendar />
       </view>
     </scroll-view>
   </view>
