@@ -14,9 +14,10 @@
     </scroll-view>
     <pi-popup
       v-model="showPopup"
-      :position="popupPosition"
       close-icon-color="#ffffff"
+      :position="popupPosition"
       :close-position="popupClosePosition"
+      :border-radius="borderRadius"
     >
       <view :style="[positionStyle, { background: '#ff508a' }]">
         <view class="pi-flex-column-center pi-pd-top-100 pi-white pi-fz-40 pi-fw-600">笔芯</view>
@@ -32,7 +33,8 @@ export default {
     return {
       showPopup: false,
       popupPosition: 'bottom',
-      popupClosePosition: ''
+      popupClosePosition: '',
+      borderRadius: '0 0 0 0'
     }
   },
   computed: {
@@ -50,6 +52,7 @@ export default {
     handleShowPopup(popupPosition = 'bottom', closePosition = '') {
       this.popupPosition = popupPosition
       this.popupClosePosition = closePosition
+      this.borderRadius = popupPosition === 'bottom' ? '40rpx 40rpx 0 0' : '0 0 0 0'
       this.showPopup = true
     }
   }
