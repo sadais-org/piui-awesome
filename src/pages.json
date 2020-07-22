@@ -88,6 +88,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "日历"
           }
+        },
+        {
+          "path": "button/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "按钮"
+          }
         }
       ]
     }

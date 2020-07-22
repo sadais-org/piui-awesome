@@ -50,6 +50,10 @@ export default {
         {
           name: 'calendar',
           zhName: '日历'
+        },
+        {
+          name: 'button',
+          zhName: '按钮'
         }
       ]
     }
