@@ -1,6 +1,6 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="搜索框" />
+    <pi-navbar title="loading" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
         <pi-loading show />

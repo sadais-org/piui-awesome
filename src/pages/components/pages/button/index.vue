@@ -19,7 +19,10 @@
           round
           :custom-style="{ height: '54rpx', lineHeight: '54rpx', fontSize: '22rpx' }"
         >
-          自定义样式（type=primary）
+          自定义样式style（type=primary）
+        </pi-button>
+        <pi-button type="primary" round custom-class="pi-mg-top-12">
+          自定义样式class（type=primary）
         </pi-button>
       </view>
     </scroll-view>

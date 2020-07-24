@@ -8,18 +8,21 @@
     {
       "path": "pages/base-style/index",
       "style": {
+        "disableScroll": true,
         "navigationBarTitleText": "基础样式"
       }
     },
     {
       "path": "pages/components/index",
       "style": {
+        "disableScroll": true,
         "navigationBarTitleText": "组件"
       }
     },
     {
       "path": "pages/tools/index",
       "style": {
+        "disableScroll": true,
         "navigationBarTitleText": "工具库"
       }
     }
@@ -94,6 +97,13 @@
           "style": {
             "disableScroll": true,
             "navigationBarTitleText": "按钮"
+          }
+        },
+        {
+          "path": "select/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "选择器"
           }
         }
       ]

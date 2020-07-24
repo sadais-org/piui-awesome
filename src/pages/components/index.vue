@@ -54,6 +54,10 @@ export default {
         {
           name: 'button',
           zhName: '按钮'
+        },
+        {
+          name: 'select',
+          zhName: '选择器'
         }
       ]
     }
