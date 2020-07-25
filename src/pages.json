@@ -105,6 +105,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "选择器"
           }
+        },
+        {
+          "path": "img/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "图片"
+          }
         }
       ]
     }

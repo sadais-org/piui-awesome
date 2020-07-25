@@ -58,6 +58,10 @@ export default {
         {
           name: 'select',
           zhName: '选择器'
+        },
+        {
+          name: 'img',
+          zhName: '图片'
         }
       ]
     }
