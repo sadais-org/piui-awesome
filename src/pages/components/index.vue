@@ -62,6 +62,10 @@ export default {
         {
           name: 'img',
           zhName: '图片'
+        },
+        {
+          name: 'modal',
+          zhName: '模态窗'
         }
       ]
     }

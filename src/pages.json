@@ -112,6 +112,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "图片"
           }
+        },
+        {
+          "path": "modal/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "模态窗"
+          }
         }
       ]
     }
