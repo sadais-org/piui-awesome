@@ -66,6 +66,10 @@ export default {
         {
           name: 'modal',
           zhName: '模态窗'
+        },
+        {
+          name: 'checkbox',
+          zhName: '复选框'
         }
       ]
     }

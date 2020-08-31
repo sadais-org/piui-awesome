@@ -119,6 +119,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "模态窗"
           }
+        },
+        {
+          "path": "checkbox/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "复选框"
+          }
         }
       ]
     }
