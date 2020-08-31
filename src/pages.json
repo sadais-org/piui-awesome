@@ -154,6 +154,7 @@
     "navigationBarTitleText": "",
     "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#FFFFFF",
+    "transparentTitle": "always",
     "navigationStyle": "custom" // 自定义导航栏
   }
 }
