@@ -126,6 +126,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "复选框"
           }
+        },
+        {
+          "path": "tabs/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "标签栏"
+          }
         }
       ]
     }

@@ -70,6 +70,10 @@ export default {
         {
           name: 'checkbox',
           zhName: '复选框'
+        },
+        {
+          name: 'tabs',
+          zhName: '标签栏'
         }
       ]
     }
