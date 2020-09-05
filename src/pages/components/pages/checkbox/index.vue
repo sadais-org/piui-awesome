@@ -1,5 +1,5 @@
 <template>
-  <view class="pi-scroll-container">
+  <view class="pi-scroll-container checkbox-demo">
     <pi-navbar title="checkbox" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
@@ -54,6 +54,51 @@
           <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
           <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
+        <view>checkboxGroup disabled</view>
+        <pi-checkbox-group
+          ref="checkboxGroup"
+          v-model="demo1.checkboxGroup"
+          direction="vertical"
+          disabled
+        >
+          <pi-checkbox :name="1">红色，代表热情</pi-checkbox>
+          <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
+          <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
+        </pi-checkbox-group>
+        <view>checkboxGroup 设置填充模式</view>
+        <pi-checkbox-group
+          ref="checkboxGroup"
+          v-model="demo2.checkboxGroup"
+          direction="vertical"
+          shape="round"
+          active-mode="fill"
+        >
+          <pi-checkbox :name="1" disabled>红色，代表热情</pi-checkbox>
+          <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
+          <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
+        </pi-checkbox-group>
+        <view>checkboxGroup 设置颜色</view>
+        <pi-checkbox-group
+          ref="checkboxGroup"
+          v-model="demo3.checkboxGroup"
+          direction="vertical"
+          active-color="#ff508a"
+        >
+          <pi-checkbox :name="1" active-mode="fill">红色，代表热情</pi-checkbox>
+          <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
+          <pi-checkbox :name="3" disabled>绿色，代表生活</pi-checkbox>
+        </pi-checkbox-group>
+        <view>checkboxGroup 设置size: 60</view>
+        <pi-checkbox-group
+          ref="checkboxGroup"
+          v-model="demo4.checkboxGroup"
+          size="60"
+          icon-size="40"
+        >
+          <pi-checkbox :name="1" active-mode="fill">红色，代表热情</pi-checkbox>
+          <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
+          <pi-checkbox :name="3" disabled>绿色，代表生活</pi-checkbox>
+        </pi-checkbox-group>
       </view>
     </scroll-view>
   </view>
@@ -72,7 +117,19 @@ export default {
       disabled: false,
       trueDisabled: true,
       checkboxGroupMax: ['a'],
-      checkboxGroupVertical: [1, 2]
+      checkboxGroupVertical: [1, 2],
+      demo1: {
+        checkboxGroup: [2, 3]
+      },
+      demo2: {
+        checkboxGroup: [1]
+      },
+      demo3: {
+        checkboxGroup: [1, 3]
+      },
+      demo4: {
+        checkboxGroup: [1]
+      }
     }
   },
   methods: {
@@ -82,3 +139,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.checkbox-demo {
+  ::v-deep .pi-check-wrap {
+    padding: 10rpx 0;
+    margin-right: 32rpx;
+  }
+}
+</style>
