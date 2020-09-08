@@ -41,6 +41,9 @@
       <pi-navbar :fixed="false" title="slot left">
         <view slot="left" class=" pi-pd-left-24 pi-icon-add pi-fz-46 pi-primary" />
       </pi-navbar>
+      <pi-navbar :fixed="false">
+        <pi-search slot="title" show-action :action-style="{ paddingRight: '18rpx' }" />
+      </pi-navbar>
     </scroll-view>
   </view>
 </template>

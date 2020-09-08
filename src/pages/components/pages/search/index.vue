@@ -5,11 +5,12 @@
       <view class="pi-content">
         <pi-search />
         <pi-search
-          search-label="笔芯"
+          search-label="左侧slot"
           :search-label-style="{ color: '#ff508a', fontSize: '36rpx' }"
         />
         <view>clearTrigger: 'focus'</view>
         <pi-search clear-trigger="focus" />
+        <pi-search clear-trigger="focus" show-action action-text="确定" />
       </view>
     </scroll-view>
   </view>
