@@ -3,6 +3,7 @@
     <pi-navbar title="搜索框" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
+        <pi-search shape="square" />
         <pi-search />
         <pi-search
           search-label="左侧slot"

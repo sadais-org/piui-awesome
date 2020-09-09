@@ -1,6 +1,15 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="自定义导航栏" />
+    <pi-navbar
+      title="自定义导航栏"
+      back-icon-color="#ffffff"
+      background="transparent"
+      :title-style="{ fontSize: '36rpx', fontWeight: 500, color: '#ffffff' }"
+      :custom-style="{
+        background:
+          'url(http://img5.imgtn.bdimg.com/it/u=2438062088,2808868405&fm=26&gp=0.jpg) no-repeat 100% 100%'
+      }"
+    />
     <scroll-view class="pi-scroll" scroll-y="">
       <pi-navbar title="取消fixed" back-text="返回" :fixed="false" />
       <pi-navbar back-icon-name="barrage" :fixed="false">自定义图标</pi-navbar>
