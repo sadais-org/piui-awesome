@@ -1037,20 +1037,20 @@
   resolved "https://registry.npmjs.org/@commitlint/types/-/types-9.1.2.tgz#d05f66db03e3a3638a654e8badf2deb489eb220d"
   integrity sha512-r3fwVbVH+M8W0qYlBBZFsUwKe6NT5qvz+EmU7sr8VeN1cQ63z+3cfXyTo7WGGEMEgKiT0jboNAK3b1FZp8k9LQ==
 
-"@dcloudio/types@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/@dcloudio/types/-/types-2.0.4.tgz#a224eae8e3b786a26396d68831482a2cd97c2ce7"
-  integrity sha512-QpXFDtmsVjBIJ2Das0j9TmbXE7JeCBX7PXPDBqeETUhv0yEIOk5zUYbqpURn6dSyt8dg7IRIL47uY2yVzcZ5Sg==
+"@dcloudio/types@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.npmjs.org/@dcloudio/types/-/types-2.0.6.tgz#33daf724a58b593deef1294c210dad6509f1133d"
+  integrity sha512-ZOGaQMV2Xv8AtP2zBEURNVE62964fXZx1yCcMHRYxKPQtUzeOW0ZZVRkO6dxWLs/GE1GXTVJlJl/A9loLHqQOA==
 
-"@dcloudio/uni-app-plus@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-app-plus/-/uni-app-plus-2.0.0-28820200820001.tgz#c1da9634798c7f090abe0eac3d1a64b443477e8b"
-  integrity sha512-b/gJpVF3QeaP+noa6krw03wMp4b+qI/Mx4MCZW8WoEgtlRg3yzjBb6Wv91mnavcT2ZR/ZkafGwon/EaitgMQ3g==
+"@dcloudio/uni-app-plus@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-app-plus/-/uni-app-plus-2.0.0-28920200907001.tgz#15d4239ea9ed11efa28aa4f0dd522c613b1161c7"
+  integrity sha512-2EPGxIqu6B1bkSq0x9GITPO3Xah+ia1NRqDD/BzEIll3LnLoruL6SHgk11h5AFtV+WRbsxMm1dsmQ95bhYL60g==
 
-"@dcloudio/uni-automator@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-automator/-/uni-automator-2.0.0-28820200820001.tgz#ab5ba3dd2062b85afb039f58001ab874ba227978"
-  integrity sha512-nbNuuVCSRh5cKgvHKsk6yBUWPuMCtnPIgSnjV698Lw67MWT1zpWruMbbvu8Ki8FlOeqQZvTNS6FyYzzQhxG8gg==
+"@dcloudio/uni-automator@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-automator/-/uni-automator-2.0.0-28920200907001.tgz#40fe3a430611abc78595b6fb54807f2be8a7161e"
+  integrity sha512-N+c+0THfIKtLIsavtpM+4dvg2kxApjPPZk1H6socdDw/SQuFDbxSFlhoIiyCSYHX1opBt8amRECpPv3p9utfGg==
   dependencies:
     address "^1.1.2"
     debug "^4.1.1"
@@ -1062,33 +1062,33 @@
     qrcode-terminal "^0.12.0"
     ws "^7.2.3"
 
-"@dcloudio/uni-cli-shared@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-cli-shared/-/uni-cli-shared-2.0.0-28820200820001.tgz#2b51a5ee7099dac5565fc261ea4357fcc0f0981b"
-  integrity sha512-lpKIrgkOo1CN3GG1U+F4rNqNWiNGYCWwbknhg/P4DTUYhPSoNGbzBsmvtfsp8LTPrm3y3AM8i+RrNd7HBqPyrA==
+"@dcloudio/uni-cli-shared@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-cli-shared/-/uni-cli-shared-2.0.0-28920200907001.tgz#5cb85279e06d68792b75a36fe2a3f744a1b44c57"
+  integrity sha512-tppChi4XuQTHVPVj3DM6uQnZX5EzdrGZUynwAmos4Gdi4v1rvTXOp2DKcwJre5B2LX/jixUzyN5dECUKZsrZjw==
   dependencies:
     hash-sum "^1.0.2"
     postcss-urlrewrite "^0.2.2"
     strip-json-comments "^2.0.1"
 
-"@dcloudio/uni-h5@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-h5/-/uni-h5-2.0.0-28820200820001.tgz#a31423789efe2676a0ef41c9fca2de9d8e94e7f2"
-  integrity sha512-uoaKXgZtxqeHYU959v10Yg6vAnBx1LObCOTaooLDHeNK+3XJde2m47Cxxftj8API9Y7e6aPHM8QIWPXCNyrJxQ==
+"@dcloudio/uni-h5@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-h5/-/uni-h5-2.0.0-28920200907001.tgz#388afba7ac58723964ab94d210f107b7f0301c07"
+  integrity sha512-XRrb35zsDpLSDySTsBDEpdDTuCcZfepK6w5O/ng5m0hy2VmDc9ZHJVWJvtceyZOZTjg9Ec1nYuff/NPo7fyBAQ==
   dependencies:
     base64-arraybuffer "^0.2.0"
     intersection-observer "^0.7.0"
     safe-area-insets "^1.4.1"
 
-"@dcloudio/uni-helper-json@*":
-  version "1.0.5"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-helper-json/download/@dcloudio/uni-helper-json-1.0.5.tgz#4799c738eba7827e737432517e2c1967603857e2"
-  integrity sha1-R5nHOOungn5zdDJRfiwZZ2A4V+I=
+"@dcloudio/uni-helper-json@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-helper-json/-/uni-helper-json-1.0.6.tgz#8a9f77eccfbaacf62ceeb50f42229af83401cc65"
+  integrity sha512-r0NGInnPGuP0LujELKoNYioi8xlIBguqjR5JxN8EYP0H/aMKZ2FzTBHB+vNrPS+B3fKPXt2902jKi3iDEePaNQ==
 
-"@dcloudio/uni-migration@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-migration/-/uni-migration-2.0.0-28820200820001.tgz#4dae1c0c86f2b0b33eb09e7deeec6cdd1be6fb6b"
-  integrity sha512-xqaomEFYgajKQ43IBdP/pxYFKPiIJJKoNxN5Q2k0TRbHANcBYEky6gsLHAjlYuzvynbYEtNSsIpZYtO4QeaGeA==
+"@dcloudio/uni-migration@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-migration/-/uni-migration-2.0.0-28920200907001.tgz#e4e32b0fb8ce0d5d5a09eb513d1d107961a70e89"
+  integrity sha512-PIstufekidSuubkgZkc2e/5e0WYaRzlRvzitBU6asHHfa17DfzLlCpErAVm7szFYo/gC0Z3Nmr+gdxqSYdyTdQ==
   dependencies:
     commander "^4.0.1"
     fs-extra "^8.1.0"
@@ -1096,35 +1096,35 @@
     recast "*"
     stricter-htmlparser2 "^3.9.6"
 
-"@dcloudio/uni-mp-360@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-360/-/uni-mp-360-2.0.0-28820200820001.tgz#a119295be8f3bd9940c17e059403827b69abee66"
-  integrity sha512-F3iT/WYy4II6ClZpvxqR0sbya2CLzH3cu4AyE2mfyBda6i6zJP6czSJa34oFYx1y5t8beiJKgxI9J2W/bYXMUw==
+"@dcloudio/uni-mp-360@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-360/-/uni-mp-360-2.0.0-28920200907001.tgz#05d6fbc28700a92ad82bfcbb86938a9e8539ee57"
+  integrity sha512-dEzifbCdreUwHQPGpEz7Zfug+0Bz8t8ryvPvaPSNM73HOWl33HsrVZm7Nn9Kz4KZhTTQZ6c41gXJEkBIkJAEaA==
 
-"@dcloudio/uni-mp-alipay@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-alipay/-/uni-mp-alipay-2.0.0-28820200820001.tgz#7b82024ee003213f5361088a78840c59defb9f2e"
-  integrity sha512-8QHVZe1mRlf6w0tt8pdqwM86yeHnrbDtv2jRQ8yActI6MnsKQqDvBP89hm4iTH1eHaAwUu7C1NVc7s08jFr5FQ==
+"@dcloudio/uni-mp-alipay@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-alipay/-/uni-mp-alipay-2.0.0-28920200907001.tgz#293e3e43497aa62780caafc22431a894136a2aa6"
+  integrity sha512-eophUsTqfwaq+BvYyzXEBfxLvVqAZHvufJt4ZGt3fSCz7bhoPSBhtuRx9B1Z0k0lCaPHSLTlLntwsmYwl5CEVw==
 
-"@dcloudio/uni-mp-baidu@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-baidu/-/uni-mp-baidu-2.0.0-28820200820001.tgz#4ecf3391c76c9d690a9244d1c6a40122b30fb3e1"
-  integrity sha512-7sSNSJ0t0QIy9Ld1wAwtJgGVZy3L28+Lho4PTnjOhKCxdRdSnXxcV6oPsjk6Z8Z7kSd0ApRcuj7ATh1rTMSn/A==
+"@dcloudio/uni-mp-baidu@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-baidu/-/uni-mp-baidu-2.0.0-28920200907001.tgz#c49c5c9d1ff3f9ad77a5119d36c53eb82fda0fb8"
+  integrity sha512-nG/uuynv+TWrdlqUJzVVgZ2XeQAmDtQaK1RHUyTQILWmk+PXDxmUA+Mo5SWDK9p3Ai0Y61HVqlXgQaLEHQUCdw==
 
-"@dcloudio/uni-mp-qq@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-qq/-/uni-mp-qq-2.0.0-28820200820001.tgz#a3de1027d43e8e1436eebb15a1d05748b574dc95"
-  integrity sha512-sv1iDPNG95mJruF0IKZ/LiKeEZ8KGkoWWDT4iQ8iJFVxK65pQebN/g37JhHhhinKQJBzDAsFX2vIoZ/aD2aTVQ==
+"@dcloudio/uni-mp-qq@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-qq/-/uni-mp-qq-2.0.0-28920200907001.tgz#e49ef201542da027a87b98b8a6b289d915928828"
+  integrity sha512-0JpIRka3Cc1azmjAMqoWfwBMdjzknqS/7ltOpPARd5BW1ymG9RRZ/Y4VMWmYBI9scgvAvN9I+KxHG1eBsyYISQ==
 
-"@dcloudio/uni-mp-toutiao@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-toutiao/-/uni-mp-toutiao-2.0.0-28820200820001.tgz#48c6f6f9eebfeade49980565fc754bbf6a59a744"
-  integrity sha512-tK3Sl99qIeJsd68fxPAvlF+JeKNPJsHx1L4nIcge6JKg1ARaCJnGJj83FCjjkDwroVd9huPv0Q+3nfs/CIJy6Q==
+"@dcloudio/uni-mp-toutiao@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-toutiao/-/uni-mp-toutiao-2.0.0-28920200907001.tgz#c18624fd88e3d177723ec07de9335ea7c3a55bd5"
+  integrity sha512-caxjwiOn0pR6uy3u/9/g13EmHEuOmPmUt8+q1E0xIG651bo7A/hnxKnZ68fk1IN7AOCmcKfDN4P/mhQyw+ZESw==
 
-"@dcloudio/uni-mp-weixin@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-weixin/-/uni-mp-weixin-2.0.0-28820200820001.tgz#00a42000673fd982c582832cc235173dbe93d92b"
-  integrity sha512-8NCKJgbz4hyQlZHmrk0SKf5muftPo/FgxkZqyPrTYzX7ti1VvFdrlf16TxXcDi6upfiNAsTqXDCH2gLEQozriA==
+"@dcloudio/uni-mp-weixin@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-mp-weixin/-/uni-mp-weixin-2.0.0-28920200907001.tgz#7b4d91b826955e07de064ce43c4c1ea91020b296"
+  integrity sha512-JNbnn/WOt3gnHklqzvN18STqST8jorzpdzp57QnUXrKpmQslnd2Cg3lTIT5WaA4wsjCZRcOAaUla+ITUDDiSng==
 
 "@dcloudio/uni-quickapp-native@^2.0.0-28620200814005":
   version "2.0.0-28620200814005"
@@ -1136,46 +1136,46 @@
     "@hap-toolkit/server" "0.6.13"
     module-alias "^2.1.0"
 
-"@dcloudio/uni-quickapp-webview@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-quickapp-webview/-/uni-quickapp-webview-2.0.0-28820200820001.tgz#81a1177e8c56f0692263e2820d5f892e8568a882"
-  integrity sha512-4GBdW2/RVx1RCLQpvA3QrdYPLqfN2/wLHvp6HYU2D5GmIoow/3WALe+VQ/8gw423b+uD7ej7A4Pju4SHA0EMGg==
+"@dcloudio/uni-quickapp-webview@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-quickapp-webview/-/uni-quickapp-webview-2.0.0-28920200907001.tgz#553d6094b1a7177417d31c9967cb041fe8de9a38"
+  integrity sha512-aKYXPVt3VrC6gFEqyO3enxV26sLMLO2WGrZpN/ohv4G19+AWaSrUOWAqxxoo9YkGocXcp7pbiyl1MMRcRr1jEw==
 
-"@dcloudio/uni-stat@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-28820200820001.tgz#f033ebb407b7a8aefc4b19b49eb154a826350149"
-  integrity sha512-8KiE+2a8+V4BZR1YK4+ztMOVG4khWf+E5BAZjWA4BqMKTji99CtgbB/x1saGfOM+oK6UHgDLm8YlcL26uK2ZNw==
+"@dcloudio/uni-stat@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-28920200907001.tgz#529372676359ab63f23a56df4c35d638c35ccede"
+  integrity sha512-AFKRFzMJDKa0IWyPtRHxUw79WJxlTFUPZMv4veCKsNubBm7Nxo1JYa4S4UubFs623mFEw9UGpJAU0uWSwuAwNg==
 
-"@dcloudio/uni-template-compiler@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/uni-template-compiler/-/uni-template-compiler-2.0.0-28820200820001.tgz#9b9e5515586533f77623c9840a247f1053df7e9a"
-  integrity sha512-td7RhGnAMmvrIRKZH6fuok950qae4zeFgxddL0FfJjgtDGU1CphJO8BJza6SipBwaANIpWc+yoysbvdsO5Zvuw==
+"@dcloudio/uni-template-compiler@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-template-compiler/-/uni-template-compiler-2.0.0-28920200907001.tgz#015731017b3650e6e61fe3fab01de5bb3b4d731d"
+  integrity sha512-31oRQizo9rqWZrR5skNR/ghwkbMIWJ0WNfmV3WZnzbDqbISxLbGDcXf97/FDTgUeEMM/vGC3+RG0LGYhEA5vnA==
   dependencies:
     "@babel/parser" "^7.3.3"
     "@babel/traverse" "^7.3.3"
     "@babel/types" "^7.3.3"
     vue-template-compiler "^2.6.10"
 
-"@dcloudio/vue-cli-plugin-hbuilderx@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/vue-cli-plugin-hbuilderx/-/vue-cli-plugin-hbuilderx-2.0.0-28820200820001.tgz#97a3edf54f434a55920a6d2d4f67a03eaa1ea882"
-  integrity sha512-1xyk0EtVtuw4ip8BiC6DON+Ixae5E5BEPkI8ZJ3P/Ge9yaIwLKT7hmypHEpG5HmwvPxRNQaRxNIgYLomgwW6Yg==
+"@dcloudio/vue-cli-plugin-hbuilderx@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/vue-cli-plugin-hbuilderx/-/vue-cli-plugin-hbuilderx-2.0.0-28920200907001.tgz#81d5ee7f4bd13216dae3da715074cea4f4c70c8e"
+  integrity sha512-AYgElRouTS8Or2lOLE6rZnGgH7WTdO4ZQzQgcxYp7LHWLjUpeuaSZZO5Bm/fe8qnqWfaeSK16Sxfjuup3FoYag==
   dependencies:
     acorn "^5.2.1"
     css "~2.2.1"
     escodegen "^1.8.1"
 
-"@dcloudio/vue-cli-plugin-uni-optimize@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/vue-cli-plugin-uni-optimize/-/vue-cli-plugin-uni-optimize-2.0.0-28820200820001.tgz#0c19c15107125fb8c5399f056e0c99fb9c688bf1"
-  integrity sha512-BeOtW2hM3yvm/MVhVkoGTBZseGk5EyOlv5LBZ3t0HMKY/xVJ4e8KcvaAF1ZMq6rkOigwN7walUfW2p1Qle4BJQ==
+"@dcloudio/vue-cli-plugin-uni-optimize@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/vue-cli-plugin-uni-optimize/-/vue-cli-plugin-uni-optimize-2.0.0-28920200907001.tgz#280c369d956942d887adaf9f031af0249d34aad4"
+  integrity sha512-i0eA7sC8eSHEQek3+SBVwIl+V2/HNnAlROg1yEaoyBmcP/pxZWp61YPhoROZy2NJJXxsKsEMdqGm7ENN84oQIw==
 
-"@dcloudio/vue-cli-plugin-uni@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/vue-cli-plugin-uni/-/vue-cli-plugin-uni-2.0.0-28820200820001.tgz#1ca6c48b553d466974747599fcb356411aea8f03"
-  integrity sha512-O3eo4leOen09k7fsbr2a9E+nI3N4rmEVw2Ms8+42J0lp5cOT+2UQFRZzM6vzq7oop1hKBPhz1PRuuzaAINb4dQ==
+"@dcloudio/vue-cli-plugin-uni@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/vue-cli-plugin-uni/-/vue-cli-plugin-uni-2.0.0-28920200907001.tgz#e93c457333e5ac06771a1b93f009449cb83b4e87"
+  integrity sha512-ISjigTDzrLep4JHEmL6RxH1ILfEYMudNtMNGvn9Vh169hmxdIJRlG1G8PdaLUkuLCdKD8O28jIJlEM/fR4bGZQ==
   dependencies:
-    "@dcloudio/uni-stat" "^2.0.0-28820200820001"
+    "@dcloudio/uni-stat" "^2.0.0-28920200907001"
     buffer-json "^2.0.0"
     copy-webpack-plugin "^5.1.1"
     cross-env "^5.2.0"
@@ -1195,15 +1195,15 @@
     wrap-loader "^0.2.0"
     xregexp "4.0.0"
 
-"@dcloudio/webpack-uni-mp-loader@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/webpack-uni-mp-loader/-/webpack-uni-mp-loader-2.0.0-28820200820001.tgz#f9afe55cf5fce9e10cdddf572b67045b469eac1b"
-  integrity sha512-OfEcqFKKX99lJDit4uN/uyp68f2zmGBh1OID+88mG0ljQfMjM9jfNWVhgipD/AVNEyt76KPcuKPz88OMuxtNNw==
+"@dcloudio/webpack-uni-mp-loader@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/webpack-uni-mp-loader/-/webpack-uni-mp-loader-2.0.0-28920200907001.tgz#94ad133e53cd19fd3187ce05087a15284c379b99"
+  integrity sha512-oNPn/NjUvP21ay/Q4t+OeazJ8DCHdfUAe735K0Ay9OvsxcyOvgZJXvn0lsFX26/QsFRtjsoVCGpfkd/fHdBBDQ==
 
-"@dcloudio/webpack-uni-pages-loader@^2.0.0-28820200820001":
-  version "2.0.0-28820200820001"
-  resolved "https://registry.npmjs.org/@dcloudio/webpack-uni-pages-loader/-/webpack-uni-pages-loader-2.0.0-28820200820001.tgz#083054f9943cebb0e3d96817f7c7ccb25af4ab54"
-  integrity sha512-TCLHVEfmBcOEsMvRZLyhcRXhpCQudOwnSEb8oOntX6rMjbpspz4mcr6uxUSdIVewugh4AlkC7+OZu4C1vxidDA==
+"@dcloudio/webpack-uni-pages-loader@^2.0.0-28920200907001":
+  version "2.0.0-28920200907001"
+  resolved "https://registry.npmjs.org/@dcloudio/webpack-uni-pages-loader/-/webpack-uni-pages-loader-2.0.0-28920200907001.tgz#873b364e3f8cc1b9d68afbb0a294b4576a06451e"
+  integrity sha512-fQfl5rAB+VMVOr49wBirAPa7OoqGmoXtsF5xSq9tw8f6980WZ6uEYwAUAd3Y7Tf9yuDjTDO6zLGtOjjxqwwFAw==
   dependencies:
     merge "^1.2.1"
     strip-json-comments "^2.0.1"

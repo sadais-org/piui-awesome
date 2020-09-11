@@ -1,9 +1,7 @@
 {
-  // 使用easycom方式引入piui
   "easycom": {
     "^pi-(.*)": "@/piui/components/pi-$1/index.vue"
   },
-  // 页面定义
   "pages": [
     {
       "path": "pages/base-style/index",
@@ -133,6 +131,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "标签栏"
           }
+        },
+        {
+          "path": "switch/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "switch开关"
+          }
         }
       ]
     }
@@ -169,6 +174,6 @@
     "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#FFFFFF",
     "transparentTitle": "always",
-    "navigationStyle": "custom" // 自定义导航栏
+    "navigationStyle": "custom"
   }
 }

@@ -74,6 +74,10 @@ export default {
         {
           name: 'tabs',
           zhName: '标签栏'
+        },
+        {
+          name: 'switch',
+          zhName: '开关'
         }
       ]
     }
