@@ -56,13 +56,28 @@
       <pi-navbar :fixed="false">
         <pi-search slot="title" show-action :action-style="{ paddingRight: '18rpx' }" />
       </pi-navbar>
+      <pi-navbar :fixed="false">
+        <pi-tabs v-model="demo2.currentItem" :items="demo2.tabItems" slider-bar-width="60" />
+      </pi-navbar>
     </scroll-view>
   </view>
 </template>
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data() {
+    return {
+      demo2: {
+        currentItem: { id: 'member' },
+        tabItems: [
+          { id: 'member', text: '团员' },
+          { id: 'masses', text: '群众' },
+          { id: 'title', text: '标题' }
+        ]
+      }
+    }
+  }
 }
 </script>
 
