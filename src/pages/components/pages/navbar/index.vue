@@ -2,7 +2,10 @@
   <view class="pi-scroll-container">
     <pi-navbar
       title="自定义导航栏"
+      show-home
+      capsule-theme="dark"
       back-icon-color="#ffffff"
+      home-icon-color="#ffffff"
       background="transparent"
       :title-style="{ fontSize: '36rpx', fontWeight: 500, color: '#ffffff' }"
       :custom-style="{
