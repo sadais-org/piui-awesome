@@ -9,5 +9,5 @@ export default {
 <style lang="scss">
 /* 每个页面公共css */
 
-@import '~@/piui/index.scss';
+@import '~@/piui/scss/index.scss';
 </style>

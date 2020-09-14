@@ -1,13 +1,18 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar />
+    <pi-navbar :border-bottom="false">组件</pi-navbar>
     <scroll-view class="pi-scroll" scroll-y>
-      <view class="pi-grid-2 border">
-        <view v-for="components in baseComponents" :key="components.name">
-          <view class=" pi-square" @tap.stop="handleNavigate(components.name)">
-            <view class="pi-flex-column-center">{{ components.zhName }}</view>
-          </view>
-        </view>
+      <view class="pi-content">
+        <pi-grid square>
+          <pi-grid-item v-for="components in baseComponents" :key="components.name">
+            <view
+              class="pi-h-100P pi-flex-column-center"
+              @tap.stop="handleNavigate(components.name)"
+            >
+              {{ components.zhName }}
+            </view>
+          </pi-grid-item>
+        </pi-grid>
       </view>
     </scroll-view>
   </view>
@@ -25,7 +30,7 @@ export default {
       return [
         {
           name: 'navbar',
-          zhName: '自定义导航栏'
+          zhName: '导航栏'
         },
         {
           name: 'search',

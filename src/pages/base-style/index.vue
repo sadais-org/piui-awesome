@@ -1,13 +1,17 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar />
-    <view class="pi-grid-2 border">
-      <view v-for="style in baseStyles" :key="style.name">
-        <view class=" pi-square" @tap.stop="handleNavigate(style.name)">
-          <view class="pi-flex-column-center">{{ style.zhName }}</view>
-        </view>
+    <pi-navbar :border-bottom="false">基础样式</pi-navbar>
+    <scroll-view class="pi-scroll" scroll-y>
+      <view class="pi-content">
+        <pi-grid square>
+          <pi-grid-item v-for="style in baseStyles" :key="style.name">
+            <view class="pi-h-100P pi-flex-column-center" @tap.stop="handleNavigate(style.name)">
+              {{ style.zhName }}
+            </view>
+          </pi-grid-item>
+        </pi-grid>
       </view>
-    </view>
+    </scroll-view>
   </view>
 </template>
 
@@ -42,7 +46,7 @@ export default {
           zhName: '边框'
         },
         {
-          name: 'gird',
+          name: 'grid',
           zhName: '宫格'
         }
       ]

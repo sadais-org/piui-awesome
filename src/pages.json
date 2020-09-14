@@ -35,6 +35,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "图标"
           }
+        },
+        {
+          "path": "grid/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "宫格"
+          }
         }
       ]
     },
