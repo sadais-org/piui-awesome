@@ -3,8 +3,15 @@
     <pi-navbar :border-bottom="false">组件</pi-navbar>
     <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
-        <pi-grid square>
-          <pi-grid-item v-for="components in baseComponents" :key="components.name">
+        <pi-grid square gap="24">
+          <!-- pi-grid-item square 是不用传的，但是头条小程序不支持provide inject，所以这里还是得传-->
+          <pi-grid-item
+            v-for="(components, index) in baseComponents"
+            :key="components.name"
+            :index="index"
+            bg-color="#f5f5f5"
+            square
+          >
             <view
               class="pi-h-100P pi-flex-column-center"
               @tap.stop="handleNavigate(components.name)"
@@ -21,9 +28,7 @@
 <script>
 export default {
   data() {
-    return {
-      title: 'Hello4'
-    }
+    return {}
   },
   computed: {
     baseComponents() {
