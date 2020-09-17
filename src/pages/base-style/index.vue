@@ -48,6 +48,10 @@ export default {
         {
           name: 'grid',
           zhName: '宫格'
+        },
+        {
+          name: 'list',
+          zhName: '列表'
         }
       ]
     }

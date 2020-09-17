@@ -42,6 +42,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "宫格"
           }
+        },
+        {
+          "path": "list/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "列表"
+          }
         }
       ]
     },
