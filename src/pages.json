@@ -152,6 +152,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "switch开关"
           }
+        },
+        {
+          "path": "section/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "section分块"
+          }
         }
       ]
     }

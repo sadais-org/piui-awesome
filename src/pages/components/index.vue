@@ -88,6 +88,10 @@ export default {
         {
           name: 'switch',
           zhName: '开关'
+        },
+        {
+          name: 'section',
+          zhName: '分块'
         }
       ]
     }

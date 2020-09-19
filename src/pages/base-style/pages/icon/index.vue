@@ -2,29 +2,24 @@
   <view class="pi-scroll-container">
     <pi-navbar title="图标" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <view>基础用法</view>
-      <pi-icon name="message-copy" custom-class="pi-fz-48" />
-      <pi-icon name="message-copy" custom-class="pi-primary pi-fz-48" dot />
-      <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" dot />
-      <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" badge="99+" />
-      测试
-      <view>所有图标</view>
-      <view class="pi-content pi-grid-3 border ">
-        <view v-for="glyph in glyphs" :key="glyph.id">
-          <view class=" pi-square">
-            <view class=" pi-flex-column-center">
-              <pi-icon
-                :name="glyph.font_class"
-                custom-class="pi-primary pi-fz-48"
-                color="red"
-                dot
-              />
+      <view class="pi-content">
+        <pi-section title="基础用法" />
+        <pi-icon name="message-copy" custom-class="pi-fz-48" />
+        <pi-icon name="message-copy" custom-class="pi-primary pi-fz-48" dot />
+        <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" dot />
+        <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" badge="99+" />
+
+        <pi-section title="所有图标" />
+        <pi-grid square col="3">
+          <pi-grid-item v-for="glyph in glyphs" :key="glyph.id">
+            <view class="pi-h-100P pi-flex-column-center" @tap.stop="handleNavigate(style.name)">
+              <pi-icon :name="glyph.font_class" custom-class="pi-primary pi-fz-48" dot />
               <view class="pi-fz-24 pi-mg-top-8 pi-light-gray pi-text-nowrap">
                 {{ glyph.font_class }}
               </view>
             </view>
-          </view>
-        </view>
+          </pi-grid-item>
+        </pi-grid>
       </view>
     </scroll-view>
   </view>
