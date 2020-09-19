@@ -1,5 +1,7 @@
 <script>
+import piPageTransitions from '@/piui/mixin/pi-page-transitions'
 export default {
+  mixins: [piPageTransitions],
   onLaunch: function() {},
   onShow: function() {},
   onHide: function() {}
