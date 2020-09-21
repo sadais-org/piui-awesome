@@ -54,12 +54,15 @@
           <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
           <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
-        <view>checkboxGroup disabled</view>
+        <pi-section>
+          是否禁用
+          <pi-switch slot="right" v-model="demo5.disabled" size="40" active-color="#ff508a" />
+        </pi-section>
         <pi-checkbox-group
           ref="checkboxGroup"
-          v-model="demo1.checkboxGroup"
+          v-model="demo5.checkboxGroup"
           direction="vertical"
-          disabled
+          :disabled="demo5.disabled"
         >
           <pi-checkbox :name="1">红色，代表热情</pi-checkbox>
           <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
@@ -129,6 +132,10 @@ export default {
       },
       demo4: {
         checkboxGroup: [1]
+      },
+      demo5: {
+        checkboxGroup: [1],
+        disabled: true
       }
     }
   },

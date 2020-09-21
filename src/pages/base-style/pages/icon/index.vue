@@ -12,7 +12,7 @@
         <pi-section title="所有图标" />
         <pi-grid square col="3">
           <pi-grid-item v-for="glyph in glyphs" :key="glyph.id">
-            <view class="pi-h-100P pi-flex-column-center" @tap.stop="handleNavigate(style.name)">
+            <view class="pi-h-100P pi-flex-column-center">
               <pi-icon :name="glyph.font_class" custom-class="pi-primary pi-fz-48" dot />
               <view class="pi-fz-24 pi-mg-top-8 pi-light-gray pi-text-nowrap">
                 {{ glyph.font_class }}
