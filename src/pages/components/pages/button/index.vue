@@ -231,7 +231,12 @@
         </view>
         <view class="section">
           <view class="title">自定义style</view>
-          <pi-button color="#ffffff" bg-color="#ff508a" custom-class="pi-mg-top-12" round>
+          <pi-button
+            color="#ffffff"
+            bg-color="#ff508a"
+            custom-class="pi-mg-top-12 pi-lh-66 pi-h-66"
+            round
+          >
             自定义style
           </pi-button>
           <pi-button color="#ffffff" bg-color="#ff508a" custom-class="pi-mg-top-12" round loading>

@@ -113,7 +113,7 @@ export default {
   data() {
     return {
       defaultCheckbox: false,
-      fillCheckbox: false,
+      fillCheckbox: true,
       defaultCustomColor: false,
       fillCustomColor: false,
       fillRoundCustomColor: false,
