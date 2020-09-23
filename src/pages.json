@@ -159,6 +159,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "section分块"
           }
+        },
+        {
+          "path": "line-progress/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "线型进度条"
+          }
         }
       ]
     }

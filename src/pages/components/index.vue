@@ -3,7 +3,7 @@
     <pi-navbar :border-bottom="false">组件</pi-navbar>
     <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
-        <pi-grid square gap="24">
+        <pi-grid square col="3" gap="24">
           <!-- pi-grid-item square 是不用传的，但是头条小程序不支持provide inject，所以这里还是得传-->
           <pi-grid-item
             v-for="(components, index) in baseComponents"
@@ -92,6 +92,10 @@ export default {
         {
           name: 'section',
           zhName: '分块'
+        },
+        {
+          name: 'line-progress',
+          zhName: '线型进度条'
         }
       ]
     }
