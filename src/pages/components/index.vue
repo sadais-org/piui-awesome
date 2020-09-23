@@ -96,6 +96,10 @@ export default {
         {
           name: 'line-progress',
           zhName: '线型进度条'
+        },
+        {
+          name: 'gap',
+          zhName: '间隔槽'
         }
       ]
     }
