@@ -2,13 +2,11 @@
   <view class="pi-scroll-container">
     <pi-navbar title="选择器" />
     <scroll-view class="pi-scroll" scroll-y>
-      <view class="pi-form pi-content">
-        <view class="item required" @tap="handleShowSelect('area')">
-          <view class="label">地区</view>
+      <pi-list title="语言切换">
+        <pi-list-item title="地区" @tap="handleShowSelect('area')">
           <input :value="form.area.text" type="text" class="input" placeholder="请选择" disabled />
-        </view>
-        <view class="item required" @tap="handleShowSelect('gender')">
-          <view class="label">性别</view>
+        </pi-list-item>
+        <pi-list-item title="性别" @tap="handleShowSelect('gender')">
           <input
             :value="form.gender.text"
             type="text"
@@ -16,9 +14,8 @@
             placeholder="请选择"
             disabled
           />
-        </view>
-        <view class="item required" @tap="handleShowSelect('identity')">
-          <view class="label">身份</view>
+        </pi-list-item>
+        <pi-list-item title="身份" @tap="handleShowSelect('identity')">
           <input
             :value="form.identity.map(i => i.text).join('，')"
             type="text"
@@ -26,14 +23,18 @@
             placeholder="请选择"
             disabled
           />
-        </view>
-      </view>
+        </pi-list-item>
+      </pi-list>
     </scroll-view>
     <pi-select
       v-model="selectOptions.show"
       :items="selectOptions.items"
       :is-multi="selectOptions.isMulti"
       :default-value="selectOptions.defaultValue"
+      show-title
+      toolbar-position="bottom"
+      :title="selectOptions.title"
+      border-radius="24rpx 24rpx 0 0"
       append-to-body
       @confirm="handleSelectConfirm"
     />
@@ -45,6 +46,7 @@ export default {
   name: 'Select',
   data() {
     return {
+      title: '',
       form: {
         area: { id: 'zhuhai', text: '珠海' },
         gender: { id: 'famale', text: '女' },
@@ -66,6 +68,7 @@ export default {
     handleShowSelect(formKey) {
       const formKeySelectMap = {
         area: {
+          title: '选择地区',
           isMulti: false,
           items: [
             { id: 'beijing', text: '北京' },
@@ -74,6 +77,7 @@ export default {
           ]
         },
         gender: {
+          title: '选择性别',
           isMulti: false,
           items: [
             { id: 'male', text: '男' },
@@ -81,6 +85,7 @@ export default {
           ]
         },
         identity: {
+          title: '选择身份',
           isMulti: true,
           items: [
             { id: 'partyMember', text: '党员' },
@@ -93,6 +98,7 @@ export default {
         key: formKey,
         show: true,
         defaultValue: this.form[formKey],
+        title: this.form[formKey].title,
         ...formKeySelectMap[formKey]
       }
     },
@@ -103,3 +109,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+input {
+  text-align: right;
+}
+</style>
