@@ -3,6 +3,8 @@
     <pi-navbar title="线型进度条" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
+        <pi-section title="指定宽度" desc="40%" />
+        <pi-line-progress width="200" percent="40" striped striped-active />
         <pi-section title="默认进度条" desc="30%" />
         <pi-line-progress percent="30" />
         <pi-section title="默认进度条" desc="60%" />
