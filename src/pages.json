@@ -168,10 +168,10 @@
           }
         },
         {
-          "path": "gap/index",
+          "path": "count-down/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "间隔槽"
+            "navigationBarTitleText": "倒计时"
           }
         }
       ]

@@ -100,6 +100,10 @@ export default {
         {
           name: 'gap',
           zhName: '间隔槽'
+        },
+        {
+          name: 'count-down',
+          zhName: '倒计时'
         }
       ]
     }
