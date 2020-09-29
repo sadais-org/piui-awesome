@@ -5,7 +5,7 @@
       <view class="pi-content">
         <view class="section">
           <view class="title">默认按钮</view>
-          <pi-button size="big">大按钮 big</pi-button>
+          <pi-button size="large">大按钮 large</pi-button>
           <pi-button size="default">普通按钮 default</pi-button>
           <pi-button size="medium">中按钮 medium</pi-button>
           <pi-button size="small">小按钮 small</pi-button>
@@ -15,7 +15,7 @@
 
         <view class="section">
           <view class="title">主要按钮</view>
-          <pi-button type="primary" size="big">大按钮 big</pi-button>
+          <pi-button type="primary" size="large">大按钮 large</pi-button>
           <pi-button type="primary" size="default">普通按钮 default</pi-button>
           <pi-button type="primary" size="medium">中按钮 medium</pi-button>
           <pi-button type="primary" size="small">小按钮 small</pi-button>
@@ -24,7 +24,7 @@
         </view>
         <view class="section">
           <view class="title">次要按钮</view>
-          <pi-button type="secondary" size="big">大按钮 big</pi-button>
+          <pi-button type="secondary" size="large">大按钮 large</pi-button>
           <pi-button type="secondary" size="default">普通按钮 default</pi-button>
           <pi-button type="secondary" size="medium">中按钮 medium</pi-button>
           <pi-button type="secondary" size="small">小按钮 small</pi-button>
@@ -33,7 +33,7 @@
         </view>
         <view class="section">
           <view class="title">线框按钮</view>
-          <pi-button type="line" size="big">大按钮 big</pi-button>
+          <pi-button type="line" size="large">大按钮 large</pi-button>
           <pi-button type="line" size="default">普通按钮 default</pi-button>
           <pi-button type="line" size="medium">中按钮 medium</pi-button>
           <pi-button type="line" size="small">小按钮 small</pi-button>
@@ -44,13 +44,13 @@
           <view class="title">渐变按钮</view>
           <pi-button
             type="primary"
-            size="big"
+            size="large"
             :custom-style="{
               background: 'linear-gradient(90deg, #6F8EFF 0%, #4731FF 100%)',
               boxShadow: '0px 8px 8px 0px rgba(66, 106, 255, 0.16);'
             }"
           >
-            大按钮 big
+            大按钮 large
           </pi-button>
           <pi-button
             type="primary"
@@ -105,7 +105,7 @@
         </view>
         <view class="section">
           <view class="title">禁用按钮</view>
-          <pi-button type="primary" size="big" disabled>大按钮 big</pi-button>
+          <pi-button type="primary" size="large" disabled>大按钮 large</pi-button>
           <pi-button type="secondary" size="default" disabled>普通按钮 default</pi-button>
           <pi-button type="warn" size="medium" disabled>中按钮 medium</pi-button>
           <pi-button type="line" size="small" disabled>小按钮 small</pi-button>
@@ -114,8 +114,8 @@
         </view>
         <view class="section">
           <view class="title">主要按钮占满一行</view>
-          <pi-button type="primary" size="big" width="100%" custom-class="pi-mg-bottom-8">
-            大按钮 big
+          <pi-button type="primary" size="large" width="100%" custom-class="pi-mg-bottom-8">
+            大按钮 large
           </pi-button>
           <pi-button type="primary" size="default" width="100%" custom-class="pi-mg-bottom-8">
             普通按钮 default
@@ -133,7 +133,7 @@
         </view>
         <view class="section">
           <view class="title">次要按钮固定宽度</view>
-          <pi-button type="secondary" size="big" width="225">大按钮 big</pi-button>
+          <pi-button type="secondary" size="large" width="225">大按钮 large</pi-button>
           <pi-button type="secondary" size="default" width="225">普通按钮 default</pi-button>
           <pi-button type="secondary" size="medium" width="225">中按钮 medium</pi-button>
           <pi-button type="secondary" size="small" width="225">小按钮 small</pi-button>
@@ -143,7 +143,7 @@
 
         <view class="section">
           <view class="title">次要按钮镂空</view>
-          <pi-button type="secondary" size="big" plain>大按钮 big</pi-button>
+          <pi-button type="secondary" size="large" plain>大按钮 large</pi-button>
           <pi-button type="secondary" size="default" plain>普通按钮 default</pi-button>
           <pi-button type="secondary" size="medium" plain>中按钮 medium</pi-button>
           <pi-button type="secondary" size="small" plain>小按钮 small</pi-button>
@@ -156,13 +156,13 @@
           <pi-button
             loading
             type="primary"
-            size="big"
+            size="large"
             :custom-style="{
               background: 'linear-gradient(90deg, #6F8EFF 0%, #4731FF 100%)',
               boxShadow: '0px 8px 8px 0px rgba(66, 106, 255, 0.16);'
             }"
           >
-            大按钮 big
+            大按钮 large
           </pi-button>
           <pi-button
             loading
@@ -222,7 +222,7 @@
         </view>
         <view class="section">
           <view class="title">次要按钮圆角</view>
-          <pi-button type="secondary" size="big" round>大按钮 big</pi-button>
+          <pi-button type="secondary" size="large" round>大按钮 large</pi-button>
           <pi-button type="secondary" size="default" round>普通按钮 default</pi-button>
           <pi-button type="secondary" size="medium" round>中按钮 medium</pi-button>
           <pi-button type="secondary" size="small" round>小按钮 small</pi-button>
@@ -243,7 +243,7 @@
             自定义style loading
           </pi-button>
           <pi-button
-            size="big"
+            size="large"
             width="100%"
             color="#ffffff"
             bg-color="#ff508a"
@@ -262,7 +262,7 @@
       </view>
     </scroll-view>
     <pi-bottom-bar>
-      <pi-button width="100%" type="primary" size="big">
+      <pi-button width="100%" type="primary" size="large">
         吸底按钮
       </pi-button>
     </pi-bottom-bar>
