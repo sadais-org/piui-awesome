@@ -9,6 +9,10 @@
         <pi-count-down value="314159" :autoplay="false" />
         <pi-section>不显示天</pi-section>
         <pi-count-down value="314159" :show-day="false" />
+        <pi-section>不显示小时</pi-section>
+        <pi-count-down value="314159" :show-day="false" :show-hour="false" />
+        <pi-section>不显示分钟</pi-section>
+        <pi-count-down value="314159" :show-day="false" :show-hour="false" :show-minute="false" />
         <pi-section>分隔符中文</pi-section>
         <pi-count-down value="314159" separator="zh" />
         <pi-section>自定义样式</pi-section>
