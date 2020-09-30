@@ -104,6 +104,10 @@ export default {
         {
           name: 'count-down',
           zhName: '倒计时'
+        },
+        {
+          name: 'date-picker',
+          zhName: '日期选择器'
         }
       ]
     }

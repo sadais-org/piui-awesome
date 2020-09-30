@@ -173,6 +173,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "倒计时"
           }
+        },
+        {
+          "path": "date-picker/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "日期选择器"
+          }
         }
       ]
     }
