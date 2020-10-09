@@ -180,6 +180,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "日期选择器"
           }
+        },
+        {
+          "path": "swiper/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "轮播图"
+          }
         }
       ]
     }

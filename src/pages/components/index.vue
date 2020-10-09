@@ -108,6 +108,10 @@ export default {
         {
           name: 'date-picker',
           zhName: '日期选择器'
+        },
+        {
+          name: 'swiper',
+          zhName: '轮播图'
         }
       ]
     }
