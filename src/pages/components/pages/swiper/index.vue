@@ -13,6 +13,7 @@
           img-mode="aspectFill"
           indicator-type="dot"
           indicator-position="bc"
+          indicator-active-color="red"
           :imgs="demo2.imgs"
         />
         <pi-section title="指示器为矩形，位置在顶部" />
