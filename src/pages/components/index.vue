@@ -112,6 +112,10 @@ export default {
         {
           name: 'swiper',
           zhName: '轮播图'
+        },
+        {
+          name: 'regions-select',
+          zhName: '地区选择'
         }
       ]
     }

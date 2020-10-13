@@ -187,6 +187,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "轮播图"
           }
+        },
+        {
+          "path": "regions-select/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "地区选择"
+          }
         }
       ]
     }
