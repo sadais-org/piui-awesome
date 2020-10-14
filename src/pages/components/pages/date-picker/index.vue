@@ -147,7 +147,8 @@ export default {
         defaultValue: this.form[formKey].value,
         toolbarPosition: this.form[formKey].toolbarPosition || 'bottom',
         showTitle: this.form[formKey].showTitle,
-        field: this.form[formKey].field
+        field: this.form[formKey].field,
+        title: '日期选择'
       }
     },
     handleSelectConfirm(value) {

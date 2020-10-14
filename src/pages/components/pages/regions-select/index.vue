@@ -42,7 +42,6 @@
       show-title
       height="60vh"
       toolbar-position="bottom"
-      :title="selectOptions.title"
       border-radius="24rpx 24rpx 0 0"
       append-to-body
       @confirm="handleSelectConfirm"
