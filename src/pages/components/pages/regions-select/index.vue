@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import regions from '@/utils/regions'
+import regions from '@/assets/json/regions.json'
 
 export default {
   name: 'Select',
