@@ -168,6 +168,13 @@
           }
         },
         {
+          "path": "gap/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "间隔槽"
+          }
+        },
+        {
           "path": "count-down/index",
           "style": {
             "disableScroll": true,
@@ -193,6 +200,13 @@
           "style": {
             "disableScroll": true,
             "navigationBarTitleText": "地区选择"
+          }
+        },
+        {
+          "path": "picker/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "选择器"
           }
         }
       ]

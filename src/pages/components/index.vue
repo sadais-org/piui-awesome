@@ -116,6 +116,10 @@ export default {
         {
           name: 'regions-select',
           zhName: '地区选择'
+        },
+        {
+          name: 'picker',
+          zhName: '选择器'
         }
       ]
     }
