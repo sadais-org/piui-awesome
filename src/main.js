@@ -17,11 +17,12 @@ console.log('已安装$utils，使用方式：this.$utils', utils)
 Vue.config.productionTip = false
 
 // 用重写uni.navigateBack的方法对返回事件进行代理
-const backFnc = uni.navigateBack
+const navigateBack = uni.navigateBack
 uni.navigateBack = function() {
-  backFnc.apply(this)
+  navigateBack.apply(this)
   window.parent.postMessage({ action: 'back' }, '*')
 }
+
 App.mpType = 'app'
 
 const app = new Vue({
