@@ -93,7 +93,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-input {
+::v-deep input {
+  width: 100%;
   text-align: right;
 }
 </style>

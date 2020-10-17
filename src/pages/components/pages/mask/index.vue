@@ -3,7 +3,7 @@
     <pi-navbar title="mask" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
-        <button type="primary" @tap="showMask = true">显示</button>
+        <pi-button type="primary" @tap="showMask = true">显示</pi-button>
       </view>
     </scroll-view>
     <pi-mask

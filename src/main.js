@@ -16,6 +16,8 @@ console.log('已安装$utils，使用方式：this.$utils', utils)
 
 Vue.config.productionTip = false
 
+// #ifdef H5
+
 // 用重写uni.navigateBack的方法对返回事件进行代理
 const navigateBack = uni.navigateBack
 uni.navigateBack = function() {
@@ -26,6 +28,8 @@ uni.navigateBack = function() {
    */
   window.parent.postMessage({ action: 'back' }, '*')
 }
+
+// #endif
 
 App.mpType = 'app'
 

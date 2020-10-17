@@ -5,7 +5,7 @@
       <view class="pi-content">
         <view class="section">
           <view class="title">默认按钮</view>
-          <pi-button size="large">大按钮 large</pi-button>
+          <pi-button size="large" @tap="handleButtonClick">大按钮 large</pi-button>
           <pi-button size="default">普通按钮 default</pi-button>
           <pi-button size="medium">中按钮 medium</pi-button>
           <pi-button size="small">小按钮 small</pi-button>
@@ -271,7 +271,12 @@
 
 <script>
 export default {
-  name: 'Button'
+  name: 'Button',
+  methods: {
+    handleButtonClick() {
+      console.log('按钮点击了')
+    }
+  }
 }
 </script>
 
