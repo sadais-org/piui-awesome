@@ -1,14 +1,14 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="list" />
+    <pi-navbar title="列表" />
     <scroll-view class="pi-scroll" scroll-y>
       <pi-list title="列表面板">
-        <pi-list-item title="标题标题" />
-        <pi-list-item title="标题标题" desc="我很帅" />
-        <pi-list-item title="舔狗" desc="我很可爱" extra-text="舔狗子可爱" />
+        <pi-list-item title="标题1" />
+        <pi-list-item title="标题2" desc="描述文本1" />
+        <pi-list-item title="标题3" desc="描述文本2" extra-text="额外文本" />
       </pi-list>
 
-      <pi-list title="语言切换">
+      <pi-list title="右侧插入组件或图标">
         <pi-list-item title="中文">
           <pi-checkbox slot="right" active-mode="fill" shape="round" :value="true" />
         </pi-list-item>
@@ -29,7 +29,7 @@
           <pi-button slot="right" type="primary" size="tiny">更新</pi-button>
         </pi-list-item>
       </pi-list>
-      <pi-list title="我的菜单">
+      <pi-list title="示例--我的菜单">
         <pi-list-item title="订单记录">
           <pi-icon slot="left" name="order1" size="50" custom-class="pi-primary" />
         </pi-list-item>
