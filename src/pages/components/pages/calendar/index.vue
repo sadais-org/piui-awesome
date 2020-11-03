@@ -4,8 +4,12 @@
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
         <pi-list title="基础用法">
-          <pi-list-item title="选则单个日期" type="primary" @tap="handleShowCanlendar('single')" />
-          <pi-list-item title="选择范围日期" type="primary" @tap="handleShowCanlendar('range')" />
+          <pi-list-item
+            title="选则单个日期"
+            type="primary"
+            @click="handleShowCanlendar('single')"
+          />
+          <pi-list-item title="选择范围日期" type="primary" @click="handleShowCanlendar('range')" />
         </pi-list>
         <pi-list title="自定义日历">
           <pi-list-item
@@ -18,7 +22,7 @@
             type="primary"
             @tap="handleShowCanlendar('text')"
           />
-          <pi-list-item title="自定义样式" type="primary" @tap="handleShowCanlendar('color')" />
+          <pi-list-item title="自定义样式" type="primary" @click="handleShowCanlendar('color')" />
         </pi-list>
       </view>
     </scroll-view>
