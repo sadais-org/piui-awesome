@@ -4,17 +4,22 @@
     <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
         <view>
-          <view>默认tabs（不设定sliderBarWidth）</view>
+          <pi-section>
+            默认tabs
+            <text slot="desc">不设定sliderBarWidth</text>
+          </pi-section>
           <pi-tabs v-model="demo1.currentItem" :items="demo1.tabItems" />
         </view>
         <view>
-          <view>sliderBarWidth固定</view>
+          <pi-section>
+            固定宽度
+            <text slot="desc">sliderBarWidth: 60</text>
+          </pi-section>
           <pi-tabs v-model="demo2.currentItem" :items="demo2.tabItems" slider-bar-width="60" />
         </view>
         <view>
           <view>
-            <view>显示滚动槽</view>
-            <view>activeColor蓝色</view>
+            <pi-section title="显示滚动槽"><text slot="desc">activeColor蓝色</text></pi-section>
             <pi-tabs
               v-model="demo3.currentItem"
               :items="demo3.tabItems"
@@ -26,12 +31,34 @@
         </view>
         <view>
           <view>
-            <view>标签是否自动撑开</view>
+            <pi-section>
+              标签自动撑开
+              <text slot="desc">平分宽度</text>
+            </pi-section>
             <pi-tabs
               v-model="demo4.currentItem"
               :items="demo4.tabItems"
               stretch
               active-color="green"
+            />
+          </view>
+        </view>
+        <view>
+          <view>
+            <pi-section>
+              自定义样式
+            </pi-section>
+            <pi-tabs
+              v-model="demo5.currentItem"
+              :items="demo5.tabItems"
+              stretch
+              active-color="green"
+              :show-slider-bar="false"
+              active-text-color="#ffffff"
+              :active-item-style="{
+                backgroundColor: '#ff508a',
+                borderRadius: '12rpx'
+              }"
             />
           </view>
         </view>
@@ -79,6 +106,15 @@ export default {
         ]
       },
       demo4: {
+        currentItem: { id: 'c' },
+        tabItems: [
+          { id: 'a', text: 'A', tag: '最帅' },
+          { id: 'b', text: 'B', tag: '最美' },
+          { id: 'c', text: 'C', tag: '最美' },
+          { id: 'd', text: 'D', tag: '最美' }
+        ]
+      },
+      demo5: {
         currentItem: { id: 'c' },
         tabItems: [
           { id: 'a', text: 'A', tag: '最帅' },
