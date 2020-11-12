@@ -1,5 +1,5 @@
 <script>
-import { create } from '@/piui/mixin/page-transitions'
+import { create } from 'sadais-piui/mixin/page-transitions'
 export default {
   // H5环境全局mixin引入转场动画
   // #ifdef H5
@@ -35,5 +35,5 @@ export default {
 <style lang="scss">
 /* 每个页面公共css */
 
-@import '~@/piui/scss/index.scss';
+@import '~sadais-piui/scss/index.scss';
 </style>

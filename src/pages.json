@@ -1,6 +1,6 @@
 {
   "easycom": {
-    "^pi-(.*)": "@/piui/components/pi-$1/index.vue"
+    "^pi-(.*)": "sadais-piui/components/pi-$1/index.vue"
   },
   "pages": [
     {
