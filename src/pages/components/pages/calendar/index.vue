@@ -1,30 +1,24 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="搜索框" />
+    <pi-navbar title="日历" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <view class="pi-content">
-        <pi-list title="基础用法">
-          <pi-list-item
-            title="选则单个日期"
-            type="primary"
-            @click="handleShowCanlendar('single')"
-          />
-          <pi-list-item title="选择范围日期" type="primary" @click="handleShowCanlendar('range')" />
-        </pi-list>
-        <pi-list title="自定义日历">
-          <pi-list-item
-            title="自定义可选日期范围"
-            type="primary"
-            @tap="handleShowCanlendar('dateRange')"
-          />
-          <pi-list-item
-            title="自定义起始结束文字"
-            type="primary"
-            @tap="handleShowCanlendar('text')"
-          />
-          <pi-list-item title="自定义样式" type="primary" @click="handleShowCanlendar('color')" />
-        </pi-list>
-      </view>
+      <pi-list title="基础用法">
+        <pi-list-item title="选则单个日期" type="primary" @click="handleShowCanlendar('single')" />
+        <pi-list-item title="选择范围日期" type="primary" @click="handleShowCanlendar('range')" />
+      </pi-list>
+      <pi-list title="自定义日历">
+        <pi-list-item
+          title="自定义可选日期范围"
+          type="primary"
+          @tap="handleShowCanlendar('dateRange')"
+        />
+        <pi-list-item
+          title="自定义起始结束文字"
+          type="primary"
+          @tap="handleShowCanlendar('text')"
+        />
+        <pi-list-item title="自定义样式" type="primary" @click="handleShowCanlendar('color')" />
+      </pi-list>
     </scroll-view>
     <pi-calendar
       v-model="showCalendar"

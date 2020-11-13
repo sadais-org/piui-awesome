@@ -30,6 +30,7 @@
       v-model="selectOptions.show"
       :items="selectOptions.items"
       :is-multi="selectOptions.isMulti"
+      :single-cancel="false"
       :default-value="selectOptions.defaultValue"
       show-title
       toolbar-position="bottom"
