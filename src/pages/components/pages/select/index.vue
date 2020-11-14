@@ -73,7 +73,7 @@ export default {
           isMulti: false,
           items: [
             { id: 'beijing', text: '北京' },
-            { id: 'shanghai', text: '上海' },
+            { id: 'shanghai', text: '上海', disabled: true },
             { id: 'zhuhai', text: '珠海' }
           ]
         },
@@ -89,7 +89,7 @@ export default {
           title: '选择身份',
           isMulti: true,
           items: [
-            { id: 'partyMember', text: '党员' },
+            { id: 'partyMember', text: '党员', disabled: true },
             { id: 'member', text: '团员' },
             { id: 'masses', text: '群众' }
           ]
