@@ -10,12 +10,20 @@
           :custom-style="{ background: '#cccccc' }"
           src="http://img5.imgtn.bdimg.com/it/u=2438062088,2808868405&fm=26&gp=0.jpg"
         />
+        <pi-section>自动撑高</pi-section>
+        <pi-img
+          dot
+          width="220"
+          mode="widthFix"
+          :custom-style="{ background: '#cccccc' }"
+          src="http://img5.imgtn.bdimg.com/it/u=2438062088,2808868405&fm=26&gp=0.jpg"
+        />
         <pi-section>红点</pi-section>
         <pi-img
+          dot
           width="220"
           height="120"
           :custom-style="{ background: '#cccccc' }"
-          dot
           src="http://img5.imgtn.bdimg.com/it/u=2438062088,2808868405&fm=26&gp=0.jpg"
         />
         <pi-section>99+</pi-section>
@@ -26,6 +34,10 @@
           badge="99+"
           src="http://img5.imgtn.bdimg.com/it/u=2438062088,2808868405&fm=26&gp=0.jpg"
         />
+        <pi-section>加载失败</pi-section>
+        <pi-img width="220" height="120" :custom-style="{ background: '#cccccc' }" src="error" />
+        <pi-section>不传src</pi-section>
+        <pi-img width="220" height="120" :custom-style="{ background: '#cccccc' }" />
       </view>
     </scroll-view>
   </view>
