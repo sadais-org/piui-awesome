@@ -1,14 +1,14 @@
 <template>
   <view class="pi-scroll-container">
     <pi-navbar title="图标" />
-    <scroll-view class="pi-scroll" scroll-y="">
+    <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
         <pi-section title="基础用法" />
         <pi-icon name="message-copy" custom-class="pi-fz-48" />
         <pi-icon name="message-copy" custom-class="pi-primary pi-fz-48" dot />
         <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" dot />
         <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" badge="99+" />
-
+        <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" dot dot-radius="28" />
         <pi-section title="所有图标" />
         <pi-grid square col="3">
           <pi-grid-item v-for="glyph in glyphs" :key="glyph.id">
