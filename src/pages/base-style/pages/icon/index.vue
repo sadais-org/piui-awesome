@@ -81,6 +81,13 @@ export default {
           unicode_decimal: 59108
         },
         {
+          icon_id: '9008886',
+          name: 'subtract',
+          font_class: 'subtract',
+          unicode: 'e6e4',
+          unicode_decimal: 59108
+        },
+        {
           icon_id: '7008884',
           name: 'activity',
           font_class: 'activity',

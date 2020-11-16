@@ -208,6 +208,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "选择器"
           }
+        },
+        {
+          "path": "stepper/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "步进器"
+          }
         }
       ]
     }

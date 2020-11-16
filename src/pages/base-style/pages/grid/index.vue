@@ -25,6 +25,17 @@
             </view>
           </pi-grid-item>
         </pi-grid>
+        <pi-section title="系统功能（一行三列无边框）" />
+        <pi-grid square col="3" :border="false">
+          <pi-grid-item v-for="glyph in demo2" :key="glyph.id">
+            <view class="pi-h-100P pi-flex-column-center">
+              <pi-icon :name="glyph.font_class" custom-class="pi-primary pi-fz-48" dot />
+              <view class="pi-fz-24 pi-mg-top-8 pi-light-gray pi-text-nowrap">
+                {{ glyph.name }}
+              </view>
+            </view>
+          </pi-grid-item>
+        </pi-grid>
         <pi-section title="系统功能（一行四列）" desc="宫格间隔12px（带边框）" />
         <pi-grid square col="4" gap="12">
           <pi-grid-item v-for="(glyph, index) in demo1" :key="glyph.id" :index="index">
