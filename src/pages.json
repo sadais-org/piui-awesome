@@ -215,6 +215,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "步进器"
           }
+        },
+        {
+          "path": "code-input/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "校验码输入"
+          }
         }
       ]
     }

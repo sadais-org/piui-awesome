@@ -124,6 +124,10 @@ export default {
         {
           name: 'stepper',
           zhName: '步进器'
+        },
+        {
+          name: 'code-input',
+          zhName: '校验码输入'
         }
       ]
     }
