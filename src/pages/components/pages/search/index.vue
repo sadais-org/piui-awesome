@@ -4,20 +4,24 @@
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
         <pi-section>默认搜索框</pi-section>
-        <pi-search />
+        <pi-search v-model="demo1" />
         <pi-section>方形搜索框</pi-section>
-        <pi-search shape="square" />
+        <pi-search v-model="demo2" shape="square" />
         <pi-section>设置searchLabel</pi-section>
         <pi-search
+          v-model="demo3"
           search-label="珠海"
           :search-label-style="{ color: '#ff508a', fontSize: '36rpx' }"
         />
-        <pi-section>设置clearTrigger: 'focus'</pi-section>
-        <pi-search clear-trigger="focus" />
         <pi-section>显示搜索action</pi-section>
-        <pi-search clear-trigger="focus" show-action action-text="确定" />
+        <pi-search v-model="demo5" clear-trigger="focus" show-action action-text="确定" />
         <pi-section>搜索按钮放在右边</pi-section>
-        <pi-search shape="square" search-icon-position="right" clear-trigger="focus" />
+        <pi-search
+          v-model="demo6"
+          shape="square"
+          search-icon-position="right"
+          clear-trigger="focus"
+        />
       </view>
     </scroll-view>
   </view>
@@ -25,7 +29,24 @@
 
 <script>
 export default {
-  name: 'Search'
+  name: 'Search',
+  data() {
+    return {
+      demo1: '',
+      demo2: '',
+      demo3: '',
+      demo4: '',
+      demo5: '',
+      demo6: '',
+      demo7: '',
+      demo8: '',
+      demo9: '',
+      demo10: '',
+      demo11: '',
+      demo12: '',
+      demo13: ''
+    }
+  }
 }
 </script>
 
