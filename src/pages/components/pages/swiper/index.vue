@@ -26,6 +26,14 @@
         />
         <pi-section title="指示器为矩形" />
         <pi-swiper height="400" img-mode="aspectFill" indicator-type="rect" :imgs="demo2.imgs" />
+        <pi-section title="指定imgField" />
+        <pi-swiper
+          height="400"
+          img-mode="aspectFill"
+          indicator-type="rect"
+          img-field="pic"
+          :imgs="demo3.imgs"
+        />
       </view>
     </scroll-view>
   </view>
@@ -48,6 +56,13 @@ export default {
           'https://images3.alphacoders.com/813/thumb-350-81317.jpg',
           'https://images4.alphacoders.com/441/thumb-350-44158.jpg',
           'https://images5.alphacoders.com/489/thumb-350-489030.jpg'
+        ]
+      },
+      demo3: {
+        imgs: [
+          { pic: 'https://images3.alphacoders.com/813/thumb-350-81317.jpg' },
+          { pic: 'https://images4.alphacoders.com/441/thumb-350-44158.jpg' },
+          { pic: 'https://images5.alphacoders.com/489/thumb-350-489030.jpg' }
         ]
       }
     }
