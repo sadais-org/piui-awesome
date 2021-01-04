@@ -26,6 +26,14 @@
           :custom-style="{ background: '#cccccc' }"
           src="http://img5.imgtn.bdimg.com/it/u=2438062088,2808868405&fm=26&gp=0.jpg"
         />
+        <pi-section>5</pi-section>
+        <pi-img
+          width="220"
+          height="120"
+          :custom-style="{ background: '#cccccc' }"
+          badge="5"
+          src="http://img5.imgtn.bdimg.com/it/u=2438062088,2808868405&fm=26&gp=0.jpg"
+        />
         <pi-section>99+</pi-section>
         <pi-img
           width="220"
