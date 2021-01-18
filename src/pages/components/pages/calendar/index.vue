@@ -34,12 +34,6 @@
       :range-color="rangeColor"
       :range-bg="rangeBg"
       :date-format="dateFormat"
-      :popup="{
-        closeIconColor: '#ff508a',
-        mask: {
-          duration: 700
-        }
-      }"
     />
   </view>
 </template>
@@ -61,7 +55,7 @@ export default {
       activeBg: '#ff6a00',
       rangeColor: '#ff6a00',
       rangeBg: 'rgba(254, 106, 0, 0.1)',
-      dateFormat: 'yyyy:mm:dd'
+      dateFormat: 'YYYY-MM-DD'
     }
   },
   computed: {},
@@ -81,7 +75,7 @@ export default {
           this.activeBg = '#ff6a00'
           this.rangeColor = '#ff6a00'
           this.rangeBg = 'rgba(254, 106, 0, 0.1)'
-          this.dateFormat = 'yyyy:mm:dd'
+          this.dateFormat = 'YYYY-MM-DD'
         }
       }
     }
@@ -123,7 +117,7 @@ export default {
           this.activeBg = 'green'
           this.rangeColor = 'white'
           this.rangeBg = 'rgba(0, 0, 255, 0.1)'
-          this.dateFormat = 'yyyy:mm:dd'
+          this.dateFormat = 'YYYY-MM-DD'
         }
       }
       this.showCalendar = true

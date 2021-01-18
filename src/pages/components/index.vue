@@ -58,6 +58,10 @@ export default {
           zhName: '加载中'
         },
         {
+          name: 'calendar-panel',
+          zhName: '日历面板'
+        },
+        {
           name: 'calendar',
           zhName: '日历'
         },
