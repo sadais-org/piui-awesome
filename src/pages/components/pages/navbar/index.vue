@@ -4,13 +4,12 @@
       title="自定义导航栏"
       show-home
       capsule-theme="dark"
-      back-icon-color="#ffffff"
-      home-icon-color="#ffffff"
+      back-icon-color="#333333"
+      home-icon-color="#333333"
       background="transparent"
-      :title-style="{ fontSize: '36rpx', fontWeight: 500, color: '#ffffff' }"
+      :title-style="{ fontSize: '36rpx', fontWeight: 500, color: '#333333' }"
       :custom-style="{
-        background:
-          'url(http://img5.imgtn.bdimg.com/it/u=2438062088,2808868405&fm=26&gp=0.jpg) no-repeat 100% 100%'
+        background: 'url(http://huozi.sadais.com/img/banner_bg.png) no-repeat 100% 100%'
       }"
     />
     <scroll-view class="pi-scroll" scroll-y="">

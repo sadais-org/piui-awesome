@@ -132,6 +132,10 @@ export default {
         {
           name: 'code-input',
           zhName: '校验码输入'
+        },
+        {
+          name: 'input',
+          zhName: '输入框'
         }
       ]
     }

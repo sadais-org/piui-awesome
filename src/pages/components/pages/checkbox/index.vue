@@ -151,7 +151,6 @@ export default {
 .checkbox-demo {
   ::v-deep .pi-check-wrap {
     padding: 10rpx 0;
-    margin-right: 32rpx;
   }
 }
 </style>

@@ -4,7 +4,7 @@
     <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
         <pi-grid square>
-          <pi-grid-item v-for="style in baseStyles" :key="style.name">
+          <pi-grid-item v-for="(style, index) in baseStyles" :key="style.name" :index="index">
             <view class="pi-h-100P pi-flex-column-center" @tap.stop="handleNavigate(style.name)">
               {{ style.zhName }}
             </view>
