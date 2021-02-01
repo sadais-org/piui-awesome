@@ -5,6 +5,8 @@
       <view class="pi-content">
         <pi-section>默认搜索框</pi-section>
         <pi-search v-model="demo1" />
+        <pi-section>自定义搜索icon样式</pi-section>
+        <pi-search v-model="demo1" :search-icon-style="{ fontSize: '50rpx' }" />
         <pi-section>方形搜索框</pi-section>
         <pi-search v-model="demo2" shape="square" />
         <pi-section>设置searchLabel</pi-section>
