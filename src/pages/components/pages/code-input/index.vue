@@ -3,7 +3,7 @@
     <pi-navbar title="验证码输入" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
-        <pi-section>默认验证码输入</pi-section>
+        <pi-section title="默认验证码输入">默认验证码输入</pi-section>
         <pi-code-input v-model="code" />
         <pi-section>均分宽度</pi-section>
         <pi-code-input v-model="code" :stretch="true" />

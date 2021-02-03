@@ -10,6 +10,72 @@
         <pi-form-item label="名称" :label-style="{ fontWeight: 500 }"><pi-input /></pi-form-item>
       </pi-form>
       <pi-gap />
+      <pi-form title="左侧输入表单">
+        <pi-form-item label="名称名称名称" input-align="left"><pi-input /></pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="左侧icon表单" label-width="60">
+        <pi-form-item input-align="left">
+          <pi-icon slot="label" name="commentfill" size="50" custom-class="pi-primary" />
+          <pi-input placeholder="请输入你的手机号" />
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="必填短内容文本">
+        <pi-form-item required label="名称"><pi-input /></pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="文本输入+单位">
+        <pi-form-item label="名称">
+          <pi-input />
+          <view slot="right">秒</view>
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="文本输入+单位选择">
+        <pi-form-item label="名称">
+          <pi-input />
+          <view slot="right" class="pi-align-center">
+            <view class="pi-pd-right-6">月</view>
+            <pi-icon name="unfold" size="34" custom-class="pi-primary" />
+          </view>
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="选择框">
+        <pi-form-item label="名称">
+          <pi-input />
+          <pi-icon slot="right" name="right" size="34" color="#cccccc" />
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="步进器">
+        <pi-form-item label="名称">
+          <pi-stepper v-model="stepper" shape="square" />
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="两个输入框">
+        <pi-form-item label="名称">
+          <view class="pi-justify-end pi-align-center">
+            <pi-input
+              custom-class="pi-w-100 pi-h-60 pi-text-center"
+              placeholder=""
+              value="1"
+              :custom-style="{ backgroundColor: '#F5F5F5', borderRadius: '8rpx' }"
+            />
+            <view class="pi-pd-lr-10">-</view>
+            <pi-input
+              custom-class="pi-w-100 pi-h-60 pi-text-center"
+              placeholder=""
+              value="10"
+              :custom-style="{ backgroundColor: '#F5F5F5', borderRadius: '8rpx' }"
+            />
+          </view>
+          <view slot="right">档</view>
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
       <pi-form title="结合form表单使用">
         <pi-form-item label="姓名"><pi-input /></pi-form-item>
         <pi-form-item label="性别">
@@ -40,7 +106,8 @@ export default {
   name: 'Input',
   data() {
     return {
-      checkboxGroupMax: ['male']
+      checkboxGroupMax: ['male'],
+      stepper: 1
     }
   }
 }

@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       showCalendar: false,
-      type: 'date',
+      type: 'range',
       defaultValue: ['2020-08-18', '2020-08-25'],
       minDate: '',
       maxDate: '',
@@ -64,7 +64,7 @@ export default {
       deep: true,
       handler(value) {
         if (!value) {
-          this.type = 'date'
+          this.type = 'range'
           this.defaultValue = ['2020-08-18', '2020-08-25']
           this.minDate = ''
           this.maxDate = ''
