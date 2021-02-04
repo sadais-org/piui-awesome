@@ -76,6 +76,19 @@
         </pi-form-item>
       </pi-form>
       <pi-gap />
+      <pi-form title="label单独占一行" input-align="left" wrap>
+        <pi-form-item label="备注">
+          <pi-input type="textarea" placeholder="请输入备注" />
+        </pi-form-item>
+        <pi-form-item label="备注">
+          <pi-input
+            type="textarea"
+            placeholder="请输入备注"
+            :custom-style="{ backgroundColor: '#f5f5f5', padding: '24rpx', borderRadius: '8rpx' }"
+          />
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
       <pi-form title="结合form表单使用">
         <pi-form-item label="姓名"><pi-input /></pi-form-item>
         <pi-form-item label="性别">
