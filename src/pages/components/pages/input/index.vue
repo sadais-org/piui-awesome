@@ -89,15 +89,25 @@
         </pi-form-item>
       </pi-form>
       <pi-gap />
-      <pi-form title="结合form表单使用">
-        <pi-form-item label="姓名"><pi-input /></pi-form-item>
-        <pi-form-item label="性别">
-          <pi-checkbox-group v-model="checkboxGroupMax">
-            <pi-checkbox name="male">男</pi-checkbox>
-            <pi-checkbox name="female">女</pi-checkbox>
-          </pi-checkbox-group>
+      <pi-form title="表单Form单项选择">
+        <pi-form-item label="姓名">
+          <pi-radio-group value="a" shape="text" active-mode="fill">
+            <pi-radio name="a">我是a</pi-radio>
+            <pi-radio name="b">我是b</pi-radio>
+            <pi-radio name="c">我是c</pi-radio>
+          </pi-radio-group>
         </pi-form-item>
-        <pi-form-item label="姓名姓名姓名姓名"><pi-input /></pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="表单Form单项选择(换行)" input-align="left" wrap>
+        <pi-form-item label="姓名">
+          <pi-radio-group value="a" shape="text" active-mode="fill">
+            <pi-radio name="a">我是a</pi-radio>
+            <pi-radio name="b">我是b</pi-radio>
+            <pi-radio name="c">我是c</pi-radio>
+          </pi-radio-group>
+        </pi-form-item>
+        <pi-form-item label="名称"><pi-input /></pi-form-item>
       </pi-form>
       <pi-gap />
       <pi-form title="label右对齐，input左对齐" label-align="right" input-align="left">

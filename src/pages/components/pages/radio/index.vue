@@ -40,6 +40,12 @@
             禁用
           </pi-radio>
         </pi-radio-group>
+        <pi-section>方形模式</pi-section>
+        <pi-radio-group v-model="demo1" shape="square" @change="handleRadioGroupChange">
+          <pi-radio name="a">a</pi-radio>
+          <pi-radio name="b">b</pi-radio>
+          <pi-radio name="c">c</pi-radio>
+        </pi-radio-group>
         <pi-section>圆点模式</pi-section>
         <pi-radio-group v-model="demo1" shape="dot" @change="handleRadioGroupChange">
           <pi-radio name="a">a</pi-radio>
