@@ -37,7 +37,7 @@
         >
           禁用
         </pi-checkbox>
-        <view>checkboxGroup 最多选择2个</view>
+        <pi-section>checkboxGroup 最多选择2个</pi-section>
         <pi-checkbox-group
           ref="checkboxGroup"
           v-model="checkboxGroupMax"
@@ -48,7 +48,7 @@
           <pi-checkbox name="b">复选框 b</pi-checkbox>
           <pi-checkbox name="c">复选框 c</pi-checkbox>
         </pi-checkbox-group>
-        <view>checkboxGroup 纵向排列</view>
+        <pi-section>checkboxGroup 纵向排列</pi-section>
         <pi-checkbox-group ref="checkboxGroup" v-model="checkboxGroupVertical" direction="vertical">
           <pi-checkbox :name="1">红色，代表热情</pi-checkbox>
           <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
@@ -68,7 +68,7 @@
           <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
           <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
-        <view>checkboxGroup 设置填充模式</view>
+        <pi-section>checkboxGroup 设置填充模式</pi-section>
         <pi-checkbox-group
           ref="checkboxGroup"
           v-model="demo2.checkboxGroup"
@@ -80,7 +80,7 @@
           <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
           <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
-        <view>checkboxGroup 设置颜色</view>
+        <pi-section>checkboxGroup 设置颜色</pi-section>
         <pi-checkbox-group
           ref="checkboxGroup"
           v-model="demo3.checkboxGroup"
@@ -91,7 +91,7 @@
           <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
           <pi-checkbox :name="3" disabled>绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
-        <view>checkboxGroup 设置size: 60</view>
+        <pi-section>checkboxGroup 设置size: 60</pi-section>
         <pi-checkbox-group
           ref="checkboxGroup"
           v-model="demo4.checkboxGroup"
@@ -146,11 +146,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.checkbox-demo {
-  ::v-deep .pi-check-wrap {
-    padding: 10rpx 0;
-  }
-}
-</style>

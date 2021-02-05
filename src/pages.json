@@ -147,6 +147,13 @@
           }
         },
         {
+          "path": "radio/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "单选框"
+          }
+        },
+        {
           "path": "tabs/index",
           "style": {
             "disableScroll": true,

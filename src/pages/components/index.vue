@@ -86,6 +86,10 @@ export default {
           zhName: '复选框'
         },
         {
+          name: 'radio',
+          zhName: '单选框'
+        },
+        {
           name: 'tabs',
           zhName: '标签栏'
         },
