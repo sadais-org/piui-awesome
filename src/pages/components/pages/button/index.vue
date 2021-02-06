@@ -4,7 +4,7 @@
     <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
         <view class="section">
-          <view class="title">默认按钮</view>
+          <view class="title">按钮尺寸</view>
           <pi-button size="large" @tap="handleButtonClick">大按钮 large</pi-button>
           <pi-button size="default">普通按钮 default</pi-button>
           <pi-button size="medium">中按钮 medium</pi-button>
@@ -14,31 +14,11 @@
         </view>
 
         <view class="section">
-          <view class="title">主要按钮</view>
-          <pi-button type="primary" size="large">大按钮 large</pi-button>
-          <pi-button type="primary" size="default">普通按钮 default</pi-button>
-          <pi-button type="primary" size="medium">中按钮 medium</pi-button>
-          <pi-button type="primary" size="small">小按钮 small</pi-button>
-          <pi-button type="primary" size="tiny">超小按钮 tiny</pi-button>
-          <pi-button type="primary" size="mini">迷你按钮 mini</pi-button>
-        </view>
-        <view class="section">
-          <view class="title">次要按钮</view>
-          <pi-button type="secondary" size="large">大按钮 large</pi-button>
-          <pi-button type="secondary" size="default">普通按钮 default</pi-button>
-          <pi-button type="secondary" size="medium">中按钮 medium</pi-button>
-          <pi-button type="secondary" size="small">小按钮 small</pi-button>
-          <pi-button type="secondary" size="tiny">超小按钮 tiny</pi-button>
-          <pi-button type="secondary" size="mini">迷你按钮 mini</pi-button>
-        </view>
-        <view class="section">
-          <view class="title">线框按钮</view>
-          <pi-button type="line" size="large">大按钮 large</pi-button>
-          <pi-button type="line" size="default">普通按钮 default</pi-button>
-          <pi-button type="line" size="medium">中按钮 medium</pi-button>
-          <pi-button type="line" size="small">小按钮 small</pi-button>
-          <pi-button type="line" size="tiny">超小按钮 tiny</pi-button>
-          <pi-button type="line" size="mini">迷你按钮 mini</pi-button>
+          <view class="title">按钮类型</view>
+          <pi-button type="primary">主要按钮</pi-button>
+          <pi-button type="secondary">次要按钮</pi-button>
+          <pi-button type="warn">警告按钮</pi-button>
+          <pi-button type="line">线框按钮</pi-button>
         </view>
         <view class="section">
           <view class="title">渐变按钮</view>
