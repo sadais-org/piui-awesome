@@ -48,6 +48,48 @@
           <pi-checkbox name="b">复选框 b</pi-checkbox>
           <pi-checkbox name="c">复选框 c</pi-checkbox>
         </pi-checkbox-group>
+        <pi-section>checkboxGroup 圆点模式</pi-section>
+        <pi-checkbox-group
+          v-model="checkboxGroupMax"
+          shape="dot"
+          @change="handleCheckboxGroupChange"
+        >
+          <pi-checkbox name="a">复选框 a</pi-checkbox>
+          <pi-checkbox name="b">复选框 b</pi-checkbox>
+          <pi-checkbox name="c">复选框 c</pi-checkbox>
+        </pi-checkbox-group>
+        <pi-section>checkboxGroup 圆点填充模式</pi-section>
+        <pi-checkbox-group
+          v-model="checkboxGroupMax"
+          shape="dot"
+          active-mode="fill"
+          @change="handleCheckboxGroupChange"
+        >
+          <pi-checkbox name="a">复选框 a</pi-checkbox>
+          <pi-checkbox name="b">复选框 b</pi-checkbox>
+          <pi-checkbox name="c">复选框 c</pi-checkbox>
+        </pi-checkbox-group>
+        <pi-section>checkboxGroup 文字模式</pi-section>
+        <pi-checkbox-group
+          v-model="checkboxGroupMax"
+          shape="text"
+          @change="handleCheckboxGroupChange"
+        >
+          <pi-checkbox name="a">复选框 a</pi-checkbox>
+          <pi-checkbox name="b">复选框 b</pi-checkbox>
+          <pi-checkbox name="c">复选框 c</pi-checkbox>
+        </pi-checkbox-group>
+        <pi-section>checkboxGroup 文字填充模式</pi-section>
+        <pi-checkbox-group
+          v-model="checkboxGroupMax"
+          shape="text"
+          active-mode="fill"
+          @change="handleCheckboxGroupChange"
+        >
+          <pi-checkbox name="a">复选框 a</pi-checkbox>
+          <pi-checkbox name="b">复选框 b</pi-checkbox>
+          <pi-checkbox name="c">复选框 c</pi-checkbox>
+        </pi-checkbox-group>
         <pi-section>checkboxGroup 纵向排列</pi-section>
         <pi-checkbox-group ref="checkboxGroup" v-model="checkboxGroupVertical" direction="vertical">
           <pi-checkbox :name="1">红色，代表热情</pi-checkbox>

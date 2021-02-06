@@ -100,11 +100,10 @@
       </pi-form>
       <pi-gap />
       <pi-form title="表单Form单项选择(换行)" input-align="left" wrap>
-        <pi-form-item label="姓名">
-          <pi-radio-group value="a" shape="text" active-mode="fill">
-            <pi-radio name="a">我是a</pi-radio>
-            <pi-radio name="b">我是b</pi-radio>
-            <pi-radio name="c">我是c</pi-radio>
+        <pi-form-item label="姓别">
+          <pi-radio-group value="male" shape="text" active-mode="fill">
+            <pi-radio name="male">男</pi-radio>
+            <pi-radio name="female">女</pi-radio>
           </pi-radio-group>
         </pi-form-item>
         <pi-form-item label="名称"><pi-input /></pi-form-item>
@@ -124,6 +123,51 @@
           </pi-checkbox-group>
         </pi-form-item>
         <pi-form-item label="姓名姓名姓名姓名"><pi-input /></pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="表单Form多选" input-align="right">
+        <pi-form-item label="名称">
+          <pi-checkbox-group :value="['1', '2']" shape="text" active-mode="fill">
+            <pi-checkbox name="1">选项1</pi-checkbox>
+            <pi-checkbox name="2">选项2</pi-checkbox>
+            <pi-checkbox name="3">选项3</pi-checkbox>
+          </pi-checkbox-group>
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="表单Form多选换行" input-align="left" wrap>
+        <pi-form-item label="名称">
+          <pi-checkbox-group :value="['1', '2']" shape="text" active-mode="fill">
+            <pi-checkbox name="1">选项1</pi-checkbox>
+            <pi-checkbox name="2">选项2</pi-checkbox>
+            <pi-checkbox name="3">选项3</pi-checkbox>
+          </pi-checkbox-group>
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="表单Form多选换行（纵向排列）" input-align="left" wrap>
+        <pi-form-item label="名称">
+          <pi-checkbox-group
+            :value="['1', '2']"
+            shape="text"
+            active-mode="fill"
+            direction="vertical"
+          >
+            <pi-checkbox name="1">选项1</pi-checkbox>
+            <pi-checkbox name="2">选项2</pi-checkbox>
+            <pi-checkbox name="3">选项3</pi-checkbox>
+          </pi-checkbox-group>
+        </pi-form-item>
+      </pi-form>
+      <pi-gap />
+      <pi-form title="选择人（自定义label）" input-align="left">
+        <pi-form-item label="名称">
+          <view slot="label" class=" pi-align-center">
+            <pi-img src="https://m.sadais.com/images.jpeg" width="88" shape="round" />
+            <view class="pi-mg-left-12">黄系息</view>
+          </view>
+          <pi-checkbox slot="right" :value="true" active-mode="fill" />
+        </pi-form-item>
       </pi-form>
     </scroll-view>
   </view>
