@@ -110,7 +110,12 @@
         <pi-form-item label="名称"><pi-input /></pi-form-item>
       </pi-form>
       <pi-gap />
-      <pi-form title="label右对齐，input左对齐" label-align="right" input-align="left">
+      <pi-form
+        title="label右对齐，input左对齐"
+        label-align="right"
+        input-align="left"
+        label-width="300"
+      >
         <pi-form-item label="姓名"><pi-input /></pi-form-item>
         <pi-form-item label="性别">
           <pi-checkbox-group v-model="checkboxGroupMax">
