@@ -93,32 +93,15 @@
           <pi-button type="primary" size="mini" disabled>迷你按钮 mini</pi-button>
         </view>
         <view class="section">
-          <view class="title">主要按钮占满一行</view>
-          <pi-button type="primary" size="large" width="100%" custom-class="pi-mg-bottom-8">
-            大按钮 large
+          <view class="title">按钮宽度</view>
+          <pi-button type="primary" width="100%" custom-class="pi-mg-bottom-8">
+            100%
           </pi-button>
-          <pi-button type="primary" size="default" width="100%" custom-class="pi-mg-bottom-8">
-            普通按钮 default
+          <pi-button type="primary" width="50%" custom-class="pi-mg-bottom-8">
+            50%
           </pi-button>
-          <pi-button type="primary" size="medium" width="100%" custom-class="pi-mg-bottom-8">
-            中按钮 medium
-          </pi-button>
-          <pi-button type="primary" size="small" width="100%" custom-class="pi-mg-bottom-8">
-            小按钮 small
-          </pi-button>
-          <pi-button type="primary" size="tiny" width="100%" custom-class="pi-mg-bottom-8">
-            超小按钮 tiny
-          </pi-button>
-          <pi-button type="primary" size="mini" width="100%">迷你按钮 mini</pi-button>
-        </view>
-        <view class="section">
-          <view class="title">次要按钮固定宽度</view>
-          <pi-button type="secondary" size="large" width="225">大按钮 large</pi-button>
-          <pi-button type="secondary" size="default" width="225">普通按钮 default</pi-button>
-          <pi-button type="secondary" size="medium" width="225">中按钮 medium</pi-button>
-          <pi-button type="secondary" size="small" width="225">小按钮 small</pi-button>
-          <pi-button type="secondary" size="tiny" width="225">超小按钮 tiny</pi-button>
-          <pi-button type="secondary" size="mini" width="225">迷你按钮 mini</pi-button>
+          <pi-button type="secondary" width="225">225px</pi-button>
+          <pi-button type="secondary" width="300">300px</pi-button>
         </view>
 
         <view class="section">
@@ -201,7 +184,7 @@
           </pi-button>
         </view>
         <view class="section">
-          <view class="title">次要按钮圆角</view>
+          <view class="title">圆角按钮</view>
           <pi-button type="secondary" size="large" round>大按钮 large</pi-button>
           <pi-button type="secondary" size="default" round>普通按钮 default</pi-button>
           <pi-button type="secondary" size="medium" round>中按钮 medium</pi-button>
