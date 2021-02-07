@@ -105,16 +105,6 @@
         </view>
 
         <view class="section">
-          <view class="title">次要按钮镂空</view>
-          <pi-button type="secondary" size="large" plain>大按钮 large</pi-button>
-          <pi-button type="secondary" size="default" plain>普通按钮 default</pi-button>
-          <pi-button type="secondary" size="medium" plain>中按钮 medium</pi-button>
-          <pi-button type="secondary" size="small" plain>小按钮 small</pi-button>
-          <pi-button type="secondary" size="tiny" plain>超小按钮 tiny</pi-button>
-          <pi-button type="secondary" size="mini" plain>迷你按钮 mini</pi-button>
-        </view>
-
-        <view class="section">
           <view class="title">渐变按钮loading</view>
           <pi-button
             loading
