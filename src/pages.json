@@ -238,6 +238,13 @@
           }
         },
         {
+          "path": "form/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "表单"
+          }
+        },
+        {
           "path": "input/index",
           "style": {
             "disableScroll": true,

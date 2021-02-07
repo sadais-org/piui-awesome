@@ -138,6 +138,10 @@ export default {
           zhName: '校验码输入'
         },
         {
+          name: 'form',
+          zhName: '表单'
+        },
+        {
           name: 'input',
           zhName: '输入框'
         }
