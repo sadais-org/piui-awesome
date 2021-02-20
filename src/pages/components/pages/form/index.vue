@@ -2,8 +2,8 @@
   <view class="pi-scroll-container">
     <pi-navbar title="表单form" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <pi-form title="文字表单">
-        <pi-form-item label="名称"><pi-input /></pi-form-item>
+      <pi-form ref="form" :model="form" title="文字表单">
+        <pi-form-item prop="name" label="姓名"><pi-input v-model="form.name" /></pi-form-item>
         <pi-form-item label="名称">
           <pi-input />
           <view slot="right">秒</view>
@@ -50,8 +50,8 @@
             <pi-radio name="c">我是c</pi-radio>
           </pi-radio-group>
         </pi-form-item>
-        <pi-form-item label="备注">
-          <pi-input type="textarea" placeholder="请输入备注" />
+        <pi-form-item prop="intro" label="简介">
+          <pi-input v-model="form.intro" type="textarea" placeholder="请输入简介" />
         </pi-form-item>
         <pi-form-item label="姓别">
           <pi-radio-group value="male" shape="text" active-mode="fill">
@@ -85,9 +85,33 @@ export default {
   name: 'Input',
   data() {
     return {
+      form: {
+        name: '',
+        intro: ''
+      },
       checkboxGroupMax: ['male'],
       stepper: 1
     }
+  },
+  onReady() {
+    const rules = {
+      name: [
+        {
+          required: true,
+          message: '请输入姓名',
+          // 可以单个或者同时写两个触发验证方式
+          trigger: ['change', 'blur']
+        }
+      ],
+      intro: [
+        {
+          min: 5,
+          message: '简介不能少于5个字',
+          trigger: 'change'
+        }
+      ]
+    }
+    this.$refs.form.setRules(rules)
   }
 }
 </script>
