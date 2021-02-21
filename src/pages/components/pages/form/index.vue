@@ -2,8 +2,17 @@
   <view class="pi-scroll-container">
     <pi-navbar title="表单form" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <pi-form ref="form" :model="form" title="文字表单">
+      <pi-form ref="form" :model="form" title="表单校验" border error-type="toast">
         <pi-form-item prop="name" label="姓名"><pi-input v-model="form.name" /></pi-form-item>
+        <pi-form-item prop="intro" label="简介">
+          <pi-input v-model="form.intro" type="textarea" placeholder="请输入简介" />
+        </pi-form-item>
+        <pi-form-item>
+          <pi-button type="primary" @click="handleSubmitForm">提交</pi-button>
+          <pi-button type="secondary" @click="handleResetForm">重置</pi-button>
+        </pi-form-item>
+      </pi-form>
+      <pi-form :model="form" title="表单演示" border>
         <pi-form-item label="名称">
           <pi-input />
           <view slot="right">秒</view>
@@ -50,9 +59,7 @@
             <pi-radio name="c">我是c</pi-radio>
           </pi-radio-group>
         </pi-form-item>
-        <pi-form-item prop="intro" label="简介">
-          <pi-input v-model="form.intro" type="textarea" placeholder="请输入简介" />
-        </pi-form-item>
+
         <pi-form-item label="姓别">
           <pi-radio-group value="male" shape="text" active-mode="fill">
             <pi-radio name="male">男</pi-radio>
@@ -86,8 +93,8 @@ export default {
   data() {
     return {
       form: {
-        name: '',
-        intro: ''
+        name: '张三',
+        intro: '三个字'
       },
       checkboxGroupMax: ['male'],
       stepper: 1
@@ -105,6 +112,12 @@ export default {
       ],
       intro: [
         {
+          required: true,
+          message: '请输入简介',
+          // 可以单个或者同时写两个触发验证方式
+          trigger: ['change', 'blur']
+        },
+        {
           min: 5,
           message: '简介不能少于5个字',
           trigger: 'change'
@@ -112,6 +125,14 @@ export default {
       ]
     }
     this.$refs.form.setRules(rules)
+  },
+  methods: {
+    handleSubmitForm() {
+      this.$refs.form.validation()
+    },
+    handleResetForm() {
+      this.$refs.form.resetValidation()
+    }
   }
 }
 </script>
