@@ -1,5 +1,5 @@
 build/*
 !build/index.js
 src/basic/*
-src/piui/src/plugins/*
+src/piui/plugins/*
 
