@@ -250,6 +250,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "输入框"
           }
+        },
+        {
+          "path": "skeleton/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "骨架屏"
+          }
         }
       ]
     }

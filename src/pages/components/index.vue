@@ -144,6 +144,10 @@ export default {
         {
           name: 'input',
           zhName: '输入框'
+        },
+        {
+          name: 'skeleton',
+          zhName: '骨架屏'
         }
       ]
     }
