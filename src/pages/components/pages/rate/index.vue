@@ -1,0 +1,32 @@
+<template>
+  <view class="pi-scroll-container">
+    <pi-navbar title="loading" />
+    <scroll-view class="pi-scroll" scroll-y="">
+      <view class="pi-content">
+        <pi-section>普通评分</pi-section>
+        <pi-rate />
+        <pi-section>默认值：3</pi-section>
+        <pi-rate v-model="syncRate" />
+        <pi-section>大尺寸</pi-section>
+        <pi-rate v-model="syncRate" size="60" />
+        <pi-section>自定义颜色</pi-section>
+        <pi-rate v-model="syncRate" selected-color="#ff508a" />
+        <pi-section>镂空</pi-section>
+        <pi-rate v-model="syncRate" selected-icon="biaoxing" selected-color="#ff508a" />
+        <pi-section>自定义图标</pi-section>
+        <pi-rate v-model="syncRate" unselected-icon="praise" selected-icon="praise-fill" />
+      </view>
+    </scroll-view>
+  </view>
+</template>
+
+<script>
+export default {
+  name: 'Rate',
+  data() {
+    return {
+      syncRate: 3
+    }
+  }
+}
+</script>

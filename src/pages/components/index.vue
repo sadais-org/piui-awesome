@@ -148,6 +148,10 @@ export default {
         {
           name: 'skeleton',
           zhName: '骨架屏'
+        },
+        {
+          name: 'rate',
+          zhName: '评分'
         }
       ]
     }

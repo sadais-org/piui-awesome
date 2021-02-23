@@ -11,7 +11,7 @@
         <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" dot dot-radius="28" />
         <pi-section title="所有图标" />
         <pi-grid square col="3">
-          <pi-grid-item v-for="glyph in glyphs" :key="glyph.id">
+          <pi-grid-item v-for="(glyph, index) in glyphs" :key="glyph.id" :index="index">
             <view class="pi-h-100P pi-flex-column-center">
               <pi-icon :name="glyph.font_class" custom-class="pi-primary pi-fz-48" dot />
               <view class="pi-fz-24 pi-mg-top-8 pi-light-gray pi-text-nowrap">

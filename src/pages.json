@@ -257,6 +257,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "骨架屏"
           }
+        },
+        {
+          "path": "rate/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "评分"
+          }
         }
       ]
     }
