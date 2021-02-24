@@ -152,6 +152,10 @@ export default {
         {
           name: 'rate',
           zhName: '评分'
+        },
+        {
+          name: 'waterfall',
+          zhName: '瀑布流'
         }
       ]
     }

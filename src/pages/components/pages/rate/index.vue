@@ -1,11 +1,11 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="loading" />
+    <pi-navbar title="Rate评分" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
         <pi-section>普通评分</pi-section>
         <pi-rate />
-        <pi-section>默认值：3</pi-section>
+        <pi-section>双向绑定值：{{ syncRate }}</pi-section>
         <pi-rate v-model="syncRate" />
         <pi-section>大尺寸</pi-section>
         <pi-rate v-model="syncRate" size="60" />

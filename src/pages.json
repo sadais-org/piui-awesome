@@ -264,6 +264,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "评分"
           }
+        },
+        {
+          "path": "waterfall/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "瀑布流"
+          }
         }
       ]
     }
