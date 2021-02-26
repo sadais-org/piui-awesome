@@ -32,6 +32,20 @@ export default {
       // iconfont.json文件glyphs定义
       glyphs: [
         {
+          icon_id: '19726047',
+          name: 'BackSpace-01',
+          font_class: 'backspace',
+          unicode: 'e71d',
+          unicode_decimal: 59165
+        },
+        {
+          icon_id: '16992358',
+          name: 'blod-check',
+          font_class: 'blod-check',
+          unicode: 'e600',
+          unicode_decimal: 58880
+        },
+        {
           icon_id: '4183170',
           name: 'next',
           font_class: 'next',

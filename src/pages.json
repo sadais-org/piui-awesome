@@ -271,6 +271,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "瀑布流"
           }
+        },
+        {
+          "path": "number-keyboard/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "数字键盘"
+          }
         }
       ]
     }

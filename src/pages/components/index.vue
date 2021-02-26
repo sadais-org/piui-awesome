@@ -156,6 +156,10 @@ export default {
         {
           name: 'waterfall',
           zhName: '瀑布流'
+        },
+        {
+          name: 'number-keyboard',
+          zhName: '数字键盘'
         }
       ]
     }
