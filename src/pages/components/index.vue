@@ -120,6 +120,10 @@ export default {
         {
           name: 'picker',
           zhName: '选择器'
+        },
+        {
+          name: 'radio',
+          zhName: '单选按钮'
         }
       ]
     }

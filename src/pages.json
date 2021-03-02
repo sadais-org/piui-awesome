@@ -208,6 +208,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "选择器"
           }
+        },
+        {
+          "path": "radio/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "单选按钮"
+          }
         }
       ]
     }
