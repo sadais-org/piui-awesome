@@ -1,3 +1,6 @@
 [submodule "src/piui"]
 	path = src/piui
 	url = https://github.com/sadais-org/piui.git
+[submodule "plugins/misson-uniapp-adapter"]
+	path = plugins/misson-uniapp-adapter
+	url = http://zhangzhenfei@git.sadais.com:8080/r/huafa-plus/misson-uniapp-adapter.git

@@ -1,9 +1,9 @@
 <template>
   <view class="pi-container">
-    <image class="logo" src="/static/logo.png" />
-    <view>
-      <text class="title">{{ title }}</text>
-    </view>
+    <pi-button type="primary" @click="handleGetDeviceInfo">获取设备信息</pi-button>
+    <pi-button type="primary" @click="handleChooseImage">
+      选择图片
+    </pi-button>
   </view>
 </template>
 
@@ -15,7 +15,20 @@ export default {
     }
   },
   onLoad() {},
-  methods: {}
+  methods: {
+    async handleGetDeviceInfo() {
+      const systemInfo = await this.$pi.native.getSystemInfo()
+      console.log('获取系统信息', systemInfo)
+    },
+    handleChooseImage() {
+      this.$uni.chooseImage({
+        count: 2,
+        success: function(res) {
+          console.log(res)
+        }
+      })
+    }
+  }
 }
 </script>
 

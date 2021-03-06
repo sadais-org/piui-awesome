@@ -1,7 +1,24 @@
 // vue.config.js
+const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin') // 拷贝插件，把copy-dist里面目录下的所有内容拷贝至dist中
+
 module.exports = {
-  productionSourceMap: false,
+  productionSourceMap: true,
+  transpileDependencies: ['sadais-piui', 'sadais-core', 'luch-request'],
   configureWebpack: {
-    devtool: 'source-map'
+    plugins: [
+      new CopyWebpackPlugin([
+        {
+          from: path.join(__dirname, 'src/build'),
+          to: path.join(
+            __dirname,
+            'dist',
+            process.env.NODE_ENV === 'production' ? 'build' : 'dev',
+            process.env.UNI_PLATFORM,
+            ''
+          )
+        }
+      ])
+    ]
   }
 }

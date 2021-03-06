@@ -2,4 +2,5 @@ build/*
 !build/index.js
 src/basic/*
 src/piui/plugins/*
+src/static/*
 
