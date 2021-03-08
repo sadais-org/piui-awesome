@@ -124,6 +124,10 @@ export default {
         {
           name: 'radio',
           zhName: '单选按钮'
+        },
+        {
+          name: 'stepper',
+          zhName: '步长'
         }
       ]
     }

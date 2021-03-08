@@ -196,6 +196,13 @@
           }
         },
         {
+          "path": "stepper/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "步长"
+          }
+        },
+        {
           "path": "regions-select/index",
           "style": {
             "disableScroll": true,
