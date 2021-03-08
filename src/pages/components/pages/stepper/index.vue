@@ -15,7 +15,7 @@
         <pi-stepper v-model="val" :min="2" :max="12" />
         <pi-section title="设置主题" desc="theme = fill(填充) | line(镂空)" />
         <pi-stepper v-model="val1" :min="2" :max="12" theme="fill" />
-        <pi-section title="修改步长" desc="step=0.5" />
+        <pi-section title="修改步长、保留1位小数" desc="step=0.5; decimal=1" />
         <pi-stepper
           v-model="val2"
           :min="2"
@@ -23,7 +23,7 @@
           theme="fill"
           :step="0.5"
           :disable-input="false"
-          :decimal="2"
+          :decimal="1"
         />
       </view>
     </scroll-view>
