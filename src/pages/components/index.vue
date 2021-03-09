@@ -128,6 +128,10 @@ export default {
         {
           name: 'stepper',
           zhName: '步长'
+        },
+        {
+          name: 'code-input',
+          zhName: '数字输入'
         }
       ]
     }
