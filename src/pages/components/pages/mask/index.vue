@@ -6,10 +6,11 @@
         <pi-button type="primary" @tap="showMask = true">显示</pi-button>
       </view>
     </scroll-view>
+    <!-- duration格式：'0.56s' 、'560ms' 、'560'、数字560 -->
     <pi-mask
       :value="showMask"
       append-to-body
-      duration="900"
+      duration="0.56s"
       background="rgba(0, 0, 0, .8)"
       @closed="showMask = false"
     >
