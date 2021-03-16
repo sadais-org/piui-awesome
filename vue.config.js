@@ -1,6 +1,6 @@
 // vue.config.js
 const path = require('path')
-const CopyWebpackPlugin = require('copy-webpack-plugin') // 拷贝插件，把copy-dist里面目录下的所有内容拷贝至dist中
+const CopyWebpackPlugin = require('copy-webpack-plugin') // 拷贝插件，把build里面目录下的所有内容拷贝至dist中
 
 module.exports = {
   productionSourceMap: true,
