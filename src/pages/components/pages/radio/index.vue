@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <view class="pi-scroll-container radio-demo">
     <pi-navbar title="radio" />
     <scroll-view class="pi-scroll" scroll-y="">
@@ -114,42 +113,6 @@
           <pi-radio :name="2">蓝色，代表冷静</pi-radio>
           <pi-radio :name="3" disabled>绿色，代表生活</pi-radio>
         </pi-radio-group>
-=======
-  <view class="pi-scroll-container">
-    <pi-navbar title="radio" />
-    <scroll-view class="pi-scroll" scroll-y="">
-      <view class="pi-content pi-flex-column">
-        <view class="pi-flex-column">
-          <pi-section title="1." desc="结合pi-radio-group使用" />
-          <view class="code">
-            &lt;pi-radio-group
-            <br />
-            v-model="demo1"
-            <br />
-            active-mode="fill"
-            <br />
-            active-color="#ff0000"
-            <br />
-            direction="vertical" &gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;pi-radio name="boy"&gt;男&lt;/pi-radio&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;pi-radio name="boy"&gt;男&lt;/pi-radio&gt;
-            <br />
-            &lt;/pi-radio-group&gt;
-          </view>
-
-          <pi-radio-group
-            v-model="demo1"
-            active-mode="fill"
-            active-color="#ff0000"
-            direction="vertical"
-          >
-            <pi-radio name="boy">男</pi-radio>
-            <pi-radio name="girl">女</pi-radio>
-          </pi-radio-group>
-        </view>
->>>>>>> merge-remote
       </view>
     </scroll-view>
   </view>
@@ -160,7 +123,6 @@ export default {
   name: 'Radio',
   data() {
     return {
-<<<<<<< HEAD
       showcase: 'fillRadio',
       demo1: 'a',
       demo11: 'a',
@@ -176,29 +138,15 @@ export default {
   methods: {
     handleRadioGroupChange(val) {
       console.log(val)
-=======
-      demo1: 'girl'
->>>>>>> merge-remote
     }
   }
 }
 </script>
-<<<<<<< HEAD
 
 <style lang="scss" scoped>
 .radio-demo {
   ::v-deep .pi-check-wrap {
     padding: 10rpx 0;
   }
-=======
-<style lang="scss" scoped>
-.code {
-  padding: 16px;
-  margin: 8px 0;
-  font-size: 14px;
-  color: #888888;
-  background: #f8f8f8;
-  border-radius: 8px;
->>>>>>> merge-remote
 }
 </style>

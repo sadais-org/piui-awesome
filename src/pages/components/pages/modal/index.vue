@@ -11,9 +11,6 @@
         </pi-button>
       </view>
     </scroll-view>
-<<<<<<< HEAD
-    <pi-modal v-model="showModal" border-radius="20" title="温馨提示" />
-=======
     <pi-modal
       v-model="showModal"
       title="温馨提示"
@@ -29,7 +26,6 @@
       confirm-bg-color="#ff0000"
       @confirm="handleDelete"
     />
->>>>>>> merge-remote
   </view>
 </template>
 
