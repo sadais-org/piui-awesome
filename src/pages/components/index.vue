@@ -130,6 +130,7 @@ export default {
           zhName: '选择器'
         },
         {
+<<<<<<< HEAD
           name: 'stepper',
           zhName: '步进器'
         },
@@ -160,6 +161,18 @@ export default {
         {
           name: 'number-keyboard',
           zhName: '数字键盘'
+=======
+          name: 'radio',
+          zhName: '单选按钮'
+        },
+        {
+          name: 'stepper',
+          zhName: '步长'
+        },
+        {
+          name: 'code-input',
+          zhName: '数字输入'
+>>>>>>> merge-remote
         }
       ]
     }

@@ -210,6 +210,13 @@
           }
         },
         {
+          "path": "stepper/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "步长"
+          }
+        },
+        {
           "path": "regions-select/index",
           "style": {
             "disableScroll": true,
@@ -224,16 +231,24 @@
           }
         },
         {
+<<<<<<< HEAD
           "path": "stepper/index",
           "style": {
             "disableScroll": true,
             "navigationBarTitleText": "步进器"
+=======
+          "path": "radio/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "单选按钮"
+>>>>>>> merge-remote
           }
         },
         {
           "path": "code-input/index",
           "style": {
             "disableScroll": true,
+<<<<<<< HEAD
             "navigationBarTitleText": "校验码输入"
           }
         },
@@ -277,6 +292,9 @@
           "style": {
             "disableScroll": true,
             "navigationBarTitleText": "数字键盘"
+=======
+            "navigationBarTitleText": "数字输入"
+>>>>>>> merge-remote
           }
         }
       ]
