@@ -210,13 +210,6 @@
           }
         },
         {
-          "path": "stepper/index",
-          "style": {
-            "disableScroll": true,
-            "navigationBarTitleText": "步长"
-          }
-        },
-        {
           "path": "regions-select/index",
           "style": {
             "disableScroll": true,
@@ -235,13 +228,6 @@
           "style": {
             "disableScroll": true,
             "navigationBarTitleText": "步进器"
-          }
-        },
-        {
-          "path": "radio/index",
-          "style": {
-            "disableScroll": true,
-            "navigationBarTitleText": "单选按钮"
           }
         },
         {

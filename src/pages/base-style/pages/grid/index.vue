@@ -4,7 +4,7 @@
     <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
         <pi-section title="系统功能（一行四列）" />
-        <pi-grid square col="4">
+        <pi-grid square col="4" :gap="13">
           <pi-grid-item v-for="glyph in demo1" :key="glyph.id">
             <view class="pi-h-100P pi-flex-column-center">
               <pi-icon :name="glyph.font_class" custom-class="pi-primary pi-fz-48" dot />
