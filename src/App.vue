@@ -1,5 +1,8 @@
 <script>
+// #ifdef H5
 import { create } from '@/piui/mixin/page-transitions'
+// #endif
+
 export default {
   // H5环境全局mixin引入转场动画
   // #ifdef H5

@@ -19,7 +19,10 @@
           <pi-loading show />
           <text class="pi-mg-left-10">放个loading，改变右侧icon</text>
         </pi-section>
-        <pi-section title="新闻" extra-text="更多" show-right-icon />
+        <pi-section title="新闻资讯" extra-text="更多" show-right-icon />
+        <pi-section title="右插槽">
+          <view slot="right">筛选</view>
+        </pi-section>
       </view>
     </scroll-view>
   </view>
