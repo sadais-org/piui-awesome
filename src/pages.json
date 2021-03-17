@@ -278,6 +278,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "数字键盘"
           }
+        },
+        {
+          "path": "bottom-bar/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "底部按钮栏"
+          }
         }
       ]
     }

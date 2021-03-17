@@ -160,6 +160,10 @@ export default {
         {
           name: 'number-keyboard',
           zhName: '数字键盘'
+        },
+        {
+          name: 'bottom-bar',
+          zhName: '底部按钮栏'
         }
       ]
     }
