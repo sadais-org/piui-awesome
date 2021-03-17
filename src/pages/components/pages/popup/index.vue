@@ -27,7 +27,7 @@
     <pi-popup
       v-model="showPopup"
       :position="popupPosition"
-      :close-position="popupClosePosition"
+      :close-icon-position="popupClosePosition"
       :border-radius="borderRadius"
     >
       <view :style="[positionStyle]">
