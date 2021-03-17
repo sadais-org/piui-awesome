@@ -285,6 +285,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "底部按钮栏"
           }
+        },
+        {
+          "path": "list/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "列表"
+          }
         }
       ]
     }

@@ -164,6 +164,10 @@ export default {
         {
           name: 'bottom-bar',
           zhName: '底部按钮栏'
+        },
+        {
+          name: 'list',
+          zhName: '列表'
         }
       ]
     }
