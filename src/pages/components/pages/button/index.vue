@@ -110,15 +110,15 @@
           <pi-button type="primary" width="100%" custom-class="pi-mg-bottom-8">
             100%
           </pi-button>
+          <pi-button type="secondary" width="300">300px</pi-button>
           <pi-button type="primary" width="50%" custom-class="pi-mg-bottom-8">
             50%
           </pi-button>
           <pi-button type="secondary" width="225">225px</pi-button>
-          <pi-button type="secondary" width="300">300px</pi-button>
         </view>
 
         <view class="section">
-          <view class="title">加载按钮loading</view>
+          <view class="title">加载按钮</view>
           <pi-button
             loading
             type="primary"
@@ -132,17 +132,10 @@
           </pi-button>
         </view>
         <view class="section">
-          <view class="title">自定义style</view>
-          <pi-button
-            color="#ffffff"
-            bg-color="#ff508a"
-            custom-class="pi-mg-top-12 pi-lh-66 pi-h-66"
-            round
-          >
-            自定义style
-          </pi-button>
-          <pi-button color="#ffffff" bg-color="#ff508a" custom-class="pi-mg-top-12" round loading>
-            自定义style loading
+          <view class="title">自定义样式</view>
+          <pi-button color="#ffffff" bg-color="#ff508a" custom-class="pi-mg-top-12" round>
+            <pi-icon name="check" />
+            <text class="pi-mg-left-12">带勾选按钮</text>
           </pi-button>
           <pi-button
             size="large"
@@ -155,10 +148,6 @@
               <view class="pi-lh-1 pi-mg-bottom-12">主按钮</view>
               <view class="pi-lh-1 pi-fz-24">副文本</view>
             </view>
-          </pi-button>
-          <pi-button color="#ffffff" bg-color="#ff508a" custom-class="pi-mg-top-12" round>
-            <pi-icon name="check" />
-            <text class="pi-mg-left-12">带勾选按钮</text>
           </pi-button>
         </view>
       </view>

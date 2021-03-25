@@ -3,40 +3,48 @@
     <pi-navbar title="checkbox" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
-        <pi-checkbox v-model="defaultCheckbox">默认复选框</pi-checkbox>
-        <pi-checkbox v-model="fillCheckbox" active-mode="fill">实底复选框</pi-checkbox>
-        <pi-checkbox v-model="defaultCustomColor" active-color="#0092fe">
-          自定义颜色线框
-        </pi-checkbox>
-        <pi-checkbox v-model="fillCustomColor" active-color="#07c160" active-mode="fill">
-          自定义颜色填充
-        </pi-checkbox>
-        <pi-checkbox
-          v-model="fillRoundCustomColor"
-          active-color="#07c160"
-          active-mode="fill"
-          shape="round"
+        <pi-section>checkbox 基础样式</pi-section>
+        <pi-checkbox-group
+          ref="checkboxGroup"
+          v-model="checkboxGroupMax"
+          direction="vertical"
+          @change="handleCheckboxGroupChange"
         >
-          自定义颜色填充圆形
-        </pi-checkbox>
-        <pi-checkbox
-          v-model="disabled"
-          active-color="#07c160"
-          active-mode="fill"
-          shape="round"
-          disabled
-        >
-          禁用
-        </pi-checkbox>
-        <pi-checkbox
-          v-model="trueDisabled"
-          active-color="#07c160"
-          active-mode="fill"
-          shape="round"
-          disabled
-        >
-          禁用
-        </pi-checkbox>
+          <pi-checkbox v-model="defaultCheckbox">默认复选框</pi-checkbox>
+          <pi-checkbox v-model="fillCheckbox" active-mode="fill">实底复选框</pi-checkbox>
+          <pi-checkbox v-model="defaultCustomColor" active-color="#0092fe">
+            自定义颜色线框
+          </pi-checkbox>
+          <pi-checkbox v-model="fillCustomColor" active-color="#07c160" active-mode="fill">
+            自定义颜色填充
+          </pi-checkbox>
+          <pi-checkbox
+            v-model="fillRoundCustomColor"
+            active-color="#07c160"
+            active-mode="fill"
+            shape="round"
+          >
+            自定义颜色填充圆形
+          </pi-checkbox>
+          <pi-checkbox
+            v-model="disabled"
+            active-color="#07c160"
+            active-mode="fill"
+            shape="round"
+            disabled
+          >
+            禁用
+          </pi-checkbox>
+          <pi-checkbox
+            v-model="trueDisabled"
+            active-color="#07c160"
+            active-mode="fill"
+            shape="round"
+            disabled
+          >
+            禁用
+          </pi-checkbox>
+        </pi-checkbox-group>
         <pi-section>checkboxGroup 最多选择2个</pi-section>
         <pi-checkbox-group
           ref="checkboxGroup"
@@ -92,9 +100,9 @@
         </pi-checkbox-group>
         <pi-section>checkboxGroup 纵向排列</pi-section>
         <pi-checkbox-group ref="checkboxGroup" v-model="checkboxGroupVertical" direction="vertical">
-          <pi-checkbox :name="1">红色，代表热情</pi-checkbox>
-          <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
-          <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
+          <pi-checkbox :name="1" active-color="red">红色，代表热情</pi-checkbox>
+          <pi-checkbox :name="2" active-color="blue">蓝色，代表冷静</pi-checkbox>
+          <pi-checkbox :name="3" active-color="green">绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
         <pi-section>
           是否禁用
@@ -106,9 +114,9 @@
           direction="vertical"
           :disabled="demo5.disabled"
         >
-          <pi-checkbox :name="1">红色，代表热情</pi-checkbox>
-          <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
-          <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
+          <pi-checkbox :name="1" active-color="red">红色，代表热情</pi-checkbox>
+          <pi-checkbox :name="2" active-color="blue">蓝色，代表冷静</pi-checkbox>
+          <pi-checkbox :name="3" active-color="green">绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
         <pi-section>checkboxGroup 设置填充模式</pi-section>
         <pi-checkbox-group
@@ -118,9 +126,9 @@
           shape="round"
           active-mode="fill"
         >
-          <pi-checkbox :name="1" disabled>红色，代表热情</pi-checkbox>
-          <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
-          <pi-checkbox :name="3">绿色，代表生活</pi-checkbox>
+          <pi-checkbox :name="1" disabled active-color="red">红色，代表热情</pi-checkbox>
+          <pi-checkbox :name="2" active-color="blue">蓝色，代表冷静</pi-checkbox>
+          <pi-checkbox :name="3" active-color="green">绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
         <pi-section>checkboxGroup 设置颜色</pi-section>
         <pi-checkbox-group
@@ -140,9 +148,9 @@
           size="60"
           icon-size="40"
         >
-          <pi-checkbox :name="1" active-mode="fill">红色，代表热情</pi-checkbox>
-          <pi-checkbox :name="2">蓝色，代表冷静</pi-checkbox>
-          <pi-checkbox :name="3" disabled>绿色，代表生活</pi-checkbox>
+          <pi-checkbox :name="1" active-mode="fill" active-color="red">红色，代表热情</pi-checkbox>
+          <pi-checkbox :name="2" active-color="blue">蓝色，代表冷静</pi-checkbox>
+          <pi-checkbox :name="3" disabled active-color="green">绿色，代表生活</pi-checkbox>
         </pi-checkbox-group>
       </view>
     </scroll-view>

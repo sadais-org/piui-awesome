@@ -5,22 +5,15 @@
       <view class="pi-content">
         <pi-section>基础示例</pi-section>
         <pi-divider>标题</pi-divider>
-        <p>
-          ...
-          <br />
-          内容
-          <br />
-          ...
-        </p>
-        <pi-divider :custom-style="{ margin: '20rpx 0' }" />
-        <p>
-          ...
-          <br />
-          内容
-          <br />
-          ...
-        </p>
-        <pi-divider :custom-style="{ margin: '20rpx 0' }" />
+        <pi-divider :custom-style="{ margin: '20rpx 0' }">
+          <p>
+            ------
+            <br />
+            内容
+            <br />
+            ------
+          </p>
+        </pi-divider>
         <pi-section>分割线颜色</pi-section>
         <pi-divider
           border-color="#ff5500"

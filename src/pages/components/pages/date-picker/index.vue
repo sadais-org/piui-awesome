@@ -2,7 +2,7 @@
   <view class="pi-scroll-container">
     <pi-navbar title="日期选择器" />
     <scroll-view class="pi-scroll" scroll-y>
-      <pi-list title="语言切换">
+      <pi-list title="精度切换">
         <pi-list-item title="生日" @tap="handleShowSelect('default')">
           <input
             :value="form.default.value"
@@ -12,19 +12,10 @@
             disabled
           />
         </pi-list-item>
-        <pi-list-item title="预定酒店" @tap="handleShowSelect('hotel')">
-          <input
-            :value="form.hotel.value"
-            type="text"
-            class="input"
-            placeholder="请选择"
-            disabled
-          />
-        </pi-list-item>
         <pi-list-item title="年" @tap="handleShowSelect('year')">
           <input :value="form.year.value" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
-        <pi-list-item title="月" @tap="handleShowSelect('month')">
+        <pi-list-item title="年-月" @tap="handleShowSelect('month')">
           <input
             :value="form.month.value"
             type="text"
@@ -33,13 +24,13 @@
             disabled
           />
         </pi-list-item>
-        <pi-list-item title="日" @tap="handleShowSelect('day')">
+        <pi-list-item title="年-月-日" @tap="handleShowSelect('day')">
           <input :value="form.day.value" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
-        <pi-list-item title="时" @tap="handleShowSelect('hour')">
+        <pi-list-item title="年-月-日 时" @tap="handleShowSelect('hour')">
           <input :value="form.hour.value" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
-        <pi-list-item title="分" @tap="handleShowSelect('minute')">
+        <pi-list-item title="年-月-日 时:分" @tap="handleShowSelect('minute')">
           <input
             :value="form.minute.value"
             type="text"
@@ -48,7 +39,7 @@
             disabled
           />
         </pi-list-item>
-        <pi-list-item title="秒" @tap="handleShowSelect('second')">
+        <pi-list-item title="年-月-日 时:分:秒" @tap="handleShowSelect('second')">
           <input
             :value="form.second.value"
             type="text"
@@ -82,51 +73,44 @@ export default {
       form: {
         default: {
           title: '选择生日',
-          value: '1990-05-23',
+          value: '2020-05-23',
           toolbarPosition: 'top',
           showTitle: false,
           field: 'day'
         },
-        hotel: {
-          title: '预定酒店',
-          value: '2020-05-23 23:59',
-          toolbarPosition: 'top',
-          showTitle: false,
-          field: 'minute'
-        },
         year: {
           title: '年',
-          value: '2020-05-23 23:59',
+          value: '2020-05-23',
           toolbarPosition: 'bottom',
           showTitle: false,
           field: 'year'
         },
         month: {
           title: '月',
-          value: '2020-05-23 23:59',
+          value: '2020-05-23',
           showTitle: true,
           field: 'month'
         },
         day: {
           title: '日',
-          value: '2020-05-23 23:59',
+          value: '2020-05-23',
           showTitle: true,
           field: 'day'
         },
         hour: {
           title: '时',
-          value: '2020-05-23 23:59',
+          value: '2020-05-23',
           showTitle: true,
           field: 'hour'
         },
         minute: {
           title: '分',
-          value: '2020-05-23 23:59',
+          value: '2020-05-23',
           field: 'minute'
         },
         second: {
           title: '秒',
-          value: '2020-05-23 23:59',
+          value: '2020-05-23',
           showTitle: true,
           field: 'second'
         }
@@ -152,7 +136,18 @@ export default {
       }
     },
     handleSelectConfirm(value) {
-      this.form[this.datePickerOptions.key].value = value
+      var strTime
+      switch (this.form[this.datePickerOptions.key].field) {
+        case 'year':
+          strTime = value.split('-')[0]
+          break
+        case 'month':
+          strTime = value.split('-')[0] + '-' + value.split('-')[1]
+          break
+        default:
+          strTime = value
+      }
+      this.form[this.datePickerOptions.key].value = strTime
       return true
     }
   }
