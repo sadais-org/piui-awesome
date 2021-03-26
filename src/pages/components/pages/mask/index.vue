@@ -14,6 +14,10 @@
         <pi-button type="primary" @tap="hideSlideBottomMask = true">向下滑出</pi-button>
         <pi-button type="primary" @tap="hideSlideLeftMask = true">向左滑出</pi-button>
         <pi-button type="primary" @tap="hideSlideRightMask = true">向右滑出</pi-button>
+        <pi-section>不可点击遮罩层关闭</pi-section>
+        <pi-button type="primary" width="200px" @tap="showClosableMask = true">
+          不可点击遮罩层关闭
+        </pi-button>
       </view>
     </scroll-view>
     <!-- 0. 默认样式（渐入） -->
@@ -160,6 +164,21 @@
         </view>
       </view>
     </pi-mask>
+    <!-- 三、不可点击遮罩层关闭的蒙层 -->
+    <pi-mask
+      v-model="showClosableMask"
+      append-to-body
+      duration="900"
+      background="rgba(0, 0, 0, .8)"
+      :mask-closable="false"
+      animation-hide="pi-ani-slide-right-hide"
+    >
+      <view class="pi-abso-center" @tap="showClosableMask = false">
+        <view class="pi-square pi-w-100 pi-bg-white">
+          <view class="pi-flex-column-center">点击此处关闭</view>
+        </view>
+      </view>
+    </pi-mask>
   </view>
 </template>
 
@@ -174,6 +193,7 @@ export default {
       showSlideBottomMask: false,
       showSlideRightMask: false,
       showSlideLeftMask: false,
+      showClosableMask: false,
       // 隐藏蒙层时执行的动画
       hideSlideTopMask: false,
       hideSlideBottomMask: false,
