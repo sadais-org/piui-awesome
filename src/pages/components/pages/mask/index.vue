@@ -166,6 +166,7 @@
     </pi-mask>
     <!-- 三、不可点击遮罩层关闭的蒙层 -->
     <pi-mask
+      ref="unClosableMask"
       v-model="showClosableMask"
       append-to-body
       duration="900"
@@ -173,7 +174,7 @@
       :mask-closable="false"
       animation-hide="pi-ani-slide-right-hide"
     >
-      <view class="pi-abso-center" @tap="showClosableMask = false">
+      <view class="pi-abso-center" @tap="handleCloseUnClosableMask">
         <view class="pi-square pi-w-100 pi-bg-white">
           <view class="pi-flex-column-center">点击此处关闭</view>
         </view>
@@ -199,6 +200,11 @@ export default {
       hideSlideBottomMask: false,
       hideSlideLeftMask: false,
       hideSlideRightMask: false
+    }
+  },
+  methods: {
+    handleCloseUnClosableMask() {
+      this.$refs.unClosableMask.closeMask()
     }
   }
 }
