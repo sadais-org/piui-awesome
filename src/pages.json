@@ -294,6 +294,17 @@
           }
         }
       ]
+    },{
+      "root": "pages/template",
+      "pages": [
+        {
+          "path": "profile",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "个人中心"
+          }
+        }
+      ]
     }
   ],
   "tabBar": {
