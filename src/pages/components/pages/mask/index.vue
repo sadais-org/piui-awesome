@@ -18,6 +18,8 @@
         <pi-button type="primary" width="200px" @tap="showClosableMask = true">
           不可点击遮罩层关闭
         </pi-button>
+        <pi-section>设置背景颜色</pi-section>
+        <pi-button type="primary" @tap="showHideTabBarMask = true">蒙层背景颜色</pi-button>
       </view>
     </scroll-view>
     <!-- 0. 默认样式（渐入） -->
@@ -31,9 +33,12 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
+        <!-- <view class="pi-square pi-w-100 pi-bg-white">
           <view class="pi-flex-column-center">点击实现渐出</view>
-        </view>
+        </view> -->
+        <pi-button custom-class="pi-flex-column-center" color="#5A8FFF" bg-color="#EEF2FF" round>
+          点击实现渐出
+        </pi-button>
       </view>
     </pi-mask>
 
@@ -48,9 +53,7 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">向下滑入动画</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>向下滑入动画</pi-button>
       </view>
     </pi-mask>
     <!-- 2. 向上滑入 -->
@@ -63,9 +66,7 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">向上滑入动画</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>向上滑入动画</pi-button>
       </view>
     </pi-mask>
     <!-- 3. 向左滑入 -->
@@ -78,9 +79,7 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">向左滑入动画</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>向左滑入动画</pi-button>
       </view>
     </pi-mask>
     <!-- 4. 向右滑入 -->
@@ -93,9 +92,7 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">向右滑入动画</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>向右滑入动画</pi-button>
       </view>
     </pi-mask>
 
@@ -111,9 +108,7 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">点击向上滑出</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>点击向上滑出</pi-button>
       </view>
     </pi-mask>
     <!-- 2. 向下滑出 -->
@@ -127,9 +122,7 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">点击向下滑出</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>点击向下滑出</pi-button>
       </view>
     </pi-mask>
     <!-- 3. 向左滑出 -->
@@ -143,9 +136,7 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">点击向左滑出</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>点击向左滑出</pi-button>
       </view>
     </pi-mask>
     <!-- 4. 向右滑出 -->
@@ -159,9 +150,7 @@
     >
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">点击向右滑出</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>点击向右滑出</pi-button>
       </view>
     </pi-mask>
     <!-- 三、不可点击遮罩层关闭的蒙层 -->
@@ -172,12 +161,15 @@
       duration="900"
       background="rgba(0, 0, 0, .8)"
       :mask-closable="false"
-      animation-hide="pi-ani-slide-right-hide"
     >
       <view class="pi-abso-center" @tap="handleCloseUnClosableMask">
-        <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">点击此处关闭</view>
-        </view>
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" width="250" round>关闭蒙层</pi-button>
+      </view>
+    </pi-mask>
+    <!-- 四、设置背景颜色 -->
+    <pi-mask v-model="showHideTabBarMask" append-to-body background="rgba(100, 100, 100, .8)">
+      <view class="pi-abso-center">
+        <pi-button color="#5A8FFF" bg-color="#EEF2FF" round>点击实现渐出</pi-button>
       </view>
     </pi-mask>
   </view>
@@ -195,6 +187,7 @@ export default {
       showSlideRightMask: false,
       showSlideLeftMask: false,
       showClosableMask: false,
+      showHideTabBarMask: false,
       // 隐藏蒙层时执行的动画
       hideSlideTopMask: false,
       hideSlideBottomMask: false,
