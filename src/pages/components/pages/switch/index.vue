@@ -1,85 +1,68 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="switch" />
+    <pi-navbar title="switch 开关" />
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content pi-flex-column">
         <view class="pi-flex-column">
-          <pi-section title="1." desc="最简模式" />
-          <view class="code">
-            &lt;pi-switch /&gt;
-          </view>
+          <pi-section title="基础用法" />
           <pi-switch />
         </view>
         <view class="pi-flex-column">
-          <pi-section title="2." desc="type属性" />
-          <view class="code">
-            &lt;pi-switch type="line" /&gt;
-            <br />
-            &lt;pi-switch type="fill" /&gt;
-          </view>
+          <pi-section title="禁用状态" />
+          <pi-switch disabled />
+        </view>
+        <view class="pi-flex-column">
+          <pi-section title="线条类型" />
           <view class="pi-align-center">
-            <text class="pi-mg-right-18">type = 'line'</text>
+            <text class="pi-mg-right-18 pi-fz-16">线框模式</text>
             <pi-switch type="line" />
           </view>
           <view class="pi-align-center pi-mg-top-16">
-            <text class="pi-mg-right-18">type = 'fill'</text>
+            <text class="pi-mg-right-18 pi-fz-16">实底模式</text>
             <pi-switch type="fill" />
           </view>
         </view>
         <view class="pi-flex-column">
-          <pi-section title="3." desc="设置颜色:" />
-          <view class="code">
-            &lt;pi-switch class="pi-mg-top-16" active-color="#ff508a" inactive-color="#888888" /&gt;
-          </view>
+          <pi-section title="自定义颜色" />
           <pi-switch class="pi-mg-top-16" active-color="#ff508a" inactive-color="#888888" />
         </view>
         <view class="pi-flex-column">
-          <pi-section title="4." desc="设置值" />
-          <view class="code">
-            &lt;pi-switch v-model="demo4Val" class="pi-mg-top-16" active-value="boy"
-            inactive-value="girle" /&gt;
-          </view>
+          <pi-section title="设置开关值" />
           <view class="pi-align-center">
             <pi-switch
               v-model="demo4Val"
               class="pi-mg-top-16 pi-mg-right-8"
-              active-value="boy"
-              inactive-value="girle"
+              active-value="open"
+              inactive-value="close"
             />
             {{ demo4Val }}
           </view>
         </view>
         <view class="pi-flex-column">
-          <pi-section title="5." desc="loading" />
-          <view class="code">
-            &lt;pi-switch :loading="isLoading" loading-type="spinner" /&gt;
-            <br />
-            &lt;pi-switch :loading="isLoading" loading-type="round" /&gt;
-          </view>
+          <pi-section title="加载状态" />
           <view class="pi-align-center">
-            <text class="pi-mg-right-18">loadingType = 'spinner'</text>
+            <text class="pi-mg-right-18 pi-fz-16">菊花</text>
             <pi-switch :loading="isLoading" loading-type="spinner" />
           </view>
           <view class="pi-align-center pi-mg-top-16">
-            <text class="pi-mg-right-18">loadingType = 'round'</text>
+            <text class="pi-mg-right-18 pi-fz-16">圆环</text>
             <pi-switch :loading="isLoading" loading-type="round" />
           </view>
         </view>
         <view class="pi-flex-column">
-          <pi-section title="6." desc="设置size" />
-          <view class="code">
-            &lt;pi-switch :size="40" /&gt;
-            <br />
-            &lt;pi-switch size="40px" /&gt;
-          </view>
+          <pi-section title="设置尺寸（默认单位rpx）" />
           <view class="pi-align-center">
-            <text class="pi-mg-right-18">数值格式：size = 40</text>
-            <pi-switch :size="40" />
+            <text class="pi-mg-right-18 pi-fz-16">数值格式</text>
+            <pi-switch :size="30" />
           </view>
           <view class="pi-align-center pi-mg-top-16">
-            <text class="pi-mg-right-18">字符串格式：size = '40px'</text>
-            <pi-switch size="40px" />
+            <text class="pi-mg-right-18 pi-fz-16">字符串格式</text>
+            <pi-switch size="50rpx" />
           </view>
+        </view>
+        <view class="pi-flex-column">
+          <pi-section title="不触发短促震动（iOS的微信小程序有效）" />
+          <pi-switch vibrate-short="false" />
         </view>
       </view>
     </scroll-view>
@@ -91,7 +74,7 @@ export default {
   name: 'Search',
   data() {
     return {
-      demo4Val: 'boy',
+      demo4Val: 'close',
       isLoading: true
     }
   }
