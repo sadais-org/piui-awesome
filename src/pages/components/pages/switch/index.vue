@@ -53,7 +53,7 @@
           <pi-section title="设置尺寸（默认单位rpx）" />
           <view class="pi-align-center">
             <text class="pi-mg-right-18 pi-fz-16">数值格式</text>
-            <pi-switch :size="30" />
+            <pi-switch :size="50" />
           </view>
           <view class="pi-align-center pi-mg-top-16">
             <text class="pi-mg-right-18 pi-fz-16">字符串格式</text>
@@ -62,7 +62,7 @@
         </view>
         <view class="pi-flex-column">
           <pi-section title="不触发短促震动（iOS的微信小程序有效）" />
-          <pi-switch vibrate-short="false" />
+          <pi-switch :vibrate-short="false" />
         </view>
       </view>
     </scroll-view>
@@ -71,7 +71,7 @@
 
 <script>
 export default {
-  name: 'Search',
+  name: 'Switch',
   data() {
     return {
       demo4Val: 'close',
