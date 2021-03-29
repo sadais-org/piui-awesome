@@ -143,41 +143,39 @@ export default {
           strTime = value.year
           break
         case 'month':
-          strTime = value.year + '年' + value.month + '月'
+          strTime = value.year + '-' + value.month
           break
         case 'day':
-          strTime = value.year + '年' + value.month + '月' + value.date + '日'
+          strTime = value.year + '-' + value.month + '-' + value.date
           break
         case 'hour':
-          strTime = value.year + '年' + value.month + '月' + value.date + '日' + value.hour + '时'
+          strTime = value.year + '-' + value.month + '-' + value.date + '-' + value.hour
           break
         case 'minute':
           strTime =
             value.year +
-            '年' +
+            '-' +
             value.month +
-            '月' +
+            '-' +
             value.date +
-            '日' +
+            '-' +
             value.hour +
-            '时' +
-            value.minute +
-            '分'
+            '-' +
+            value.minute
           break
         case 'second':
           strTime =
             value.year +
-            '年' +
+            '-' +
             value.month +
-            '月' +
+            '-' +
             value.date +
-            '日' +
+            '-' +
             value.hour +
-            '时' +
+            '-' +
             value.minute +
-            '分' +
-            value.second +
-            '秒'
+            '-' +
+            value.second
           break
       }
       this.form[this.datePickerOptions.key].value = strTime
