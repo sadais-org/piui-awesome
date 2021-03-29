@@ -48,14 +48,11 @@
       <pi-navbar :fixed="false" :show-back="true">
         <view>default slot</view>
       </pi-navbar>
-      <pi-navbar :fixed="false" :show-home="true">
-        <view>显示主页按钮</view>
+      <pi-navbar :fixed="false" title="slot left">
+        <view slot="left" class="pi-pd-left-24 pi-icon-add pi-fz-46 pi-primary" />
       </pi-navbar>
       <pi-navbar :fixed="false" title="slot right" :show-back="true">
         <view slot="right" class="pi-pd-right-24 pi-icon-add pi-fz-46 pi-primary" />
-      </pi-navbar>
-      <pi-navbar :fixed="false" title="slot left">
-        <view slot="left" class="pi-pd-left-24 pi-icon-add pi-fz-46 pi-primary" />
       </pi-navbar>
       <pi-section title="示例--搜索导航栏" custom-class="pi-mg-top-10" />
       <pi-navbar :fixed="false">
@@ -86,5 +83,3 @@ export default {
   }
 }
 </script>
-
-<style></style>
