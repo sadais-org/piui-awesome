@@ -2,9 +2,6 @@
   <view class="pi-scroll-container">
     <pi-navbar title="地区选择" />
     <scroll-view class="pi-scroll" scroll-y>
-      <view class="pi-content">
-        该组件地区数据不全，请到下载最新数据，传入regions-data（https://github.com/modood/Administrative-divisions-of-China/blob/master/dist/pca-code.json）
-      </view>
       <pi-list title="地区选择">
         <pi-list-item title="地区" @tap="handleShowSelect('regions')">
           <input
@@ -41,7 +38,7 @@
       :default-value="selectOptions.defaultValue"
       show-title
       height="60vh"
-      toolbar-position="bottom"
+      toolbar-position="top"
       border-radius="24rpx 24rpx 0 0"
       append-to-body
       @confirm="handleSelectConfirm"
