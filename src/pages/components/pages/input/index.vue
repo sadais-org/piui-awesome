@@ -7,7 +7,7 @@
       </pi-form>
       <pi-gap />
       <pi-form title="文字标题加粗表单">
-        <pi-form-item label="名称" :label-style="{ fontWeight: 500 }"><pi-input /></pi-form-item>
+        <pi-form-item label="名称" :label-style="{ fontWeight: 800 }"><pi-input /></pi-form-item>
       </pi-form>
       <pi-gap />
       <pi-form title="左侧输入表单">
@@ -122,7 +122,6 @@
             <pi-checkbox name="female">女</pi-checkbox>
           </pi-checkbox-group>
         </pi-form-item>
-        <pi-form-item label="姓名姓名姓名姓名"><pi-input /></pi-form-item>
       </pi-form>
       <pi-gap />
       <pi-form title="表单Form多选" input-align="right">
