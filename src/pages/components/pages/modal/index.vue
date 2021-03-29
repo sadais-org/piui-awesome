@@ -6,9 +6,9 @@
         <pi-section title="基础弹窗" />
         <pi-button type="primary" @tap="handleShowModal">显示</pi-button>
         <pi-section title="自定义确定按钮" />
-        <pi-button type="primary" @tap="showModal2 = true">定制确定按钮背景色</pi-button>
+        <pi-button type="primary" @tap="showModal2 = true">定制确定按钮</pi-button>
         <pi-section title="自定义取消按钮" />
-        <pi-button type="primary" @tap="showModal3 = true">定制取消按钮背景色</pi-button>
+        <pi-button type="primary" @tap="showModal3 = true">定制取消按钮</pi-button>
         <pi-section title="自定义关闭按钮" />
         <pi-button type="primary" @tap="showModal4 = true">隐藏关闭按钮</pi-button>
         <pi-button type="primary" @tap="showModal5 = true">定制关闭按钮</pi-button>
@@ -37,6 +37,7 @@
       cancel-color="#FFFFFF"
       cancel-bg-color="#5A7DFF"
       :show-confirm-button="false"
+      @cancel="handleCancel"
     />
     <pi-modal
       v-model="showModal4"
@@ -77,6 +78,9 @@ export default {
     },
     handleDelete() {
       console.log('delete')
+    },
+    handleCancel() {
+      console.log('点击了返回')
     }
   }
 }
