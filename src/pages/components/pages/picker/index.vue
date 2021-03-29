@@ -2,12 +2,12 @@
   <view class="pi-scroll-container">
     <pi-navbar title="选择器" />
     <scroll-view class="pi-scroll" scroll-y>
-      <pi-list title="单列选择器">
+      <pi-list title="单列">
         <pi-list-item title="地区（单列）" @tap="handleShowPicker('area')">
           <input :value="form.area.text" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
       </pi-list>
-      <pi-list title="多列选择器">
+      <pi-list title="多列">
         <pi-list-item title="性别（多列）" @tap="handleShowPicker('gender')">
           <input
             :value="form.gender.text"
@@ -18,7 +18,7 @@
           />
         </pi-list-item>
       </pi-list>
-      <pi-list title="多列联动选择器">
+      <pi-list title="多列联动">
         <pi-list-item title="身份（多列联动）" @tap="handleShowPicker('identity')">
           <input
             :value="form.identity.text"
