@@ -2,25 +2,37 @@
   <view class="pi-scroll-container">
     <pi-navbar title="Popup" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <view class="pi-content" style="height: 2048rpx;">
+      <view class="pi-content" style="height: 2048rpx">
+        <pi-section title="上方弹出" />
         <pi-button type="primary" custom-class="pi-mg-top-12" @tap="handleShowPopup('top')">
           上方弹出
         </pi-button>
+        <pi-section title="下方弹出" />
         <pi-button type="primary" custom-class="pi-mg-top-12" @tap="handleShowPopup('bottom')">
           下方弹出
+        </pi-button>
+        <pi-section title="左侧弹出" />
+        <pi-button type="primary" custom-class="pi-mg-top-12" @tap="handleShowPopup('left')">
+          左侧弹出
+        </pi-button>
+        <pi-section title="右侧弹出" />
+        <pi-button type="primary" custom-class="pi-mg-top-12" @tap="handleShowPopup('right')">
+          右侧弹出
+        </pi-button>
+        <pi-section title="设置关闭按钮位置" />
+        <pi-button
+          type="primary"
+          custom-class="pi-mg-top-12"
+          @tap="handleShowPopup('bottom', 'tl')"
+        >
+          关闭按钮在左上角
         </pi-button>
         <pi-button
           type="primary"
           custom-class="pi-mg-top-12"
           @tap="handleShowPopup('bottom', 'br')"
         >
-          下方弹出（关闭按钮在右下角）
-        </pi-button>
-        <pi-button type="primary" custom-class="pi-mg-top-12" @tap="handleShowPopup('left')">
-          左侧弹出
-        </pi-button>
-        <pi-button type="primary" custom-class="pi-mg-top-12" @tap="handleShowPopup('right')">
-          右侧弹出
+          关闭按钮在右下角
         </pi-button>
       </view>
     </scroll-view>
@@ -71,9 +83,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pi-content {
-  pi-button {
-    margin-top: 24rpx;
-  }
+.pi-button {
+  display: block;
+  width: 380rpx;
+  margin-top: 24rpx;
 }
 </style>
