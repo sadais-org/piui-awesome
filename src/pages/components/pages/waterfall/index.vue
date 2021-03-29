@@ -1,6 +1,6 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="Waterfall瀑布流" />
+    <pi-navbar title="waterfall 瀑布流" />
     <scroll-view class="pi-scroll pi-bg-fifth" scroll-y="">
       <pi-waterfall v-model="list">
         <template v-slot:left="{ items }">
@@ -160,6 +160,7 @@ export default {
   font-size: 20rpx;
   line-height: 1;
   color: #ffffff;
+  background-color: #ff2121;
   border-radius: 50rpx;
 }
 
@@ -177,7 +178,8 @@ export default {
 
 .waterfall-price {
   margin-top: 5px;
-  font-size: 30rpx;
+  font-size: 25rpx;
+  color: #ff2121;
 }
 
 .waterfall-shop {
