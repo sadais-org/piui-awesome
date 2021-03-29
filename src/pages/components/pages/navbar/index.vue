@@ -17,7 +17,9 @@
       <pi-section title="取消固定在顶部" custom-class="pi-mg-top-10" />
       <pi-navbar title="取消fixed" :fixed="false" />
       <pi-section title="自定义返回按钮" custom-class="pi-mg-top-10" />
-      <pi-navbar back-icon-name="barrage" :fixed="false" :show-back="true">自定义图标</pi-navbar>
+      <pi-navbar back-icon-name="barrage" :fixed="false" :show-back="true">
+        自定义返回图标
+      </pi-navbar>
       <pi-navbar back-icon-name="barrage" back-text="笔芯" :fixed="false" :show-back="true">
         自定义返回名称
       </pi-navbar>
@@ -30,7 +32,7 @@
         :fixed="false"
         :show-back="true"
       >
-        自定义背景色
+        自定义背景颜色
       </pi-navbar>
       <pi-navbar
         back-icon-name="barrage"
@@ -46,12 +48,12 @@
       />
       <pi-section title="插槽用法" custom-class="pi-mg-top-10" />
       <pi-navbar :fixed="false" :show-back="true">
-        <view>default slot</view>
+        <view>默认插槽</view>
       </pi-navbar>
-      <pi-navbar :fixed="false" title="slot left">
+      <pi-navbar :fixed="false" title="左边插槽">
         <view slot="left" class="pi-pd-left-24 pi-icon-add pi-fz-46 pi-primary" />
       </pi-navbar>
-      <pi-navbar :fixed="false" title="slot right" :show-back="true">
+      <pi-navbar :fixed="false" title="右边插槽" :show-back="true">
         <view slot="right" class="pi-pd-right-24 pi-icon-add pi-fz-46 pi-primary" />
       </pi-navbar>
       <pi-section title="示例--搜索导航栏" custom-class="pi-mg-top-10" />
