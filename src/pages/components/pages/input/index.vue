@@ -51,7 +51,7 @@
       <pi-gap />
       <pi-form title="步进器">
         <pi-form-item label="名称">
-          <pi-stepper v-model="stepper" shape="square" />
+          <pi-stepper v-model="stepper" shape="square" :min="1" :max="12" />
         </pi-form-item>
       </pi-form>
       <pi-gap />

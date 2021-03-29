@@ -11,7 +11,6 @@
           <pi-button size="small">小按钮</pi-button>
           <pi-button size="tiny">超小按钮</pi-button>
           <pi-button size="mini">迷你按钮</pi-button>
-          <pi-button />
         </view>
 
         <view class="section">
