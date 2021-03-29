@@ -136,16 +136,49 @@ export default {
       }
     },
     handleSelectConfirm(value) {
+      console.log(value)
       var strTime
       switch (this.form[this.datePickerOptions.key].field) {
         case 'year':
-          strTime = value.split('-')[0]
+          strTime = value.year
           break
         case 'month':
-          strTime = value.split('-')[0] + '-' + value.split('-')[1]
+          strTime = value.year + '年' + value.month + '月'
           break
-        default:
-          strTime = value
+        case 'day':
+          strTime = value.year + '年' + value.month + '月' + value.date + '日'
+          break
+        case 'hour':
+          strTime = value.year + '年' + value.month + '月' + value.date + '日' + value.hour + '时'
+          break
+        case 'minute':
+          strTime =
+            value.year +
+            '年' +
+            value.month +
+            '月' +
+            value.date +
+            '日' +
+            value.hour +
+            '时' +
+            value.minute +
+            '分'
+          break
+        case 'second':
+          strTime =
+            value.year +
+            '年' +
+            value.month +
+            '月' +
+            value.date +
+            '日' +
+            value.hour +
+            '时' +
+            value.minute +
+            '分' +
+            value.second +
+            '秒'
+          break
       }
       this.form[this.datePickerOptions.key].value = strTime
       return true
