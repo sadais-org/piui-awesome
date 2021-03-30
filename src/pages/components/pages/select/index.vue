@@ -1,20 +1,16 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="选择器" />
+    <pi-navbar title="select 选择器" />
     <scroll-view class="pi-scroll" scroll-y>
-      <pi-list title="语言切换">
+      <pi-list title="单选模式">
         <pi-list-item title="地区" @tap="handleShowSelect('area')">
           <input :value="form.area.text" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
-        <pi-list-item title="性别" @tap="handleShowSelect('gender')">
-          <input
-            :value="form.gender.text"
-            type="text"
-            class="input"
-            placeholder="请选择"
-            disabled
-          />
-        </pi-list-item>
+      </pi-list>
+      <pi-list-item title="性别" @tap="handleShowSelect('gender')">
+        <input :value="form.gender.text" type="text" class="input" placeholder="请选择" disabled />
+      </pi-list-item>
+      <pi-list title="多选模式">
         <pi-list-item title="身份" @tap="handleShowSelect('identity')">
           <input
             :value="form.identity.map(i => i.text).join('，')"
@@ -35,6 +31,9 @@
       show-title
       toolbar-position="bottom"
       :title="selectOptions.title"
+      height="60vh"
+      :item-height="150"
+      close-icon-position="tl"
       border-radius="24rpx 24rpx 0 0"
       append-to-body
       @confirm="handleSelectConfirm"
