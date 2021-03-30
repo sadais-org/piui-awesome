@@ -12,7 +12,7 @@
         </view>
         <view>
           <pi-section>
-            固定宽度
+            固定sliderBar宽度
             <text slot="desc">sliderBarWidth: 60</text>
           </pi-section>
           <pi-tabs v-model="demo2.currentItem" :items="demo2.tabItems" slider-bar-width="60" />
@@ -45,20 +45,19 @@
         </view>
         <view>
           <view>
-            <pi-section>
-              自定义样式
-            </pi-section>
+            <pi-section>自定义样式</pi-section>
             <pi-tabs
               v-model="demo5.currentItem"
               :items="demo5.tabItems"
+              :item-style="{ color: '#333333', fontWeight: 600 }"
               stretch
-              active-color="green"
               :show-slider-bar="false"
               active-text-color="#ffffff"
               :active-item-style="{
                 backgroundColor: '#ff508a',
                 borderRadius: '12rpx'
               }"
+              @change="changeItem"
             />
           </view>
         </view>
@@ -83,6 +82,16 @@ export default {
         ]
       },
       demo2: {
+        currentItem: { id: 'b' },
+        tabItems: [
+          { id: 'member', text: '团员', tag: '最帅' },
+          { id: 'masses', text: '群众', tag: '最美' },
+          { id: 'b', text: '我是一只小鸟', tag: '最美' },
+          { id: 'c', text: '测试很长很长很长', tag: '最美' },
+          { id: 'test', text: '短', tag: '最美' }
+        ]
+      },
+      demo6: {
         currentItem: { id: 'b' },
         tabItems: [
           { id: 'member', text: '团员', tag: '最帅' },
@@ -120,9 +129,15 @@ export default {
           { id: 'a', text: 'A', tag: '最帅' },
           { id: 'b', text: 'B', tag: '最美' },
           { id: 'c', text: 'C', tag: '最美' },
-          { id: 'd', text: 'D', tag: '最美' }
+          { id: 'd', text: 'D', tag: '最美' },
+          { id: 'e', text: 'E', tag: '最美' }
         ]
       }
+    }
+  },
+  methods: {
+    changeItem(val) {
+      console.log('切换到' + val.text)
     }
   }
 }
