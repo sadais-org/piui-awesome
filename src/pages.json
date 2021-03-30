@@ -213,7 +213,7 @@
           "path": "regions-select/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "地区选择"
+            "navigationBarTitleText": "地区选择器"
           }
         },
         {
@@ -277,6 +277,13 @@
           "style": {
             "disableScroll": true,
             "navigationBarTitleText": "数字键盘"
+          }
+        },
+        {
+          "path": "status-bar/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "status-bar 状态栏"
           }
         },
         {

@@ -162,6 +162,10 @@ export default {
           zhName: '数字键盘'
         },
         {
+          name: 'status-bar',
+          zhName: '状态栏'
+        },
+        {
           name: 'bottom-bar',
           zhName: '底部按钮栏'
         },
