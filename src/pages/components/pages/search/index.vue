@@ -9,7 +9,7 @@
         <pi-search disabled />
         <pi-section>方形搜索框</pi-section>
         <pi-search v-model="demo3" shape="square" />
-        <pi-section>自定义搜索icon样式</pi-section>
+        <pi-section>自定义search-icon样式</pi-section>
         <pi-search v-model="demo2" :search-icon-style="{ fontSize: '50rpx' }" />
         <pi-section>搜索按钮放在右边</pi-section>
         <pi-search v-model="demo6" shape="square" search-icon-position="right" />
@@ -29,7 +29,7 @@
           search-icon-color="#ffffff"
           show-action
           background="#e5e5e5"
-          color="#ffffff"
+          color="#ff508a"
           action-text="搜索"
           placeholder="提示文字"
           placeholder-style="color: #ffffff"
