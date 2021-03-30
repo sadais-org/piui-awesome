@@ -6,10 +6,16 @@
         <pi-list-item title="地区" @tap="handleShowSelect('area')">
           <input :value="form.area.text" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
+        <pi-list-item title="性别" @tap="handleShowSelect('gender')">
+          <input
+            :value="form.gender.text"
+            type="text"
+            class="input"
+            placeholder="请选择"
+            disabled
+          />
+        </pi-list-item>
       </pi-list>
-      <pi-list-item title="性别" @tap="handleShowSelect('gender')">
-        <input :value="form.gender.text" type="text" class="input" placeholder="请选择" disabled />
-      </pi-list-item>
       <pi-list title="多选模式">
         <pi-list-item title="身份" @tap="handleShowSelect('identity')">
           <input
