@@ -12,13 +12,8 @@
         <pi-section>自定义搜索icon样式</pi-section>
         <pi-search v-model="demo2" :search-icon-style="{ fontSize: '50rpx' }" />
         <pi-section>搜索按钮放在右边</pi-section>
-        <pi-search
-          v-model="demo6"
-          shape="square"
-          search-icon-position="right"
-          clear-trigger="focus"
-        />
-        <pi-section>设置searchLabel</pi-section>
+        <pi-search v-model="demo6" shape="square" search-icon-position="right" />
+        <pi-section>设置搜索框左侧文本</pi-section>
         <pi-search
           v-model="demo4"
           search-label="珠海"
@@ -26,7 +21,7 @@
         />
         <pi-section>显示搜索action</pi-section>
         <pi-search v-model="demo5" clear-trigger="focus" show-action action-text="确定" />
-        <pi-section>设置背景颜色</pi-section>
+        <pi-section>设置搜索框背景颜色</pi-section>
         <pi-search
           v-model="demo7"
           search-label="PIUI"
@@ -72,3 +67,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.pi-w-100P {
+  margin-bottom: 8px;
+}
+</style>
