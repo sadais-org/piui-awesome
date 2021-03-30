@@ -5,24 +5,40 @@
       <view class="pi-content">
         <pi-section>默认搜索框</pi-section>
         <pi-search v-model="demo1" />
-        <pi-section>自定义搜索icon样式</pi-section>
-        <pi-search v-model="demo1" :search-icon-style="{ fontSize: '50rpx' }" />
+        <pi-section>禁用搜索框</pi-section>
+        <pi-search disabled />
         <pi-section>方形搜索框</pi-section>
-        <pi-search v-model="demo2" shape="square" />
-        <pi-section>设置searchLabel</pi-section>
-        <pi-search
-          v-model="demo3"
-          search-label="珠海"
-          :search-label-style="{ color: '#ff508a', fontSize: '36rpx' }"
-        />
-        <pi-section>显示搜索action</pi-section>
-        <pi-search v-model="demo5" clear-trigger="focus" show-action action-text="确定" />
+        <pi-search v-model="demo3" shape="square" />
+        <pi-section>自定义搜索icon样式</pi-section>
+        <pi-search v-model="demo2" :search-icon-style="{ fontSize: '50rpx' }" />
         <pi-section>搜索按钮放在右边</pi-section>
         <pi-search
           v-model="demo6"
           shape="square"
           search-icon-position="right"
           clear-trigger="focus"
+        />
+        <pi-section>设置searchLabel</pi-section>
+        <pi-search
+          v-model="demo4"
+          search-label="珠海"
+          :search-label-style="{ color: '#ff508a', fontSize: '36rpx' }"
+        />
+        <pi-section>显示搜索action</pi-section>
+        <pi-search v-model="demo5" clear-trigger="focus" show-action action-text="确定" />
+        <pi-section>设置背景颜色</pi-section>
+        <pi-search
+          v-model="demo7"
+          search-label="PIUI"
+          :search-label-style="{ color: '#ff508a' }"
+          search-icon-color="#ffffff"
+          show-action
+          background="#e5e5e5"
+          color="#ffffff"
+          action-text="搜索"
+          placeholder="提示文字"
+          placeholder-style="color: #ffffff"
+          @focus="handleClean"
         />
       </view>
     </scroll-view>
@@ -47,6 +63,11 @@ export default {
       demo11: '',
       demo12: '',
       demo13: ''
+    }
+  },
+  methods: {
+    handleClean() {
+      this.demo7 = ''
     }
   }
 }
