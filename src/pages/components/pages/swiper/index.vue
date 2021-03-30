@@ -60,9 +60,9 @@ export default {
       },
       demo3: {
         imgs: [
-          { pic: 'https://images3.alphacoders.com/813/thumb-350-81317.jpg' },
-          { pic: 'https://images4.alphacoders.com/441/thumb-350-44158.jpg' },
-          { pic: 'https://images5.alphacoders.com/489/thumb-350-489030.jpg' }
+          { pic: 'https://picfiles.alphacoders.com/430/thumb-430814.jpg' },
+          { pic: 'https://picfiles.alphacoders.com/425/thumb-425129.jpg' },
+          { pic: 'https://picfiles.alphacoders.com/424/thumb-424428.jpg' }
         ]
       }
     }
