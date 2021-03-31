@@ -4,19 +4,14 @@
     <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
         <pi-section>默认图片</pi-section>
-        <pi-img
-          width="220"
-          height="120"
-          :custom-style="{ background: '#cccccc' }"
-          src="https://www.sadais.com/_nuxt/img/89c8332.png"
-        />
+        <pi-img width="220" height="120" :custom-style="{ background: '#cccccc' }" :src="imgsrc" />
         <pi-section>自动撑高</pi-section>
         <pi-img
           dot
           width="220"
           mode="widthFix"
           :custom-style="{ background: '#cccccc' }"
-          src="https://www.sadais.com/_nuxt/img/89c8332.png"
+          :src="imgsrc"
         />
         <pi-section>红点</pi-section>
         <pi-img
@@ -24,7 +19,7 @@
           width="220"
           height="120"
           :custom-style="{ background: '#cccccc' }"
-          src="https://www.sadais.com/_nuxt/img/89c8332.png"
+          :src="imgsrc"
         />
         <pi-section>5</pi-section>
         <pi-img
@@ -32,7 +27,7 @@
           height="120"
           :custom-style="{ background: '#cccccc' }"
           badge="5"
-          src="https://www.sadais.com/_nuxt/img/89c8332.png"
+          :src="imgsrc"
         />
         <pi-section>99+</pi-section>
         <pi-img
@@ -40,7 +35,7 @@
           height="120"
           :custom-style="{ background: '#cccccc' }"
           badge="99+"
-          src="https://www.sadais.com/_nuxt/img/89c8332.png"
+          :src="imgsrc"
         />
         <pi-section>加载失败</pi-section>
         <pi-img width="220" height="120" :custom-style="{ background: '#cccccc' }" src="error" />
@@ -53,6 +48,11 @@
 
 <script>
 export default {
-  name: 'Img'
+  name: 'Img',
+  data() {
+    return {
+      imgsrc: require('./x.jpg')
+    }
+  }
 }
 </script>

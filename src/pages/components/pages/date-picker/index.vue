@@ -12,10 +12,10 @@
             disabled
           />
         </pi-list-item>
-        <pi-list-item title="年" @tap="handleShowSelect('year')">
+        <pi-list-item title="YYYY" @tap="handleShowSelect('year')">
           <input :value="form.year.value" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
-        <pi-list-item title="年-月" @tap="handleShowSelect('month')">
+        <pi-list-item title="YYYY-MM" @tap="handleShowSelect('month')">
           <input
             :value="form.month.value"
             type="text"
@@ -24,13 +24,13 @@
             disabled
           />
         </pi-list-item>
-        <pi-list-item title="年-月-日" @tap="handleShowSelect('day')">
+        <pi-list-item title="YYYY-MM-DD" @tap="handleShowSelect('day')">
           <input :value="form.day.value" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
-        <pi-list-item title="年-月-日 时" @tap="handleShowSelect('hour')">
+        <pi-list-item title="YYYY-MM-DD hh" @tap="handleShowSelect('hour')">
           <input :value="form.hour.value" type="text" class="input" placeholder="请选择" disabled />
         </pi-list-item>
-        <pi-list-item title="年-月-日 时:分" @tap="handleShowSelect('minute')">
+        <pi-list-item title="YYYY-MM-DD hh:mm" @tap="handleShowSelect('minute')">
           <input
             :value="form.minute.value"
             type="text"
@@ -39,7 +39,7 @@
             disabled
           />
         </pi-list-item>
-        <pi-list-item title="年-月-日 时:分:秒" @tap="handleShowSelect('second')">
+        <pi-list-item title="YYYY-MM-DD hh:mm:ss" @tap="handleShowSelect('second')">
           <input
             :value="form.second.value"
             type="text"
@@ -80,14 +80,14 @@ export default {
         },
         year: {
           title: '年',
-          value: '2020-05-23',
+          value: '2020',
           toolbarPosition: 'bottom',
           showTitle: false,
           field: 'year'
         },
         month: {
           title: '月',
-          value: '2020-05-23',
+          value: '2020-05',
           showTitle: true,
           field: 'month'
         },
@@ -105,12 +105,12 @@ export default {
         },
         minute: {
           title: '分',
-          value: '2020-05-23',
+          value: '2020-05-23 12:10',
           field: 'minute'
         },
         second: {
           title: '秒',
-          value: '2020-05-23',
+          value: '2020-05-23 12:10:25',
           showTitle: true,
           field: 'second'
         }
@@ -158,9 +158,9 @@ export default {
             value.month +
             '-' +
             value.date +
-            '-' +
+            ' ' +
             value.hour +
-            '-' +
+            ':' +
             value.minute
           break
         case 'second':
@@ -170,11 +170,11 @@ export default {
             value.month +
             '-' +
             value.date +
-            '-' +
+            ' ' +
             value.hour +
-            '-' +
+            ':' +
             value.minute +
-            '-' +
+            ':' +
             value.second
           break
       }
