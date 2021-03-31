@@ -22,7 +22,7 @@
           </view>
         </view>
       </view>
-      <pi-skeleton :show="loading" node-background="#70f3ff" />
+      <pi-skeleton :show="loading" node-background="#c0ebd7" background="rgba(0,0,0,.07)" />
     </scroll-view>
   </view>
 </template>

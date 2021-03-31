@@ -15,8 +15,21 @@
         <pi-rate v-model="syncRate" unselected-icon="praise" selected-icon="praise-fill" />
         <pi-section>禁用评分</pi-section>
         <pi-rate v-model="disRate" disabled />
-        <pi-section>调整间距</pi-section>
-        <pi-rate v-model="syncRate" :gutter="38" />
+        <view class="pi-flex-column">
+          <pi-section title="调整间距" />
+          <view class="pi-align-center">
+            <text class="pi-mg-right-44 pi-fz-16">小间距</text>
+            <pi-rate v-model="syncRate" :gutter="18" />
+          </view>
+          <view class="pi-align-center">
+            <text class="pi-mg-right-58 pi-fz-16">适中</text>
+            <pi-rate v-model="syncRate" :gutter="42" />
+          </view>
+          <view class="pi-align-center">
+            <text class="pi-mg-right-18 pi-fz-16">大间距</text>
+            <pi-rate v-model="syncRate" :gutter="78" />
+          </view>
+        </view>
         <pi-section>大尺寸</pi-section>
         <pi-rate v-model="syncRate" size="60" />
         <pi-section>自定义数量</pi-section>
