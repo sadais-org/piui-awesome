@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangzhenfei
  * @Date: 2021-03-08 17:26:33
- * @LastEditTime: 2021-03-31 13:03:44
+ * @LastEditTime: 2021-04-01 23:58:57
  * @LastEditors: zhangzhenfei
  * @Description: 
  * @FilePath: \piui-awesome\src\pages\components\pages\stepper\index.vue
@@ -45,13 +45,13 @@
         <pi-stepper v-model="val7" :min="2" :max="12" :show-subtract="false" />
         <pi-section title="只显示增加按钮" />
         <pi-stepper v-model="val8" :min="2" :max="12" :show-add="false" class="pi-mg-lr-50" />
-        <pi-section title="固定小数位数" />
+        <pi-section title="固定两位小数（步长0.03）" />
         <pi-stepper
           v-model="val9"
           :min="2"
           :max="12"
           :disable-input="false"
-          :step="0.5"
+          :step="0.03"
           :decimal="2"
         />
         <pi-section title="自定义按钮大小" />
