@@ -32,6 +32,13 @@ export default {
       // iconfont.json文件glyphs定义
       glyphs: [
         {
+          icon_id: '1446453',
+          name: 'edit',
+          font_class: 'edit-line',
+          unicode: 'e61f',
+          unicode_decimal: 58911
+        },
+        {
           icon_id: '19726047',
           name: 'BackSpace-01',
           font_class: 'backspace',
