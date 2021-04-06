@@ -61,6 +61,31 @@
             />
           </view>
         </view>
+        <view>
+          <view>
+            <pi-section>
+              自定义样式
+            </pi-section>
+            <pi-tabs
+              v-model="tabs.currentItem"
+              :items="tabs.tabItems"
+              slider-bar-width="60"
+              active-text-color="#222222"
+              active-color="#4784FE"
+              :show-slider-bar-guide="false"
+              :active-item-style="{
+                fontSize: '48rpx',
+                fontWeight: '600',
+                fontFamily: 'PingFangSC-Semibold, PingFang SC;'
+              }"
+              :item-style="{
+                fontSize: '32rpx',
+                fontFamily: 'PingFangSC-Semibold, PingFang SC;',
+                color: '#666666'
+              }"
+            />
+          </view>
+        </view>
       </view>
     </scroll-view>
   </view>
@@ -131,6 +156,17 @@ export default {
           { id: 'c', text: 'C', tag: '最美' },
           { id: 'd', text: 'D', tag: '最美' },
           { id: 'e', text: 'E', tag: '最美' }
+        ]
+      },
+      tabs: {
+        currentItem: { id: '1' },
+        tabItems: [
+          { id: '1', text: '全部' },
+          { id: '2', text: '家电' },
+          { id: '5', text: '奢侈品' },
+          { id: '3', text: '家具' },
+          { id: '4', text: '服装' },
+          { id: '6', text: '其他' }
         ]
       }
     }
