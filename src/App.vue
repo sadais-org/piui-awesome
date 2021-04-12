@@ -28,6 +28,7 @@ export default {
       )
     }
   },
+  methods: {},
   // #endif
   onLaunch: function() {},
   onShow: function() {},

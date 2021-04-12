@@ -56,7 +56,13 @@ export default {
       ]
     }
   },
-  onLoad() {},
+  onLoad(options) {
+    const params = this.$pi.navi.decodeParams(options)
+    console.log(params, options)
+    if (params.naviTo) {
+      this.$pi.navi.navigateTo(params.naviTo)
+    }
+  },
   methods: {
     handleNavigate(name) {
       this.$pi.navi.navigateTo(`pages/base-style/pages/${name}/index`)
