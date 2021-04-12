@@ -58,9 +58,8 @@ export default {
   },
   onLoad(options) {
     const params = this.$pi.navi.decodeParams(options)
-    console.log(params, options)
     if (params.naviTo) {
-      this.$pi.navi.navigateTo(params.naviTo)
+      this.$pi.navi.navigateTo(params.naviTo + '?noSend=1')
     }
   },
   methods: {

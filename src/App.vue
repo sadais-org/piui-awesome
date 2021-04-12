@@ -19,6 +19,9 @@ export default {
        *  滤当页面不在iframe中的情况，因为涉及到跨域问题，iframe中的页面只能调用window.parent.postMessage
        *  其他方法都会报跨域，即使是访问window.parent也会报跨域，只能window.parent.postMessage
        */
+      if (this.$route.query.noSend === '1') {
+        return
+      }
       window.parent.postMessage(
         {
           action: 'pathChange',
