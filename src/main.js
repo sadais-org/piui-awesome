@@ -1,16 +1,19 @@
 /*
  * @Author: zhangzhenfei
  * @Date: 2020-11-13 10:25:49
- * @LastEditTime: 2021-03-16 15:34:10
- * @LastEditors: zhangzhenfei
+ * @LastEditTime: 2021-04-13 16:29:28
+ * @LastEditors: zhengyifan
  * @Description:
- * @FilePath: /piui-awesome/src/main.js
+ * @FilePath: \piui-awesome\src\main.js
  */
 import Vue from 'vue'
 import App from './App'
 
 import piui from '@/piui'
 // config 可选，覆盖默认配置，达到全局配置的效果
+piui.navi.beforeBack((to, from, next) => {
+  next('pages/components/index')
+})
 Vue.use(piui, {
   navbar: {
     homePage: 'pages/base-style/index'
