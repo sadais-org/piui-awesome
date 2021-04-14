@@ -2,8 +2,18 @@
   <view class="pi-scroll-container">
     <pi-navbar title="表单form" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <pi-form ref="form" :model="form" title="表单校验" border error-type="toast">
-        <pi-form-item prop="name" label="姓名"><pi-input v-model="form.name" /></pi-form-item>
+      <pi-form
+        ref="form"
+        label-width="200"
+        input-align="left"
+        :model="form"
+        title="表单校验"
+        border
+        error-type="toast"
+      >
+        <pi-form-item required label-width="300" prop="name" label="姓名">
+          <pi-input v-model="form.name" />
+        </pi-form-item>
         <pi-form-item prop="intro" label="简介">
           <pi-input v-model="form.intro" type="textarea" placeholder="请输入简介" />
         </pi-form-item>

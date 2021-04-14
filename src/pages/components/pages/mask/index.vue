@@ -24,18 +24,9 @@
     </scroll-view>
     <!-- 0. 默认样式（渐入） -->
     <!-- duration格式：'0.56s' 、'560ms' 、'560'、数字560 -->
-    <pi-mask
-      v-model="showMask"
-      append-to-body
-      duration="0.56s"
-      background="rgba(0, 0, 0, .8)"
-      @closed="showMask = false"
-    >
+    <pi-mask v-model="showMask" append-to-body duration="0.56s" background="rgba(0, 0, 0, .8)">
       <!-- 显示蒙层内容 -->
       <view class="pi-abso-center">
-        <!-- <view class="pi-square pi-w-100 pi-bg-white">
-          <view class="pi-flex-column-center">点击实现渐出</view>
-        </view> -->
         <pi-button custom-class="pi-flex-column-center" color="#5A8FFF" bg-color="#EEF2FF" round>
           点击实现渐出
         </pi-button>
@@ -162,8 +153,16 @@
       background="rgba(0, 0, 0, .8)"
       :mask-closable="false"
     >
-      <view class="pi-abso-center" @tap="handleCloseUnClosableMask">
-        <pi-button color="#5A8FFF" bg-color="#EEF2FF" width="250" round>关闭蒙层</pi-button>
+      <view class="pi-abso-center">
+        <pi-button
+          color="#5A8FFF"
+          bg-color="#EEF2FF"
+          width="250"
+          round
+          @click="handleCloseUnClosableMask"
+        >
+          关闭蒙层
+        </pi-button>
       </view>
     </pi-mask>
     <!-- 四、设置背景颜色 -->

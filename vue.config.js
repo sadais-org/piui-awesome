@@ -4,6 +4,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin') // 拷贝插件，把bu
 
 module.exports = {
   productionSourceMap: true,
+  pluginOptions: {
+    webpackBundleAnalyzer: {
+      openAnalyzer: process.env.NODE_ENV === 'production'
+    }
+  },
   transpileDependencies: ['sadais-piui', 'sadais-core', 'luch-request'],
   configureWebpack: {
     plugins: [
