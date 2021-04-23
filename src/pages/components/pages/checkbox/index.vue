@@ -4,12 +4,7 @@
     <scroll-view class="pi-scroll" scroll-y="">
       <view class="pi-content">
         <pi-section>checkbox 基础样式</pi-section>
-        <pi-checkbox-group
-          ref="checkboxGroup"
-          v-model="checkboxGroupMax"
-          direction="vertical"
-          @change="handleCheckboxGroupChange"
-        >
+        <pi-checkbox-group ref="checkboxGroup1" v-model="checkboxGroupMax" direction="vertical">
           <pi-checkbox v-model="defaultCheckbox">默认复选框</pi-checkbox>
           <pi-checkbox v-model="fillCheckbox" active-mode="fill">实底复选框</pi-checkbox>
           <pi-checkbox v-model="defaultCustomColor" active-color="#0092fe">
@@ -45,55 +40,34 @@
             禁用
           </pi-checkbox>
         </pi-checkbox-group>
+        <pi-button size="small" type="primary" @click="handleSelectAll">全选</pi-button>
+        <pi-button size="small" type="secondary" @click="handleUnSelectAll">全清</pi-button>
         <pi-section>checkboxGroup 最多选择2个</pi-section>
-        <pi-checkbox-group
-          ref="checkboxGroup"
-          v-model="checkboxGroupMax"
-          max="2"
-          @change="handleCheckboxGroupChange"
-        >
+        <pi-checkbox-group ref="checkboxGroup" v-model="checkboxGroupMax" max="2">
           <pi-checkbox name="a">复选框 a</pi-checkbox>
           <pi-checkbox name="b">复选框 b</pi-checkbox>
           <pi-checkbox name="c">复选框 c</pi-checkbox>
         </pi-checkbox-group>
         <pi-section>checkboxGroup 圆点模式</pi-section>
-        <pi-checkbox-group
-          v-model="checkboxGroupMax"
-          shape="dot"
-          @change="handleCheckboxGroupChange"
-        >
+        <pi-checkbox-group v-model="checkboxGroupMax" shape="dot">
           <pi-checkbox name="a">复选框 a</pi-checkbox>
           <pi-checkbox name="b">复选框 b</pi-checkbox>
           <pi-checkbox name="c">复选框 c</pi-checkbox>
         </pi-checkbox-group>
         <pi-section>checkboxGroup 圆点填充模式</pi-section>
-        <pi-checkbox-group
-          v-model="checkboxGroupMax"
-          shape="dot"
-          active-mode="fill"
-          @change="handleCheckboxGroupChange"
-        >
+        <pi-checkbox-group v-model="checkboxGroupMax" shape="dot" active-mode="fill">
           <pi-checkbox name="a">复选框 a</pi-checkbox>
           <pi-checkbox name="b">复选框 b</pi-checkbox>
           <pi-checkbox name="c">复选框 c</pi-checkbox>
         </pi-checkbox-group>
         <pi-section>checkboxGroup 文字模式</pi-section>
-        <pi-checkbox-group
-          v-model="checkboxGroupMax"
-          shape="text"
-          @change="handleCheckboxGroupChange"
-        >
+        <pi-checkbox-group v-model="checkboxGroupMax" shape="text">
           <pi-checkbox name="a">复选框 a</pi-checkbox>
           <pi-checkbox name="b">复选框 b</pi-checkbox>
           <pi-checkbox name="c">复选框 c</pi-checkbox>
         </pi-checkbox-group>
         <pi-section>checkboxGroup 文字填充模式</pi-section>
-        <pi-checkbox-group
-          v-model="checkboxGroupMax"
-          shape="text"
-          active-mode="fill"
-          @change="handleCheckboxGroupChange"
-        >
+        <pi-checkbox-group v-model="checkboxGroupMax" shape="text" active-mode="fill">
           <pi-checkbox name="a">复选框 a</pi-checkbox>
           <pi-checkbox name="b">复选框 b</pi-checkbox>
           <pi-checkbox name="c">复选框 c</pi-checkbox>
@@ -190,8 +164,11 @@ export default {
     }
   },
   methods: {
-    handleCheckboxGroupChange(val) {
-      console.log(val)
+    handleSelectAll() {
+      this.$refs.checkboxGroup1.toggleSelect(true)
+    },
+    handleUnSelectAll() {
+      this.$refs.checkboxGroup1.toggleSelect(false)
     }
   }
 }
