@@ -3,7 +3,7 @@
     <pi-navbar title="input" />
     <scroll-view class="pi-scroll" scroll-y="">
       <pi-form title="文字表单">
-        <pi-form-item label="名称"><pi-input /></pi-form-item>
+        <pi-form-item label="名称"><pi-input v-model="name" /></pi-form-item>
       </pi-form>
       <pi-gap />
       <pi-form title="文字标题加粗表单">
@@ -177,6 +177,7 @@ export default {
   name: 'Input',
   data() {
     return {
+      name: '李伟兰',
       checkboxGroupMax: ['male'],
       stepper: 1
     }

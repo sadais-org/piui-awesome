@@ -55,4 +55,7 @@ export default {
 /* 每个页面公共css */
 
 @import '~@/piui/scss/index.scss';
+.pi-content {
+  background: transparent;
+}
 </style>

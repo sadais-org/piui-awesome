@@ -9,7 +9,7 @@
             v-for="(components, index) in baseComponents"
             :key="components.name"
             :index="index"
-            bg-color="#f5f5f5"
+            bg-color="#ffffff"
             square
           >
             <view
@@ -172,6 +172,10 @@ export default {
         {
           name: 'list',
           zhName: '列表'
+        },
+        {
+          name: 'card',
+          zhName: '卡片'
         }
       ]
     }

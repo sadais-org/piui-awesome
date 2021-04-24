@@ -299,6 +299,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "列表"
           }
+        },
+        {
+          "path": "card/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "卡片"
+          }
         }
       ]
     },{
