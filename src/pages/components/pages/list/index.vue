@@ -61,6 +61,9 @@
           <pi-icon slot="left" name="setup-fill" size="50" custom-class="pi-primary" />
         </pi-list-item>
       </pi-list>
+      <pi-list-item title="系统设置">
+        <pi-icon slot="left" name="setup-fill" size="50" custom-class="pi-primary" />
+      </pi-list-item>
     </scroll-view>
   </view>
 </template>

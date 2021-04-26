@@ -7,11 +7,6 @@
       capsule-theme="dark"
       back-icon-color="#333333"
       home-icon-color="#333333"
-      background="transparent"
-      :title-style="{ fontSize: '36rpx', fontWeight: 500, color: '#333333' }"
-      :custom-style="{
-        background: 'url(http://huozi.sadais.com/img/banner_bg.png) no-repeat 100% 100%'
-      }"
     />
     <scroll-view class="pi-scroll" scroll-y="">
       <pi-section title="取消固定在顶部" custom-class="pi-mg-top-10" />

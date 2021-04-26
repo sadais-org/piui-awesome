@@ -1,10 +1,10 @@
 /*
  * @Author: zhangzhenfei
  * @Date: 2020-11-13 10:25:49
- * @LastEditTime: 2021-04-13 16:29:28
- * @LastEditors: zhengyifan
+ * @LastEditTime: 2021-04-26 09:27:09
+ * @LastEditors: zhangzhenfei
  * @Description:
- * @FilePath: \piui-awesome\src\main.js
+ * @FilePath: /piui-awesome/src/main.js
  */
 import Vue from 'vue'
 import App from './App'
@@ -16,7 +16,10 @@ piui.navi.beforeBack((to, from, next) => {
 })
 Vue.use(piui, {
   navbar: {
-    homePage: 'pages/base-style/index'
+    homePage: 'pages/base-style/index',
+    customStyle: {
+      boxShadow: '0 4px 10px 0 rgb(0 0 0 / 7%)'
+    }
   }
 })
 
