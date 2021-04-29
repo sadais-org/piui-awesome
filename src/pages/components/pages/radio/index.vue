@@ -96,6 +96,26 @@
           <pi-radio :name="2" active-color="blue">蓝色，代表冷静</pi-radio>
           <pi-radio :name="3" disabled active-color="green">绿色，代表生活</pi-radio>
         </pi-radio-group>
+        <pi-radio-group v-model="type_pay" direction="vertical">
+          <template v-for="item in radioGroup">
+            <view
+              :key="item.payType"
+              class="pi-align-center pi-pd-tb-36 border-bottom"
+              @tap="showcase = item.payType"
+            >
+              <pi-img :src="item.icon" width="40" class="pi-mg-right-10" />
+              <view class="pi-w-100P pi-justify-between pi-align-center">
+                <text class="title">{{ item.title }}</text>
+                <pi-radio
+                  :disabled="item.show"
+                  :name="item.payType"
+                  :custom-style="{ margin: 0 }"
+                  active-mode="fill"
+                />
+              </view>
+            </view>
+          </template>
+        </pi-radio-group>
       </view>
     </scroll-view>
   </view>
@@ -119,7 +139,28 @@ export default {
         radioGroup: 1,
         disabled: true
       },
-      demo6: 1
+      demo6: 1,
+      type_pay: 2,
+      radioGroup: [
+        {
+          payType: 1,
+          title: '星钻支付',
+          payName: 'diamondPay',
+          show: false
+        },
+        {
+          payType: 2,
+          title: '微信支付',
+          payName: 'wechatPay',
+          show: true
+        },
+        {
+          payType: 3,
+          title: '充值卡支付',
+          payName: 'cardPay',
+          show: false
+        }
+      ]
     }
   },
   methods: {

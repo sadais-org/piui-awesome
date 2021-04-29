@@ -42,10 +42,11 @@ export default {
       this.$pi.navi.navigateTo(e.data.path)
     }
   },
-  // #endif
   onLaunch: function() {
     window.addEventListener('message', this.customNavi)
   },
+  // #endif
+
   onShow: function() {},
   onHide: function() {}
 }

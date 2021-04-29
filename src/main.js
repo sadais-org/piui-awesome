@@ -1,7 +1,7 @@
 /*
  * @Author: zhangzhenfei
  * @Date: 2020-11-13 10:25:49
- * @LastEditTime: 2021-04-26 09:27:09
+ * @LastEditTime: 2021-04-29 09:07:39
  * @LastEditors: zhangzhenfei
  * @Description:
  * @FilePath: /piui-awesome/src/main.js
@@ -19,6 +19,11 @@ Vue.use(piui, {
     homePage: 'pages/base-style/index',
     customStyle: {
       boxShadow: '0 4px 10px 0 rgb(0 0 0 / 7%)'
+    }
+  },
+  popup: {
+    closeIcon: {
+      color: '#5a7dff'
     }
   }
 })

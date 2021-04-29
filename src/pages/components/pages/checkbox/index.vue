@@ -6,39 +6,50 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="基础用法" />
         <template slot="body">
-          <pi-checkbox v-model="demo1">复选框</pi-checkbox>
+          <pi-checkbox v-model="base">复选框</pi-checkbox>
         </template>
       </pi-card>
-      <!-- 自定义颜色（active-color="#ff508a"）-->
+      <!-- 搭配checkbox-group使用 -->
       <pi-card>
-        <pi-section slot="title" padding="0" title='自定义颜色（active-color="#ff508a"）' />
+        <pi-section slot="title" padding="0" title="搭配checkbox-group使用" />
         <template slot="body">
-          <pi-checkbox-group v-model="demo2" direction="vertical" active-color="#ff508a">
-            <pi-checkbox name="square" shape="square" active-color="#ff508a">
+          <pi-checkbox-group v-model="checkboxGroup">
+            <pi-checkbox name="A">选项一</pi-checkbox>
+            <pi-checkbox name="B">选项二</pi-checkbox>
+            <pi-checkbox name="C">选项三</pi-checkbox>
+          </pi-checkbox-group>
+        </template>
+      </pi-card>
+      <!-- 自定义颜色（active-color="#ff6a00"）-->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义颜色" />
+        <template slot="body">
+          <pi-checkbox-group v-model="customColor" direction="vertical" active-color="#ff6a00">
+            <pi-checkbox name="square" shape="square" active-color="#ff6a00">
               方形（默认）
             </pi-checkbox>
             <pi-checkbox
               name="square-fill"
               shape="square"
-              active-color="#ff508a"
+              active-color="#ff6a00"
               active-mode="fill"
             >
               方形（填充）
             </pi-checkbox>
-            <pi-checkbox name="round" shape="round" active-color="#ff508a">
+            <pi-checkbox name="round" shape="round" active-color="#ff6a00">
               圆形
             </pi-checkbox>
-            <pi-checkbox name="round-fill" shape="round" active-mode="fill" active-color="#ff508a">
+            <pi-checkbox name="round-fill" shape="round" active-mode="fill" active-color="#ff6a00">
               圆形（填充）
             </pi-checkbox>
-            <pi-checkbox name="dot" shape="dot" active-color="#ff508a">
+            <pi-checkbox name="dot" shape="dot" active-color="#ff6a00">
               圆点
             </pi-checkbox>
-            <pi-checkbox name="dot-fill" shape="dot" active-color="#ff508a" active-mode="fill">
+            <pi-checkbox name="dot-fill" shape="dot" active-color="#ff6a00" active-mode="fill">
               圆点（填充）
             </pi-checkbox>
-            <pi-checkbox name="text" shape="text" active-color="#ff508a">文字</pi-checkbox>
-            <pi-checkbox name="text-fill" shape="text" active-color="#ff508a" active-mode="fill">
+            <pi-checkbox name="text" shape="text" active-color="#ff6a00">文字</pi-checkbox>
+            <pi-checkbox name="text-fill" shape="text" active-color="#ff6a00" active-mode="fill">
               文字（填充）
             </pi-checkbox>
           </pi-checkbox-group>
@@ -48,7 +59,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="自定义形状" />
         <template slot="body">
-          <pi-checkbox-group v-model="demo3" direction="vertical">
+          <pi-checkbox-group v-model="customShape" direction="vertical">
             <pi-checkbox name="square" shape="square">方形（默认）</pi-checkbox>
             <pi-checkbox name="round" shape="round">圆形</pi-checkbox>
             <pi-checkbox name="dot" shape="dot">圆点</pi-checkbox>
@@ -60,7 +71,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="填充模式" />
         <template slot="body">
-          <pi-checkbox-group v-model="demo4" direction="vertical">
+          <pi-checkbox-group v-model="customFill" direction="vertical">
             <pi-checkbox name="square" shape="square" active-mode="fill">
               方形（默认）
             </pi-checkbox>
@@ -74,7 +85,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="自定义形状（禁用）" />
         <template slot="body">
-          <pi-checkbox-group v-model="demo5" direction="vertical">
+          <pi-checkbox-group v-model="customShapeDisabled" direction="vertical">
             <pi-checkbox name="square" shape="square" disabled>方形（默认）</pi-checkbox>
             <pi-checkbox name="round" shape="round" disabled>圆形</pi-checkbox>
             <pi-checkbox name="dot" shape="dot" disabled>圆点</pi-checkbox>
@@ -86,7 +97,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="填充模式（禁用）" />
         <template slot="body">
-          <pi-checkbox-group v-model="demo6" direction="vertical">
+          <pi-checkbox-group v-model="customFillDisabled" direction="vertical">
             <pi-checkbox name="square" shape="square" active-mode="fill" disabled>
               方形（默认）
             </pi-checkbox>
@@ -100,7 +111,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="最多选择2项（max:2）" />
         <template slot="body">
-          <pi-checkbox-group v-model="demo7" max="2">
+          <pi-checkbox-group v-model="max2" max="2">
             <pi-checkbox name="A">
               选项一
             </pi-checkbox>
@@ -119,7 +130,7 @@
         <template slot="body">
           <pi-checkbox-group
             ref="checkboxGroup"
-            v-model="demo8"
+            v-model="toggleSelected"
             direction="vertical"
             active-mode="fill"
           >
@@ -160,8 +171,10 @@ export default {
   name: 'Checkbox',
   data() {
     return {
-      demo1: true,
-      demo2: [
+      base: true, // 基础用法
+      checkboxGroup: ['A', 'C'], // 搭配checkbox-group使用
+      customColor: [
+        // 自定义颜色
         'square',
         'round',
         'dot',
@@ -171,12 +184,12 @@ export default {
         'dot-fill',
         'text-fill'
       ],
-      demo3: ['square', 'round', 'dot', 'text'],
-      demo4: ['square', 'round', 'dot', 'text'],
-      demo5: ['dot', 'text'],
-      demo6: ['square', 'round'],
-      demo7: ['A', 'B'],
-      demo8: ['A', 'C', 'D']
+      customShape: ['square', 'round', 'dot', 'text'], // 自定义形状
+      customFill: ['square', 'round', 'dot', 'text'], // 填充模式
+      customShapeDisabled: ['dot', 'text'], // 自定义形状（禁用）
+      customFillDisabled: ['dot', 'text'], // 填充模式（禁用）
+      max2: ['A', 'B'], // 最多选择2项
+      toggleSelected: ['A', 'C', 'D'] // 全选与反选
     }
   },
   methods: {
