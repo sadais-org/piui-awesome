@@ -137,7 +137,7 @@
             <pi-checkbox name="A">
               选项一
             </pi-checkbox>
-            <pi-checkbox name="B">
+            <pi-checkbox name="B" disabled>
               选项二
             </pi-checkbox>
             <pi-checkbox name="C">
