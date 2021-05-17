@@ -1,7 +1,7 @@
 <template>
   <view class="pi-scroll-container">
     <pi-navbar title="Popup" />
-    <scroll-view class="pi-scroll" scroll-y="">
+    <scroll-view class="pi-scroll" scroll-y>
       <!-- 基础用法 -->
       <pi-card>
         <pi-section slot="title" padding="0" title="基础用法" />

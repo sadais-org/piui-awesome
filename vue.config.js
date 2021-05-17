@@ -9,6 +9,10 @@ module.exports = {
       openAnalyzer: process.env.NODE_ENV === 'production'
     }
   },
+  devServer: {
+    hot: true,
+    port: 31415
+  },
   transpileDependencies: ['sadais-piui', 'sadais-core', 'luch-request'],
   configureWebpack: {
     plugins: [
