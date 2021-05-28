@@ -32,6 +32,62 @@ export default {
       // iconfont.json文件glyphs定义
       glyphs: [
         {
+          icon_id: '6444186',
+          name: '招商小程序-关闭',
+          font_class: 'close-line',
+          unicode: 'e627',
+          unicode_decimal: 58919
+        },
+        {
+          icon_id: '14196363',
+          name: '小程序-关闭',
+          font_class: 'xiaochengxu-guanbi',
+          unicode: 'e64c',
+          unicode_decimal: 58956
+        },
+        {
+          icon_id: '18729632',
+          name: '更多',
+          font_class: 'more',
+          unicode: 'e660',
+          unicode_decimal: 58976
+        },
+        {
+          icon_id: '21429459',
+          name: '兑换',
+          font_class: 'refresh-line',
+          unicode: 'e615',
+          unicode_decimal: 58901
+        },
+        {
+          icon_id: '21712497',
+          name: 'alipay',
+          font_class: 'alipay',
+          unicode: 'e694',
+          unicode_decimal: 59028
+        },
+        {
+          icon_id: '21712511',
+          name: 'bars',
+          font_class: 'bars',
+          unicode: 'e697',
+          unicode_decimal: 59031
+        },
+        {
+          icon_id: '21712725',
+          name: 'wechat',
+          font_class: 'wechat',
+          unicode: 'e6ba',
+          unicode_decimal: 59066
+        },
+        {
+          icon_id: '21809139',
+          name: 'arrow-down_fill',
+          font_class: 'arrow-down_fill',
+          unicode: 'e602',
+          unicode_decimal: 58882
+        },
+        {
           icon_id: '1446453',
           name: 'edit',
           font_class: 'edit-line',
@@ -39,11 +95,25 @@ export default {
           unicode_decimal: 58911
         },
         {
-          icon_id: '19726047',
-          name: 'BackSpace-01',
+          icon_id: '20075636',
+          name: 'backspace',
           font_class: 'backspace',
-          unicode: 'e71d',
-          unicode_decimal: 59165
+          unicode: 'e601',
+          unicode_decimal: 58881
+        },
+        {
+          icon_id: '848668',
+          name: 'add',
+          font_class: 'add',
+          unicode: 'e64d',
+          unicode_decimal: 58957
+        },
+        {
+          icon_id: '10915047',
+          name: 'subtract-line',
+          font_class: 'subtract',
+          unicode: 'e67b',
+          unicode_decimal: 59003
         },
         {
           icon_id: '16992358',
@@ -93,20 +163,6 @@ export default {
           font_class: 'eye',
           unicode: 'e60c',
           unicode_decimal: 58892
-        },
-        {
-          icon_id: '7008886',
-          name: 'add',
-          font_class: 'add',
-          unicode: 'e6e4',
-          unicode_decimal: 59108
-        },
-        {
-          icon_id: '9008886',
-          name: 'subtract',
-          font_class: 'subtract',
-          unicode: 'e6e4',
-          unicode_decimal: 59108
         },
         {
           icon_id: '7008884',
