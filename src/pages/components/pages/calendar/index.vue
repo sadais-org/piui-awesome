@@ -34,6 +34,7 @@
       :range-color="rangeColor"
       :range-bg="rangeBg"
       :date-format="dateFormat"
+      @confirm="handleConfirm"
     />
   </view>
 </template>
@@ -122,6 +123,9 @@ export default {
       }
       this.showCalendar = true
       fn[key]()
+    },
+    handleConfirm(value) {
+      console.log(value)
     }
   }
 }
