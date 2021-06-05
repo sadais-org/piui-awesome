@@ -5,7 +5,7 @@
       <pi-form
         ref="form"
         label-width="200"
-        input-align="left"
+        input-align="right"
         :model="form"
         title="表单校验"
         border
@@ -19,7 +19,9 @@
         </pi-form-item>
         <pi-form-item>
           <pi-button type="primary" @click="handleSubmitForm">提交</pi-button>
-          <pi-button type="secondary" @click="handleResetForm">重置</pi-button>
+          <pi-button class="pi-mg-left-24" type="secondary" @click="handleResetForm">
+            重置
+          </pi-button>
         </pi-form-item>
       </pi-form>
       <pi-form :model="form" title="表单演示" border>
@@ -29,10 +31,7 @@
         </pi-form-item>
         <pi-form-item label="名称">
           <pi-input />
-          <view slot="right" class="pi-align-center">
-            <view class="pi-pd-right-6">月</view>
-            <pi-icon name="unfold" size="34" custom-class="pi-primary" />
-          </view>
+          <pi-icon slot="right" name="right" size="34" custom-class="pi-primary" />
         </pi-form-item>
         <pi-form-item label="名称">
           <pi-stepper v-model="stepper" shape="square" />
