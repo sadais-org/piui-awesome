@@ -41,7 +41,13 @@
       v-model="range.show"
       :calendar-panel="{
         value: range.value,
-        type: 'range'
+        type: 'range',
+        dateFormat: 'YYYY.MM.DD'
+      }"
+      :popup="{
+        mask: {
+          appendToBody: true
+        }
       }"
       @confirm="range.value = $event"
     />
@@ -59,7 +65,7 @@ export default {
       },
       range: {
         show: false,
-        value: ['2020-5-2', '2020-5-20']
+        value: ['2020.5.2', '2020.5.20']
       }
     }
   },

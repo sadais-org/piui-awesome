@@ -41,7 +41,7 @@ export default {
         {
           icon_id: '14196363',
           name: '小程序-关闭',
-          font_class: 'xiaochengxu-guanbi',
+          font_class: 'icon-close-dot',
           unicode: 'e64c',
           unicode_decimal: 58956
         },

@@ -42,6 +42,11 @@
       close-icon-position="tl"
       border-radius="24rpx 24rpx 0 0"
       append-to-body
+      :confirm-btn="{
+        customStyle: {
+          borderRadius: '500px'
+        }
+      }"
       @confirm="handleSelectConfirm"
     />
   </view>
