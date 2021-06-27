@@ -2,12 +2,12 @@
   <view class="pi-scroll-container">
     <pi-navbar title="底部按钮栏" />
     <scroll-view class="pi-scroll" scroll-y>
-      <view class="body">
-        <view v-for="item in 99" :key="item">{{ item }}</view>
-      </view>
+      <pi-list>
+        <pi-card v-for="item in 99" :key="item" :title="item + '. 标题'">{{ item }}</pi-card>
+      </pi-list>
     </scroll-view>
     <pi-bottom-bar>
-      <pi-button width="100%">确认</pi-button>
+      <pi-button type="primary" width="100%">确认</pi-button>
     </pi-bottom-bar>
   </view>
 </template>

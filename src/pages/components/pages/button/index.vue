@@ -2,19 +2,62 @@
   <view class="pi-scroll-container">
     <pi-navbar title="按钮" />
     <scroll-view class="pi-scroll" scroll-y>
-      <view class="pi-content">
-        <view class="section">
-          <view class="title">按钮尺寸</view>
+      <!-- 基础用法 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="基础用法" />
+        <template slot="body">
+          <pi-button type="primary">基础用法</pi-button>
+        </template>
+      </pi-card>
+      <!-- 按钮类型 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="按钮类型" />
+        <template slot="body">
+          <pi-button type="primary">主要按钮</pi-button>
+          <pi-button type="secondary">次要按钮</pi-button>
+          <pi-button type="warn">警告按钮</pi-button>
+          <pi-button type="line">线框按钮</pi-button>
+        </template>
+      </pi-card>
+      <!-- 按钮尺寸 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="按钮尺寸" />
+        <template slot="body">
           <pi-button size="large">大按钮</pi-button>
           <pi-button size="default">普通按钮</pi-button>
           <pi-button size="medium">中按钮</pi-button>
           <pi-button size="small">小按钮</pi-button>
           <pi-button size="tiny">超小按钮</pi-button>
           <pi-button size="mini">迷你按钮</pi-button>
-        </view>
-
-        <view class="section">
-          <view class="title">渐变按钮</view>
+        </template>
+      </pi-card>
+      <!-- 圆角按钮 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="圆角按钮" />
+        <template slot="body">
+          <pi-button type="primary" size="default" round>普通按钮</pi-button>
+          <pi-button type="secondary" size="medium" round>中按钮</pi-button>
+          <pi-button type="warn" size="small" round>小按钮</pi-button>
+          <pi-button type="line" size="tiny" round>超小按钮</pi-button>
+          <pi-button type="primary" size="mini" round>迷你按钮</pi-button>
+        </template>
+      </pi-card>
+      <!-- 按钮禁用 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="按钮禁用" />
+        <template slot="body">
+          <pi-button type="primary" size="large" disabled>大按钮</pi-button>
+          <pi-button type="secondary" size="default" disabled>普通按钮</pi-button>
+          <pi-button type="warn" size="medium" disabled>中按钮</pi-button>
+          <pi-button type="line" size="small" disabled>小按钮</pi-button>
+          <pi-button type="primary" size="tiny" disabled>超小按钮</pi-button>
+          <pi-button type="primary" size="mini" disabled>迷你按钮</pi-button>
+        </template>
+      </pi-card>
+      <!-- 渐变按钮 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="渐变按钮" />
+        <template slot="body">
           <pi-button
             type="primary"
             size="large"
@@ -75,39 +118,13 @@
           >
             迷你按钮
           </pi-button>
-        </view>
-
-        <view class="section">
-          <view class="title">禁用按钮</view>
-          <pi-button type="primary" size="large" disabled>大按钮</pi-button>
-          <pi-button type="secondary" size="default" disabled>普通按钮</pi-button>
-          <pi-button type="warn" size="medium" disabled>中按钮</pi-button>
-          <pi-button type="line" size="small" disabled>小按钮</pi-button>
-          <pi-button type="primary" size="tiny" disabled>超小按钮</pi-button>
-          <pi-button type="primary" size="mini" disabled>迷你按钮</pi-button>
-        </view>
-
-        <view class="section">
-          <view class="title">圆角按钮</view>
-          <pi-button type="secondary" size="large" round>大按钮</pi-button>
-          <pi-button type="secondary" size="default" round>普通按钮</pi-button>
-          <pi-button type="secondary" size="medium" round>中按钮</pi-button>
-          <pi-button type="secondary" size="small" round>小按钮</pi-button>
-          <pi-button type="secondary" size="tiny" round>超小按钮</pi-button>
-          <pi-button type="secondary" size="mini" round>迷你按钮</pi-button>
-        </view>
-
-        <view class="section">
-          <view class="title">按钮类型</view>
-          <pi-button type="primary">主要按钮</pi-button>
-          <pi-button type="secondary">次要按钮</pi-button>
-          <pi-button type="warn">警告按钮</pi-button>
-          <pi-button type="line">线框按钮</pi-button>
-        </view>
-
-        <view class="section">
-          <view class="title">按钮宽度</view>
-          <pi-button type="primary" width="100%" custom-class="pi-mg-bottom-8">
+        </template>
+      </pi-card>
+      <!-- 按钮宽度 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="按钮宽度" />
+        <template slot="body">
+          <pi-button type="line" width="100%" custom-class="pi-mg-bottom-8">
             100%
           </pi-button>
           <pi-button type="secondary" width="300">300px</pi-button>
@@ -115,24 +132,24 @@
             50%
           </pi-button>
           <pi-button type="secondary" width="225">225px</pi-button>
-        </view>
-
-        <view class="section">
-          <view class="title">加载按钮</view>
-          <pi-button
-            loading
-            type="primary"
-            size="large"
-            :custom-style="{
-              background: 'linear-gradient(90deg, #6F8EFF 0%, #4731FF 100%)',
-              boxShadow: '0px 8px 8px 0px rgba(66, 106, 255, 0.16);'
-            }"
-          >
-            加载按钮
-          </pi-button>
-        </view>
-        <view class="section">
-          <view class="title">自定义样式</view>
+        </template>
+      </pi-card>
+      <!-- 加载中按钮 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="加载中按钮" />
+        <template slot="body">
+          <pi-button type="primary" size="large" loading>大按钮</pi-button>
+          <pi-button type="secondary" size="default" loading>普通按钮</pi-button>
+          <pi-button type="warn" size="medium" loading>中按钮</pi-button>
+          <pi-button type="line" size="small" loading>小按钮</pi-button>
+          <pi-button type="primary" size="tiny" loading>超小按钮</pi-button>
+          <pi-button type="primary" size="mini" loading>迷你按钮</pi-button>
+        </template>
+      </pi-card>
+      <!-- 自定义样式 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义样式" />
+        <template slot="body">
           <pi-button color="#ffffff" bg-color="#ff508a" custom-class="pi-mg-top-12" round>
             <pi-icon name="check" />
             <text class="pi-mg-left-12">带勾选按钮</text>
@@ -149,11 +166,12 @@
               <view class="pi-lh-1 pi-fz-24">副文本</view>
             </view>
           </pi-button>
-        </view>
-      </view>
+        </template>
+      </pi-card>
     </scroll-view>
+    <!-- 吸底按钮 -->
     <pi-bottom-bar>
-      <pi-button width="100%" type="primary" size="large">
+      <pi-button width="100%" type="primary" size="medium" round>
         吸底按钮
       </pi-button>
     </pi-bottom-bar>
