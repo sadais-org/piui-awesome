@@ -20,36 +20,36 @@
           </pi-checkbox-group>
         </template>
       </pi-card>
-      <!-- 自定义颜色（active-color="#ff6a00"）-->
+      <!-- 自定义颜色（active-color="#ff508a"）-->
       <pi-card>
         <pi-section slot="title" padding="0" title="自定义颜色" />
         <template slot="body">
-          <pi-checkbox-group v-model="customColor" direction="vertical" active-color="#ff6a00">
-            <pi-checkbox name="square" shape="square" active-color="#ff6a00">
+          <pi-checkbox-group v-model="customColor" direction="vertical" active-color="#ff508a">
+            <pi-checkbox name="square" shape="square" active-color="#ff508a">
               方形（默认）
             </pi-checkbox>
             <pi-checkbox
               name="square-fill"
               shape="square"
-              active-color="#ff6a00"
+              active-color="#ff508a"
               active-mode="fill"
             >
               方形（填充）
             </pi-checkbox>
-            <pi-checkbox name="round" shape="round" active-color="#ff6a00">
+            <pi-checkbox name="round" shape="round" active-color="#ff508a">
               圆形
             </pi-checkbox>
-            <pi-checkbox name="round-fill" shape="round" active-mode="fill" active-color="#ff6a00">
+            <pi-checkbox name="round-fill" shape="round" active-mode="fill" active-color="#ff508a">
               圆形（填充）
             </pi-checkbox>
-            <pi-checkbox name="dot" shape="dot" active-color="#ff6a00">
+            <pi-checkbox name="dot" shape="dot" active-color="#ff508a">
               圆点
             </pi-checkbox>
-            <pi-checkbox name="dot-fill" shape="dot" active-color="#ff6a00" active-mode="fill">
+            <pi-checkbox name="dot-fill" shape="dot" active-color="#ff508a" active-mode="fill">
               圆点（填充）
             </pi-checkbox>
-            <pi-checkbox name="text" shape="text" active-color="#ff6a00">文字</pi-checkbox>
-            <pi-checkbox name="text-fill" shape="text" active-color="#ff6a00" active-mode="fill">
+            <pi-checkbox name="text" shape="text" active-color="#ff508a">文字</pi-checkbox>
+            <pi-checkbox name="text-fill" shape="text" active-color="#ff508a" active-mode="fill">
               文字（填充）
             </pi-checkbox>
           </pi-checkbox-group>
