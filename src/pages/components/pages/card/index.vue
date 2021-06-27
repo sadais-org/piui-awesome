@@ -2,7 +2,7 @@
   <view class="pi-scroll-container">
     <pi-navbar title="card" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <pi-card title="默认卡片" />
+      <pi-card title="基础用法" />
       <pi-card>
         <pi-section slot="title" padding="0" title="设置title slot：pi-section" show-right-icon />
       </pi-card>
