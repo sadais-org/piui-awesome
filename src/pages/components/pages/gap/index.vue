@@ -9,7 +9,14 @@
           <pi-gap />
         </template>
       </pi-card>
-      <!-- 基础用法 -->
+      <!-- 间隔高度 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="间隔高度" />
+        <template slot="body">
+          <pi-gap height="40" />
+        </template>
+      </pi-card>
+      <!-- 背景颜色 -->
       <pi-card>
         <pi-section slot="title" padding="0" title="背景颜色" />
         <template slot="body">
