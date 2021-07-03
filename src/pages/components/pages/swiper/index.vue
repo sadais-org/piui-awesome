@@ -2,39 +2,54 @@
   <view class="pi-scroll-container">
     <pi-navbar title="swiper" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <view class="pi-content">
-        <pi-section title="自动撑高" desc="height: 'auto'" />
-        <pi-swiper :imgs="demo1.imgs" />
-        <pi-section title="定高,开启3d效果" />
-        <pi-swiper height="400" img-mode="aspectFill" :imgs="demo2.imgs" effect3d />
-        <pi-section title="指示器为圆点，位置在中间" />
-        <pi-swiper
-          height="400"
-          img-mode="aspectFill"
-          indicator-type="dot"
-          indicator-position="bc"
-          indicator-active-color="red"
-          :imgs="demo2.imgs"
-        />
-        <pi-section title="指示器为矩形，位置在顶部" />
-        <pi-swiper
-          height="400"
-          img-mode="aspectFill"
-          indicator-type="rect"
-          indicator-position="tc"
-          :imgs="demo2.imgs"
-        />
-        <pi-section title="指示器为矩形" />
-        <pi-swiper height="400" img-mode="aspectFill" indicator-type="rect" :imgs="demo2.imgs" />
-        <pi-section title="指定imgField" />
-        <pi-swiper
-          height="400"
-          img-mode="aspectFill"
-          indicator-type="rect"
-          img-field="pic"
-          :imgs="demo3.imgs"
-        />
-      </view>
+      <!-- 基础用法 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="基础用法" />
+        <template slot="body">
+          <pi-swiper :imgs="demo1.imgs" />
+        </template>
+      </pi-card>
+      <!-- 固定高度 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="固定高度" desc="height: 400" />
+        <template slot="body">
+          <pi-swiper height="400" img-mode="aspectFill" :imgs="demo2.imgs" />
+        </template>
+      </pi-card>
+      <!-- 3d效果 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="3d效果" desc="effect3d" />
+        <template slot="body">
+          <pi-swiper height="400" img-mode="aspectFill" :imgs="demo2.imgs" effect3d />
+        </template>
+      </pi-card>
+      <!-- 圆点指示器 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="圆点指示器" desc="indicator-type: dot" />
+        <template slot="body">
+          <pi-swiper
+            height="400"
+            img-mode="aspectFill"
+            indicator-type="dot"
+            indicator-position="bc"
+            indicator-active-color="red"
+            :imgs="demo2.imgs"
+          />
+        </template>
+      </pi-card>
+      <!-- 矩形指示器 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="矩形指示器" desc="indicator-type: rect" />
+        <template slot="body">
+          <pi-swiper
+            height="400"
+            img-mode="aspectFill"
+            indicator-type="rect"
+            indicator-position="tc"
+            :imgs="demo2.imgs"
+          />
+        </template>
+      </pi-card>
     </scroll-view>
   </view>
 </template>
