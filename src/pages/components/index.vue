@@ -99,7 +99,7 @@ export default {
         },
         {
           name: 'section',
-          zhName: '分块'
+          zhName: '区块'
         },
         {
           name: 'line-progress',

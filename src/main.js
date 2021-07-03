@@ -1,7 +1,7 @@
 /*
  * @Author: zhangzhenfei
  * @Date: 2020-11-13 10:25:49
- * @LastEditTime: 2021-04-29 09:07:39
+ * @LastEditTime: 2021-07-02 14:39:59
  * @LastEditors: zhangzhenfei
  * @Description:
  * @FilePath: /piui-awesome/src/main.js
@@ -17,6 +17,7 @@ piui.navi.beforeBack((to, from, next) => {
 Vue.use(piui, {
   navbar: {
     homePage: 'pages/base-style/index',
+    backText: '返回',
     customStyle: {
       boxShadow: '0 4px 10px 0 rgb(0 0 0 / 7%)'
     }

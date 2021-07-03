@@ -3,6 +3,7 @@
     <pi-navbar
       title="自定义导航栏"
       :show-back="true"
+      back-text="返回"
       show-home
       capsule-theme="dark"
       back-icon-color="#333333"
