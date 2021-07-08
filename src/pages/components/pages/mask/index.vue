@@ -133,11 +133,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.pi-button {
-  display: block;
-  width: 380rpx;
-  margin-top: 5rpx;
-}
-</style>

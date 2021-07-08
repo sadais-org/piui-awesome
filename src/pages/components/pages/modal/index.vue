@@ -4,14 +4,14 @@
     <scroll-view class="pi-scroll" scroll-y>
       <view class="pi-content">
         <pi-section title="基础弹窗" />
-        <pi-button type="primary" @tap="handleShowModal">显示</pi-button>
+        <pi-button type="primary" @click="handleShowModal">显示</pi-button>
         <pi-section title="自定义确定按钮" />
-        <pi-button type="primary" @tap="showModal2 = true">定制确定按钮</pi-button>
+        <pi-button type="primary" @click="showModal2 = true">定制确定按钮</pi-button>
         <pi-section title="自定义取消按钮" />
-        <pi-button type="primary" @tap="showModal3 = true">定制取消按钮</pi-button>
+        <pi-button type="primary" @click="showModal3 = true">定制取消按钮</pi-button>
         <pi-section title="自定义关闭按钮" />
-        <pi-button type="primary" @tap="showModal4 = true">隐藏关闭按钮</pi-button>
-        <pi-button type="primary" @tap="showModal5 = true">定制关闭按钮</pi-button>
+        <pi-button type="primary" @click="showModal4 = true">隐藏关闭按钮</pi-button>
+        <pi-button type="primary" @click="showModal5 = true">定制关闭按钮</pi-button>
       </view>
     </scroll-view>
     <pi-modal
@@ -19,6 +19,7 @@
       title="温馨提示"
       content="是否要升级版本"
       confirm-text="升级"
+      @cancel="handleCancel"
       @confirm="handleUpdate"
     />
     <pi-modal
@@ -99,11 +100,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.pi-button {
-  display: block;
-  width: 380rpx;
-  margin-top: 5rpx;
-}
-</style>

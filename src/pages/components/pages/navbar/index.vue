@@ -12,6 +12,12 @@
     <scroll-view class="pi-scroll" scroll-y="">
       <pi-section title="取消固定在顶部" custom-class="pi-mg-top-10" />
       <pi-navbar title="取消fixed" :fixed="false" />
+      <pi-navbar
+        show-back
+        through-title-width="400"
+        title="超长导航栏，自动剪裁添加省略号"
+        :fixed="false"
+      />
       <pi-section title="自定义返回按钮" custom-class="pi-mg-top-10" />
       <pi-navbar back-icon-name="barrage" :fixed="false" :show-back="true">
         自定义返回图标
