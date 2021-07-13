@@ -2,9 +2,28 @@
   <view class="pi-scroll-container">
     <pi-navbar title="底部按钮栏" />
     <scroll-view class="pi-scroll" scroll-y>
-      <pi-list>
-        <pi-card v-for="item in 99" :key="item" :title="item + '. 标题'">{{ item }}</pi-card>
-      </pi-list>
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" title="底部双按钮" />
+        <template slot="body">
+          <pi-bottom-bar border-top="none">
+            <pi-button type="secondary" width="50%" class="pi-mg-right-24">忽略</pi-button>
+            <pi-button type="primary" width="50%">确认</pi-button>
+          </pi-bottom-bar>
+        </template>
+      </pi-card>
+
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" title="底部三按钮" />
+        <template slot="body">
+          <pi-bottom-bar border-top="none">
+            <pi-button type="secondary" width="50%" class="pi-mg-right-24">忽略</pi-button>
+            <pi-button type="warn" width="50%" class="pi-mg-right-24">销毁</pi-button>
+            <pi-button type="primary" width="50%">确认</pi-button>
+          </pi-bottom-bar>
+        </template>
+      </pi-card>
+
+      <pi-card v-for="item in 99" :key="item" :title="item + '. 标题'">{{ item }}</pi-card>
     </scroll-view>
     <pi-bottom-bar>
       <pi-button type="primary" width="100%">确认</pi-button>

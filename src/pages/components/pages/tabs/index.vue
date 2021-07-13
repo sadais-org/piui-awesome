@@ -2,91 +2,90 @@
   <view class="pi-scroll-container">
     <pi-navbar title="标签栏" />
     <scroll-view class="pi-scroll" scroll-y>
-      <view class="pi-content">
-        <view>
-          <pi-section>
-            默认tabs
-            <text slot="desc">不设定sliderBarWidth</text>
-          </pi-section>
-          <pi-tabs v-model="demo1.currentItem" :items="demo1.tabItems" />
-        </view>
-        <view>
-          <pi-section>
-            固定sliderBar宽度
-            <text slot="desc">sliderBarWidth: 60</text>
-          </pi-section>
-          <pi-tabs v-model="demo2.currentItem" :items="demo2.tabItems" slider-bar-width="60" />
-        </view>
-        <view>
-          <view>
-            <pi-section title="显示滚动槽"><text slot="desc">activeColor蓝色</text></pi-section>
-            <pi-tabs
-              v-model="demo3.currentItem"
-              :items="demo3.tabItems"
-              slider-bar-width="60"
-              active-color="blue"
-              show-slider-bar-guide
-            />
-          </view>
-        </view>
-        <view>
-          <view>
-            <pi-section>
-              标签自动撑开
-              <text slot="desc">平分宽度</text>
-            </pi-section>
-            <pi-tabs
-              v-model="demo4.currentItem"
-              :items="demo4.tabItems"
-              stretch
-              active-color="green"
-            />
-          </view>
-        </view>
-        <view>
-          <view>
-            <pi-section>自定义样式</pi-section>
-            <pi-tabs
-              v-model="demo5.currentItem"
-              :items="demo5.tabItems"
-              :item-style="{ color: '#333333', fontWeight: 600 }"
-              stretch
-              :show-slider-bar="false"
-              active-text-color="#ffffff"
-              :active-item-style="{
-                backgroundColor: '#ff508a',
-                borderRadius: '12rpx'
-              }"
-              @change="changeItem"
-            />
-          </view>
-        </view>
-        <view>
-          <view>
-            <pi-section>
-              自定义样式
-            </pi-section>
-            <pi-tabs
-              v-model="tabs.currentItem"
-              :items="tabs.tabItems"
-              slider-bar-width="60"
-              active-text-color="#222222"
-              active-color="#4784FE"
-              :show-slider-bar-guide="false"
-              :active-item-style="{
-                fontSize: '48rpx',
-                fontWeight: '600',
-                fontFamily: 'PingFangSC-Semibold, PingFang SC;'
-              }"
-              :item-style="{
-                fontSize: '32rpx',
-                fontFamily: 'PingFangSC-Semibold, PingFang SC;',
-                color: '#666666'
-              }"
-            />
-          </view>
-        </view>
-      </view>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="基础用法" />
+        <template slot="body">
+          <pi-tabs v-model="baseUsed.currentItem" :items="baseUsed.tabItems" />
+        </template>
+      </pi-card>
+      <pi-card>
+        <pi-section
+          slot="title"
+          padding="0"
+          title="固定sliderBar宽度"
+          desc="slider-bar-width: 60"
+        />
+        <template slot="body">
+          <pi-tabs
+            v-model="sliderBarWidth.currentItem"
+            :items="sliderBarWidth.tabItems"
+            slider-bar-width="60"
+          />
+        </template>
+      </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="显示滚动槽" desc="show-slider-bar-guide" />
+        <template slot="body">
+          <pi-tabs
+            v-model="showSliderBarGuide.currentItem"
+            :items="showSliderBarGuide.tabItems"
+            slider-bar-width="60"
+            active-color="blue"
+            show-slider-bar-guide
+          />
+        </template>
+      </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="标签均分宽度" desc="stretch" />
+        <template slot="body">
+          <pi-tabs
+            v-model="stretch.currentItem"
+            :items="stretch.tabItems"
+            stretch
+            active-color="green"
+          />
+        </template>
+      </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义标签" />
+        <template slot="body">
+          <pi-tabs
+            v-model="itemStyle.currentItem"
+            :items="itemStyle.tabItems"
+            :item-style="{ color: '#333333', fontWeight: 600 }"
+            stretch
+            :show-slider-bar="false"
+            active-text-color="#ffffff"
+            :active-item-style="{
+              backgroundColor: '#ff508a',
+              borderRadius: '12rpx'
+            }"
+            @change="handleChangeItem"
+          />
+        </template>
+      </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义激活标签" />
+        <template slot="body">
+          <pi-tabs
+            v-model="activeItemStyle.currentItem"
+            :items="activeItemStyle.tabItems"
+            slider-bar-width="60"
+            active-text-color="#222222"
+            active-color="#ff508a"
+            :show-slider-bar-guide="false"
+            :active-item-style="{
+              fontSize: '48rpx',
+              fontWeight: '600',
+              color: '#ff508a'
+            }"
+            :item-style="{
+              fontSize: '32rpx',
+              color: '#666666'
+            }"
+          />
+        </template>
+      </pi-card>
     </scroll-view>
   </view>
 </template>
@@ -96,69 +95,59 @@ export default {
   name: 'Tabs',
   data() {
     return {
-      demo1: {
-        currentItem: { id: 'b' },
+      baseUsed: {
+        currentItem: { id: 'recommend' },
         tabItems: [
-          { id: 'member', text: '团员', tag: '最帅' },
-          { id: 'masses', text: '群众', tag: '最美' },
-          { id: 'b', text: '我是一只小鸟', tag: '最美' },
-          { id: 'c', text: '测试很长很长很长', tag: '最美' },
-          { id: 'test', text: '短', tag: '最美' }
+          { id: 'product', text: '宝贝' },
+          { id: 'evaluation', text: '评价' },
+          { id: 'detail', text: '详情' },
+          { id: 'discover', text: '发现好物' },
+          { id: 'recommend', text: '推荐我的好宝贝' },
+          { id: 'share', text: '分享' }
         ]
       },
-      demo2: {
-        currentItem: { id: 'b' },
+      sliderBarWidth: {
+        currentItem: { id: 'product' },
         tabItems: [
-          { id: 'member', text: '团员', tag: '最帅' },
-          { id: 'masses', text: '群众', tag: '最美' },
-          { id: 'b', text: '我是一只小鸟', tag: '最美' },
-          { id: 'c', text: '测试很长很长很长', tag: '最美' },
-          { id: 'test', text: '短', tag: '最美' }
+          { id: 'product', text: '宝贝' },
+          { id: 'evaluation', text: '评价' },
+          { id: 'detail', text: '详情' },
+          { id: 'discover', text: '发现好物' },
+          { id: 'recommend', text: '推荐我的好宝贝' },
+          { id: 'share', text: '分享' }
         ]
       },
-      demo6: {
-        currentItem: { id: 'b' },
+      showSliderBarGuide: {
+        currentItem: { id: 'detail' },
         tabItems: [
-          { id: 'member', text: '团员', tag: '最帅' },
-          { id: 'masses', text: '群众', tag: '最美' },
-          { id: 'b', text: '我是一只小鸟', tag: '最美' },
-          { id: 'c', text: '测试很长很长很长', tag: '最美' },
-          { id: 'test', text: '短', tag: '最美' }
+          { id: 'product', text: '宝贝' },
+          { id: 'evaluation', text: '评价' },
+          { id: 'detail', text: '详情' },
+          { id: 'discover', text: '发现好物' },
+          { id: 'recommend', text: '推荐我的好宝贝' },
+          { id: 'share', text: '分享' }
         ]
       },
-      demo3: {
+      stretch: {
         currentItem: { id: 'c' },
         tabItems: [
-          { id: 'member', text: '团员', tag: '最帅' },
-          { id: 'masses', text: '群众', tag: '最美' },
-          { id: 'b', text: '我是一只小鸟', tag: '最美' },
-          { id: 'c', text: '测试很长很长很长', tag: '最美' },
-          { id: 'test', text: '短', tag: '最美' },
-          { id: 'x', text: '测试', tag: '最美' },
-          { id: 'b2', text: '测试2', tag: '最美' },
-          { id: 'b11', text: '母婴', tag: '最美' }
+          { id: 'a', text: 'A' },
+          { id: 'b', text: 'B' },
+          { id: 'c', text: 'C' },
+          { id: 'd', text: 'D' }
         ]
       },
-      demo4: {
+      itemStyle: {
         currentItem: { id: 'c' },
         tabItems: [
-          { id: 'a', text: 'A', tag: '最帅' },
-          { id: 'b', text: 'B', tag: '最美' },
-          { id: 'c', text: 'C', tag: '最美' },
-          { id: 'd', text: 'D', tag: '最美' }
+          { id: 'a', text: 'A' },
+          { id: 'b', text: 'B' },
+          { id: 'c', text: 'C' },
+          { id: 'd', text: 'D' },
+          { id: 'e', text: 'E' }
         ]
       },
-      demo5: {
-        currentItem: { id: 'c' },
-        tabItems: [
-          { id: 'a', text: 'A', tag: '最帅' },
-          { id: 'b', text: 'B', tag: '最美' },
-          { id: 'c', text: 'C', tag: '最美' },
-          { id: 'd', text: 'D', tag: '最美' },
-          { id: 'e', text: 'E', tag: '最美' }
-        ]
-      },
-      tabs: {
+      activeItemStyle: {
         currentItem: { id: '1' },
         tabItems: [
           { id: '1', text: '全部' },
@@ -172,7 +161,7 @@ export default {
     }
   },
   methods: {
-    changeItem(val) {
+    handleChangeItem(val) {
       console.log('切换到' + val.text)
     }
   }
