@@ -84,6 +84,13 @@
           }
         },
         {
+          "path": "popup-select/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "弹出选择"
+          }
+        },
+        {
           "path": "divider/index",
           "style": {
             "disableScroll": true,

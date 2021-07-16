@@ -3,15 +3,15 @@
     <pi-navbar title="日历面板" />
     <scroll-view class="pi-scroll" scroll-y="">
       <!-- 基础用法 -->
-      <pi-card>
-        <pi-section slot="title" padding="0" title="基础用法" />
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" title="基础用法" />
         <template slot="body">
           <pi-calendar-panel v-model="base.value" />
         </template>
       </pi-card>
       <!-- 双向绑定 -->
-      <pi-card>
-        <pi-section slot="title" padding="0" title="双向绑定" />
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" title="双向绑定" />
         <template slot="body">
           <pi-calendar-panel v-model="sync.value" />
         </template>
@@ -21,8 +21,8 @@
         </view>
       </pi-card>
       <!-- 范围选择 -->
-      <pi-card>
-        <pi-section slot="title" padding="0" title="范围选择" />
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" title="范围选择" />
         <template slot="body">
           <pi-calendar-panel v-model="range.value" type="range" />
         </template>

@@ -39,14 +39,6 @@
       :title="selectOptions.title"
       height="60vh"
       :item-height="150"
-      close-icon-position="tl"
-      border-radius="24rpx 24rpx 0 0"
-      append-to-body
-      :confirm-btn="{
-        customStyle: {
-          borderRadius: '500px'
-        }
-      }"
       @confirm="handleSelectConfirm"
     />
   </view>
@@ -101,7 +93,10 @@ export default {
           items: [
             { id: 'partyMember', text: '党员', disabled: true },
             { id: 'member', text: '团员' },
-            { id: 'masses', text: '群众' }
+            { id: 'masses', text: '群众' },
+            { id: 'renmin', text: '人民' },
+            { id: 'guanyuan', text: '官员' },
+            { id: 'dangyuan', text: '党员' }
           ]
         }
       }

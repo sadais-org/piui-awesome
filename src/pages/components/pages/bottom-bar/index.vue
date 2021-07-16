@@ -5,9 +5,11 @@
       <pi-card padding="0">
         <pi-section slot="title" padding="24" title="底部双按钮" />
         <template slot="body">
-          <pi-bottom-bar border-top="none">
-            <pi-button type="secondary" width="50%" class="pi-mg-right-24">忽略</pi-button>
-            <pi-button type="primary" width="50%">确认</pi-button>
+          <pi-bottom-bar border-top="none" custom-class="pi-align-center">
+            <pi-button type="secondary" style="width: 50%;" width="100%" class="pi-mg-right-24">
+              忽略
+            </pi-button>
+            <pi-button type="primary" style="width: 50%;" width="100%">确认</pi-button>
           </pi-bottom-bar>
         </template>
       </pi-card>
@@ -15,10 +17,14 @@
       <pi-card padding="0">
         <pi-section slot="title" padding="24" title="底部三按钮" />
         <template slot="body">
-          <pi-bottom-bar border-top="none">
-            <pi-button type="secondary" width="50%" class="pi-mg-right-24">忽略</pi-button>
-            <pi-button type="warn" width="50%" class="pi-mg-right-24">销毁</pi-button>
-            <pi-button type="primary" width="50%">确认</pi-button>
+          <pi-bottom-bar border-top="none" custom-class="pi-align-center">
+            <pi-button type="secondary" style="width: 50%;" width="100%" class="pi-mg-right-24">
+              忽略
+            </pi-button>
+            <pi-button type="warn" style="width: 50%;" width="100%" class="pi-mg-right-24">
+              销毁
+            </pi-button>
+            <pi-button type="primary" style="width: 50%;" width="100%">确认</pi-button>
           </pi-bottom-bar>
         </template>
       </pi-card>

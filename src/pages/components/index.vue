@@ -50,6 +50,10 @@ export default {
           zhName: '弹出层'
         },
         {
+          name: 'popup-select',
+          zhName: '弹出选择'
+        },
+        {
           name: 'divider',
           zhName: '分割线'
         },
