@@ -2,32 +2,59 @@
   <view class="pi-scroll-container">
     <pi-navbar title="numberkeyboard 数字键盘" />
     <scroll-view class="pi-scroll" scroll-y>
-      <pi-form ref="form" :model="form" title="表单校验" border error-type="toast">
-        <pi-form-item prop="code" label="默认数字键盘">
-          <pi-input v-model="form.code" @focus="handleInputFocus('code')" />
+      <pi-form ref="form" :model="form" title="数字键盘" border error-type="toast">
+        <pi-form-item prop="baseUsed" label="默认数字键盘" @click="form.baseUsed.show = true">
+          <pi-input v-model="form.baseUsed.value" />
         </pi-form-item>
-        <pi-form-item prop="demo2" label="数字键盘没有标题">
-          <pi-input v-model="form.demo2" @focus="handleInputFocus('demo2')" />
+        <pi-form-item prop="showTitle" label="显示标题" @click="form.showTitle.show = true">
+          <pi-input v-model="form.showTitle.value" />
         </pi-form-item>
-        <pi-form-item prop="demo3" label="身份证号键盘">
-          <pi-input v-model="form.demo3" @focus="handleInputFocus('demo3')" />
+        <pi-form-item prop="demo3" label="身份证号键盘" @click="form.extraKey.show = true">
+          <pi-input v-model="form.extraKey.value" />
         </pi-form-item>
-        <pi-form-item prop="demo4" label="自定义键盘颜色">
-          <pi-input v-model="form.demo4" @focus="handleInputFocus('demo4')" />
+        <pi-form-item prop="grayKeyboard" label="灰底键盘" @click="form.grayKeyboard.show = true">
+          <pi-input v-model="form.grayKeyboard.value" />
+        </pi-form-item>
+        <pi-form-item
+          prop="keyBackgroundColor"
+          label="自定义键盘颜色"
+          @click="form.keyBackgroundColor.show = true"
+        >
+          <pi-input v-model="form.keyBackgroundColor.value" />
         </pi-form-item>
       </pi-form>
     </scroll-view>
     <pi-number-keyboard
-      v-model="form[keyboardOptions.key]"
-      :show="keyboardOptions.show"
-      :default-value="keyboardOptions.defaultValue"
-      :show-title="keyboardOptions.showTitle"
-      :title="keyboardOptions.title"
-      :extra-key="keyboardOptions.extraKey"
-      :key-background-color="keyboardOptions.keyBackgroundColor"
-      border-radius="24rpx 24rpx 0 0"
-      append-to-body
-      @close="keyboardOptions.show = false"
+      v-model="form.baseUsed.value"
+      :show="form.baseUsed.show"
+      @close="form.baseUsed.show = false"
+    />
+    <pi-number-keyboard
+      v-model="form.showTitle.value"
+      :show="form.showTitle.show"
+      :popup-select="{
+        showTitle: true
+      }"
+      @close="form.showTitle.show = false"
+    />
+    <pi-number-keyboard
+      v-model="form.extraKey.value"
+      :show="form.extraKey.show"
+      extra-key="X"
+      @close="form.extraKey.show = false"
+    />
+    <pi-number-keyboard
+      v-model="form.grayKeyboard.value"
+      :show="form.grayKeyboard.show"
+      background-color="#f5f5f5"
+      key-background-color="#ffffff"
+      @close="form.grayKeyboard.show = false"
+    />
+    <pi-number-keyboard
+      v-model="form.keyBackgroundColor.value"
+      :show="form.keyBackgroundColor.show"
+      :key-style="{ color: '#ffffff', backgroundColor: '#5a7dff' }"
+      @close="form.keyBackgroundColor.show = false"
     />
   </view>
 </template>
@@ -39,17 +66,26 @@ export default {
     return {
       title: '',
       form: {
-        code: 30,
-        demo2: 100,
-        demo3: 44,
-        demo4: 555
-      },
-      keyboardOptions: {
-        key: 'code',
-        show: false,
-        showTitle: true,
-        extraKey: '',
-        keyBackgroundColor: ''
+        baseUsed: {
+          show: false,
+          value: 100
+        },
+        showTitle: {
+          show: false,
+          value: 130
+        },
+        extraKey: {
+          show: false,
+          value: 134
+        },
+        grayKeyboard: {
+          show: false,
+          value: '110102199907178435'
+        },
+        keyBackgroundColor: {
+          show: false,
+          value: 13415
+        }
       }
     }
   },
