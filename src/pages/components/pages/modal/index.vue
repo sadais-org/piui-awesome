@@ -2,62 +2,96 @@
   <view class="pi-scroll-container">
     <pi-navbar title="模态窗" />
     <scroll-view class="pi-scroll" scroll-y>
-      <view class="pi-content">
-        <pi-section title="基础弹窗" />
-        <pi-button type="primary" @click="handleShowModal">显示</pi-button>
-        <pi-section title="自定义确定按钮" />
-        <pi-button type="primary" @click="showModal2 = true">定制确定按钮</pi-button>
-        <pi-section title="自定义取消按钮" />
-        <pi-button type="primary" @click="showModal3 = true">定制取消按钮</pi-button>
-        <pi-section title="自定义关闭按钮" />
-        <pi-button type="primary" @click="showModal4 = true">隐藏关闭按钮</pi-button>
-        <pi-button type="primary" @click="showModal5 = true">定制关闭按钮</pi-button>
-      </view>
+      <!-- 基础用法 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="基础用法" />
+        <template slot="body">
+          <pi-button type="primary" @click="baseUsed = true">
+            显示模态窗
+          </pi-button>
+        </template>
+      </pi-card>
+      <!-- 隐藏关闭按钮 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="隐藏关闭按钮" />
+        <template slot="body">
+          <pi-button type="primary" @click="hideCancelBtn = true">
+            显示模态窗
+          </pi-button>
+        </template>
+      </pi-card>
+      <!-- 自定义确定按钮 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义确定按钮" />
+        <template slot="body">
+          <pi-button type="primary" @click="customConfirmBtn = true">
+            显示模态窗
+          </pi-button>
+        </template>
+      </pi-card>
+      <!-- 自定义取消按钮 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义取消按钮" />
+        <template slot="body">
+          <pi-button type="primary" @click="customCancelBtn = true">
+            显示模态窗
+          </pi-button>
+        </template>
+      </pi-card>
+      <!-- 自定义关闭按钮 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义关闭按钮" />
+        <template slot="body">
+          <pi-button type="primary" @click="customCloseBtn = true">
+            显示模态窗
+          </pi-button>
+        </template>
+      </pi-card>
+      <!-- 自定义slot -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义slot" />
+        <template slot="body">
+          <pi-button type="primary" @click="customSlot = true">
+            显示模态窗
+          </pi-button>
+        </template>
+      </pi-card>
     </scroll-view>
+    <pi-modal v-model="baseUsed" />
     <pi-modal
-      v-model="showModal"
+      v-model="hideCancelBtn"
       title="温馨提示"
-      content="是否要升级版本"
-      confirm-text="升级"
-      @cancel="handleCancel"
-      @confirm="handleUpdate"
+      content="暂无数据"
+      :cancel-btn="{
+        show: false
+      }"
     />
     <pi-modal
-      v-model="showModal2"
+      v-model="customConfirmBtn"
       title="温馨提示"
       content="是否要删除"
       :confirm-btn="{
         text: '删除',
-        bgColor: '#ff0000'
+        bgColor: '#ff508a'
       }"
       confirm-text="删除"
       confirm-bg-color="#ff0000"
-      @confirm="handleDelete"
     />
     <pi-modal
-      v-model="showModal3"
+      v-model="customCancelBtn"
       title="温馨提示"
-      content="暂无数据"
+      content="自定义取消按钮"
       :cancel-btn="{
-        text: '返回',
-        color: '#FFFFFF',
-        bgColor: '#5A7DFF'
+        text: '删除',
+        color: '#ffffff',
+        bgColor: '#ff508a'
       }"
       :confirm-btn="{
-        show: false
-      }"
-      @cancel="handleCancel"
-    />
-    <pi-modal
-      v-model="showModal4"
-      title="温馨提示"
-      content="隐藏关闭按钮"
-      :popup="{
-        showCloseIcon: false
+        text: '更新'
       }"
     />
     <pi-modal
-      v-model="showModal5"
+      v-model="customCloseBtn"
       title="温馨提示"
       content="定制关闭按钮"
       :popup="{
@@ -69,6 +103,9 @@
         }
       }"
     />
+    <pi-modal v-model="customSlot" title="请选择时间">
+      <pi-calendar-panel v-model="customSlotValue" />
+    </pi-modal>
   </view>
 </template>
 
@@ -77,25 +114,13 @@ export default {
   name: 'Modal',
   data() {
     return {
-      showModal: false,
-      showModal2: false,
-      showModal3: false,
-      showModal4: false,
-      showModal5: false
-    }
-  },
-  methods: {
-    handleShowModal() {
-      this.showModal = true
-    },
-    handleUpdate() {
-      console.log('点击升级了')
-    },
-    handleDelete() {
-      console.log('delete')
-    },
-    handleCancel() {
-      console.log('点击了返回')
+      baseUsed: false,
+      hideCancelBtn: false,
+      customConfirmBtn: false,
+      customCancelBtn: false,
+      customCloseBtn: false,
+      customSlotValue: '2020-08-08',
+      customSlot: false
     }
   }
 }
