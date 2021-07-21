@@ -2,29 +2,127 @@
   <view class="pi-scroll-container">
     <pi-navbar title="表单form" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <pi-form
-        ref="form"
-        label-width="200"
-        input-align="right"
-        :model="form"
-        title="表单校验"
-        border
-        error-type="toast"
-      >
-        <pi-form-item required label-width="300" prop="name" label="姓名">
-          <pi-input v-model="form.name" />
-        </pi-form-item>
-        <pi-form-item prop="intro" label="简介">
-          <pi-input v-model="form.intro" type="textarea" placeholder="请输入简介" />
-        </pi-form-item>
-        <pi-form-item>
-          <pi-button type="primary" @click="handleSubmitForm">提交</pi-button>
-          <pi-button class="pi-mg-left-24" type="secondary" @click="handleResetForm">
-            重置
-          </pi-button>
-        </pi-form-item>
-      </pi-form>
-      <pi-form :model="form" title="表单演示" border>
+      <pi-card>
+        <pi-form
+          slot="body"
+          label-width="200"
+          input-align="right"
+          :model="form"
+          title="基础用法"
+          border
+          error-type="toast"
+        >
+          <pi-form-item required label-width="300" prop="name" label="姓名">
+            <pi-input v-model="form.name" />
+          </pi-form-item>
+          <pi-form-item required label-width="300" prop="age" label="年龄">
+            <pi-input v-model="form.age" type="number" />
+          </pi-form-item>
+          <pi-form-item required label-width="300" prop="sex" label="性别">
+            <pi-radio-group v-model="form.sex" shape="dot">
+              <pi-radio name="male">男</pi-radio>
+              <pi-radio name="female">女</pi-radio>
+            </pi-radio-group>
+          </pi-form-item>
+          <pi-form-item required label-width="300" prop="notice" label="自动通知">
+            <pi-switch v-model="form.notice" />
+          </pi-form-item>
+          <pi-form-item label="参与活动" prop="" activity>
+            <pi-checkbox-group v-model="form.activity" shape="text" active-mode="fill">
+              <pi-checkbox name="1">活动1</pi-checkbox>
+              <pi-checkbox name="2">活动2</pi-checkbox>
+            </pi-checkbox-group>
+          </pi-form-item>
+          <pi-form-item prop="intro" label="自我介绍" wrap>
+            <pi-input v-model="form.intro" type="textarea" placeholder="请输入" />
+          </pi-form-item>
+        </pi-form>
+      </pi-card>
+
+      <pi-card>
+        <pi-form slot="body" :model="form" title="title是标题" desc="desc是描述" border>
+          <pi-form-item label="名称">
+            <pi-input />
+            <view slot="right">秒</view>
+          </pi-form-item>
+        </pi-form>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title" title="对齐方式和宽度" />
+        <template slot="body">
+          <view class="pi-justify-between">
+            <pi-radio-group
+              v-model="labelAlign"
+              shape="dot"
+              class="pi-justify-center"
+              direction="vertical"
+            >
+              <pi-radio name="left">左对齐</pi-radio>
+              <pi-radio name="center">居中对齐</pi-radio>
+              <pi-radio name="right">右对齐</pi-radio>
+            </pi-radio-group>
+            <pi-radio-group
+              v-model="labelWidth"
+              shape="dot"
+              class="pi-justify-center"
+              direction="vertical"
+            >
+              <pi-radio :name="120">宽度120</pi-radio>
+              <pi-radio :name="200">宽度200</pi-radio>
+              <pi-radio :name="300">宽度300</pi-radio>
+            </pi-radio-group>
+          </view>
+          <pi-form :model="form" :label-align="labelAlign" :label-width="labelWidth">
+            <pi-form-item required prop="name" label="姓名">
+              <pi-input v-model="form.name" />
+            </pi-form-item>
+            <pi-form-item required prop="age" label="手机号">
+              <pi-input v-model="form.age" type="number" />
+            </pi-form-item>
+            <pi-form-item required prop="age" label="是否预约">
+              <pi-switch v-model="form.notice" />
+            </pi-form-item>
+          </pi-form>
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title" title="标签换行" />
+        <template slot="body">
+          <pi-form :model="form1" wrap>
+            <pi-form-item required prop="name" label="姓名">
+              <pi-input v-model="form1.name" />
+            </pi-form-item>
+            <pi-form-item required prop="age" label="手机号">
+              <pi-input v-model="form1.age" type="number" />
+            </pi-form-item>
+            <pi-form-item required prop="age" label="是否预约">
+              <pi-switch v-model="form1.notice" />
+            </pi-form-item>
+          </pi-form>
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title" title="表单校验" />
+        <template slot="body">
+          <pi-form ref="form" :model="form2" border error-type="message">
+            <pi-form-item prop="name" label="姓名">
+              <pi-input v-model="form2.name" />
+            </pi-form-item>
+            <pi-form-item prop="intro" label="简介">
+              <pi-input v-model="form2.intro" type="textarea" placeholder="请输入简介" />
+            </pi-form-item>
+            <pi-form-item>
+              <pi-button type="primary" @click="handleSubmitForm">提交</pi-button>
+              <pi-button type="secondary" @click="handleResetForm">重置</pi-button>
+            </pi-form-item>
+          </pi-form>
+        </template>
+      </pi-card>
+
+      <!-- <pi-form :model="form" title="表单演示" border>
         <pi-form-item label="名称">
           <pi-input />
           <view slot="right">秒</view>
@@ -91,7 +189,7 @@
             <pi-checkbox name="3">选项3</pi-checkbox>
           </pi-checkbox-group>
         </pi-form-item>
-      </pi-form>
+      </pi-form> -->
     </scroll-view>
   </view>
 </template>
@@ -103,8 +201,22 @@ export default {
     return {
       form: {
         name: '张三',
-        intro: '三个字'
+        intro: '',
+        age: 12,
+        sex: 'male'
       },
+      form1: {
+        name: '张三',
+        intro: '',
+        age: 12,
+        sex: 'male'
+      },
+      form2: {
+        name: '张三',
+        intro: ''
+      },
+      labelAlign: 'left',
+      labelWidth: 120,
       checkboxGroupMax: ['male'],
       stepper: 1
     }

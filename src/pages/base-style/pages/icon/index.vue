@@ -2,15 +2,45 @@
   <view class="pi-scroll-container">
     <pi-navbar title="图标" />
     <scroll-view class="pi-scroll" scroll-y>
-      <view class="pi-content">
-        <pi-section title="基础用法" />
-        <pi-icon name="message-copy" custom-class="pi-fz-48" />
-        <pi-icon name="message-copy" custom-class="pi-primary pi-fz-48" dot />
-        <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" dot />
-        <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" badge="99+" />
-        <pi-icon name="message-copy" custom-class="pi-fz-48" color="red" dot dot-radius="28" />
-        <pi-section title="所有图标" />
-        <pi-grid square col="3">
+      <pi-card>
+        <pi-section slot="title" title="基础用法" />
+        <template slot="body">
+          <view class="pi-justify-around">
+            <pi-icon name="message-copy" size="16" />
+            <pi-icon name="bars" size="32" />
+            <pi-icon name="edit-line" size="48" />
+            <pi-icon name="add" size="64" />
+          </view>
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title" title="图标颜色" />
+        <template slot="body">
+          <view class="pi-justify-around">
+            <pi-icon name="message-copy" color="red" size="16" />
+            <pi-icon name="bars" color="green" size="32" />
+            <pi-icon name="edit-line" color="blue" size="48" />
+            <pi-icon name="add" color="black" size="64" />
+          </view>
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title" title="图标红点" />
+        <template slot="body">
+          <view class="pi-justify-around">
+            <pi-icon name="message-copy" color="red" size="16" dot />
+            <pi-icon name="bars" color="green" size="32" dot dot-radius="30" />
+            <pi-icon name="edit-line" color="blue" size="48" badge="30" />
+            <pi-icon name="add" color="black" size="64" badge="99+" />
+          </view>
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title" title="所有图标" />
+        <pi-grid slot="body" square col="3">
           <pi-grid-item v-for="(glyph, index) in glyphs" :key="glyph.id" :index="index">
             <view class="pi-h-100P pi-flex-column-center">
               <pi-icon :name="glyph.font_class" custom-class="pi-primary pi-fz-48" dot />
@@ -20,7 +50,7 @@
             </view>
           </pi-grid-item>
         </pi-grid>
-      </view>
+      </pi-card>
     </scroll-view>
   </view>
 </template>
