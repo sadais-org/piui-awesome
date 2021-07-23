@@ -11,6 +11,15 @@
           </pi-button>
         </template>
       </pi-card>
+      <!-- 设置弹出高度（非内容撑开） -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="设置弹出高度（非内容撑开）" />
+        <template slot="body">
+          <pi-button type="primary" @click="customHeight.show = true">
+            显示弹出层
+          </pi-button>
+        </template>
+      </pi-card>
       <!-- 弹出位置 -->
       <pi-card>
         <pi-section slot="title" padding="0" title="弹出位置" />
@@ -89,6 +98,13 @@
     <pi-popup v-model="baseUsed.show">
       <view style="height: 800rpx;" />
     </pi-popup>
+    <!-- 设置弹出高度（非内容撑开） -->
+    <pi-popup
+      v-model="customHeight.show"
+      :custom-style="{
+        height: '50%'
+      }"
+    />
     <!-- 弹出位置 popup -->
     <pi-popup v-model="position.show" :position="position.position">
       <view :style="[position.style]" />
@@ -120,6 +136,7 @@ export default {
       baseUsed: {
         show: false
       },
+      customHeight: false,
       position: {
         show: false,
         position: 'top',
