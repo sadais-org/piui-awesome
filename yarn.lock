@@ -1114,6 +1114,11 @@
   resolved "https://registry.npmjs.org/@dcloudio/uni-helper-json/-/uni-helper-json-1.0.13.tgz#4e8aa062daaefb30d98973c035a7b0ab628329c7"
   integrity sha512-FO9Iu4zW4td3Tr+eiCDWuele2ehkJ4qxQ/UhpAMLjso+ZdWz6NagK5Syh6cdy1hoDqbxpNoqnLynuJXe81Ereg==
 
+"@dcloudio/uni-i18n@^2.0.0-31920210709003":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.npmjs.org/@dcloudio/uni-i18n/-/uni-i18n-2.0.0-31920210709003.tgz#aa6cbd30bd070386df6009fb678f904826edcd71"
+  integrity sha512-mky1QinvxJ3CaqfHlbpVozHIN1IFFT9II38T2Ww4Qr5pPS77eBYv5FFnWb1DB5uwA3HruF/5qWQJAH7G85PGqg==
+
 "@dcloudio/uni-migration@^2.0.0-31920210709003":
   version "2.0.0-31920210709003"
   resolved "https://registry.npmjs.org/@dcloudio/uni-migration/-/uni-migration-2.0.0-31920210709003.tgz#aa8e982aea2c718a8fdce3e009410d6b9d92b0cb"
