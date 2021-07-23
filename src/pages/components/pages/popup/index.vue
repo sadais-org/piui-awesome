@@ -13,7 +13,7 @@
       </pi-card>
       <!-- 设置弹出高度（非内容撑开） -->
       <pi-card>
-        <pi-section slot="title" padding="0" title="设置弹出高度（非内容撑开）" />
+        <pi-section slot="title" padding="0" title="设置弹出高度" desc="非内容撑开" />
         <template slot="body">
           <pi-button type="primary" @click="customHeight.show = true">
             显示弹出层
@@ -22,7 +22,7 @@
       </pi-card>
       <!-- 弹出位置 -->
       <pi-card>
-        <pi-section slot="title" padding="0" title="弹出位置" />
+        <pi-section slot="title" padding="0" title="弹出位置" desc="position" />
         <template slot="body">
           <pi-grid col="2" gap="24" :border="false">
             <pi-grid-item :index="0">
@@ -50,7 +50,7 @@
       </pi-card>
       <!-- 背景颜色 -->
       <pi-card>
-        <pi-section slot="title" padding="0" title="背景颜色" />
+        <pi-section slot="title" padding="0" title="背景颜色" desc="background" />
         <template slot="body">
           <pi-button type="primary" @click="background.show = true">
             显示弹出层
@@ -59,7 +59,7 @@
       </pi-card>
       <!-- 圆角 -->
       <pi-card>
-        <pi-section slot="title" padding="0" title="圆角" />
+        <pi-section slot="title" padding="0" title="圆角" desc="borderRadius" />
         <template slot="body">
           <pi-button type="primary" @click="borderRadius.show = true">
             显示弹出层
