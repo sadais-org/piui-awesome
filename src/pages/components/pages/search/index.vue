@@ -2,40 +2,92 @@
   <view class="pi-scroll-container">
     <pi-navbar title="搜索框" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <view class="pi-content">
-        <pi-section>默认搜索框</pi-section>
-        <pi-search v-model="demo1" />
-        <pi-section>禁用搜索框</pi-section>
-        <pi-search disabled />
-        <pi-section>方形搜索框</pi-section>
-        <pi-search v-model="demo3" shape="square" />
-        <pi-section>自定义search-icon样式</pi-section>
-        <pi-search v-model="demo2" :search-icon-style="{ fontSize: '50rpx' }" />
-        <pi-section>搜索按钮放在右边</pi-section>
-        <pi-search v-model="demo6" shape="square" search-icon-position="right" />
-        <pi-section>设置搜索框左侧文本</pi-section>
-        <pi-search
-          v-model="demo4"
-          search-label="珠海"
-          :search-label-style="{ color: '#ff508a', fontSize: '36rpx' }"
-        />
-        <pi-section>显示搜索action</pi-section>
-        <pi-search v-model="demo5" clear-trigger="focus" show-action action-text="确定" />
-        <pi-section>设置搜索框背景颜色</pi-section>
-        <pi-search
-          v-model="demo7"
-          search-label="PIUI"
-          :search-label-style="{ color: '#ff508a' }"
-          search-icon-color="#ffffff"
-          show-action
-          background="#e5e5e5"
-          color="#ff508a"
-          action-text="搜索"
-          placeholder="提示文字"
-          placeholder-style="color: #ffffff"
-          @focus="handleClean"
-        />
-      </view>
+      <pi-card>
+        <pi-section slot="title">基础用法</pi-section>
+        <template slot="body">
+          <pi-search v-model="demo1" />
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title">自定义Icon</pi-section>
+        <template slot="body">
+          <pi-search v-model="demo2" />
+          <pi-search v-model="demo2" :search-icon-style="{ fontSize: '50rpx' }" />
+          <pi-search
+            v-model="demo2"
+            search-icon="camera"
+            :search-icon-style="{ fontSize: '50rpx', color: 'blue' }"
+          />
+          <pi-search
+            v-model="demo2"
+            search-icon="camera"
+            search-icon-position="right"
+            :search-icon-style="{ fontSize: '50rpx', color: 'blue' }"
+          />
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title">左侧文本</pi-section>
+        <template slot="body">
+          <pi-search v-model="demo3" search-label="珠海" />
+          <pi-search
+            v-model="demo3"
+            search-label="珠海"
+            :search-label-style="{ color: '#ff508a' }"
+          />
+          <pi-search
+            v-model="demo3"
+            search-label="珠海"
+            search-icon-position="right"
+            :search-icon-style="{ fontSize: '50rpx', color: 'blue' }"
+            :search-label-style="{ color: '#ff508a', fontSize: '36rpx' }"
+          />
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title">右侧文本</pi-section>
+        <template slot="body">
+          <pi-search v-model="demo4" action-text="搜索" show-action />
+          <pi-search
+            v-model="demo4"
+            action-text="搜索"
+            :action-style="{ color: 'blue' }"
+            show-action
+          />
+          <pi-search
+            v-model="demo4"
+            show-action
+            search-label="珠海"
+            action-text="搜索"
+            search-icon-position="right"
+            :search-icon-style="{ fontSize: '50rpx', color: 'blue' }"
+            :action-style="{ color: 'blue', fontSize: '36rpx' }"
+          />
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title">背景颜色</pi-section>
+
+        <template slot="body">
+          <pi-search
+            v-model="demo7"
+            search-label="PIUI"
+            :search-label-style="{ color: '#ff508a' }"
+            search-icon-color="#ffffff"
+            show-action
+            background="#e5e5e5"
+            color="#ff508a"
+            action-text="搜索"
+            placeholder="提示文字"
+            placeholder-style="color: #ffffff"
+            @focus="handleClean"
+          />
+        </template>
+      </pi-card>
     </scroll-view>
   </view>
 </template>
