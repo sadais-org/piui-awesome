@@ -15,7 +15,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="设置弹出高度" desc="非内容撑开" />
         <template slot="body">
-          <pi-button type="primary" @click="customHeight.show = true">
+          <pi-button type="primary" @click="customHeight = true">
             显示弹出层
           </pi-button>
         </template>
@@ -100,7 +100,7 @@
     </pi-popup>
     <!-- 设置弹出高度（非内容撑开） -->
     <pi-popup
-      v-model="customHeight.show"
+      v-model="customHeight"
       :custom-style="{
         height: '50%'
       }"

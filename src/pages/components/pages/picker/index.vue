@@ -2,33 +2,39 @@
   <view class="pi-scroll-container">
     <pi-navbar title="选择器" />
     <scroll-view class="pi-scroll" scroll-y>
-      <pi-list title="单列">
-        <pi-list-item title="地区（单列）" @tap="handleShowPicker('area')">
-          <input :value="form.area.text" type="text" class="input" placeholder="请选择" disabled />
-        </pi-list-item>
-      </pi-list>
-      <pi-list title="多列">
-        <pi-list-item title="性别（多列）" @tap="handleShowPicker('gender')">
-          <input
-            :value="form.gender.text"
-            type="text"
-            class="input"
-            placeholder="请选择"
-            disabled
-          />
-        </pi-list-item>
-      </pi-list>
-      <pi-list title="多列联动">
-        <pi-list-item title="身份（多列联动）" @tap="handleShowPicker('identity')">
-          <input
-            :value="form.identity.text"
-            type="text"
-            class="input"
-            placeholder="请选择"
-            disabled
-          />
-        </pi-list-item>
-      </pi-list>
+      <pi-card padding="0">
+        <template slot="body">
+          <pi-form show-right-icon>
+            <pi-form-item label="地区（单列）" @tap="handleShowPicker('area')">
+              <input
+                :value="form.area.text"
+                type="text"
+                class="input"
+                placeholder="请选择"
+                disabled
+              />
+            </pi-form-item>
+            <pi-form-item label="性别（多列）" @tap="handleShowPicker('gender')">
+              <input
+                :value="form.gender.text"
+                type="text"
+                class="input"
+                placeholder="请选择"
+                disabled
+              />
+            </pi-form-item>
+            <pi-form-item label="身份（多列联动）" @tap="handleShowPicker('identity')">
+              <input
+                :value="form.identity.text"
+                type="text"
+                class="input"
+                placeholder="请选择"
+                disabled
+              />
+            </pi-form-item>
+          </pi-form>
+        </template>
+      </pi-card>
     </scroll-view>
     <pi-picker
       v-model="pickerOptions.show"
