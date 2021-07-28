@@ -86,6 +86,21 @@
           />
         </template>
       </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="自定义slot" />
+        <template slot="body">
+          <pi-tabs
+            v-model="customSlot.currentItem"
+            :items="customSlot.tabItems"
+            show-item-split-line
+          >
+            <view slot="item" slot-scope="{ item }" class="pi-align-center">
+              <view>{{ item.text }}</view>
+              <pi-badge color="#5a7dff" :content="item.num" class="pi-mg-left-6" />
+            </view>
+          </pi-tabs>
+        </template>
+      </pi-card>
     </scroll-view>
   </view>
 </template>
@@ -156,6 +171,17 @@ export default {
           { id: '3', text: '家具' },
           { id: '4', text: '服装' },
           { id: '6', text: '其他' }
+        ]
+      },
+      customSlot: {
+        currentItem: { id: '5' },
+        tabItems: [
+          { id: '1', text: '全部', num: 0 },
+          { id: '2', text: '家电', num: 100 },
+          { id: '5', text: '奢侈品', num: 30 },
+          { id: '3', text: '家具', num: 0 },
+          { id: '4', text: '服装', num: 0 },
+          { id: '6', text: '其他', num: 0 }
         ]
       }
     }

@@ -30,6 +30,10 @@ export default {
           zhName: '图标'
         },
         {
+          name: 'badge',
+          zhName: '徽标'
+        },
+        {
           name: 'layout',
           zhName: '布局'
         },

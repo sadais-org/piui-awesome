@@ -37,6 +37,13 @@
           }
         },
         {
+          "path": "badge/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "徽标"
+          }
+        },
+        {
           "path": "grid/index",
           "style": {
             "disableScroll": true,
