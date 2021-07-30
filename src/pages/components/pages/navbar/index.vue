@@ -66,8 +66,8 @@
           />
         </template>
       </pi-card>
-      <pi-card>
-        <pi-section slot="title" padding="0" title="插槽示例" />
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" title="插槽示例" />
         <template slot="body">
           <pi-navbar :fixed="false" :show-back="true">
             <view>默认插槽</view>
@@ -75,13 +75,16 @@
           <pi-navbar :fixed="false" title="左边插槽">
             <view slot="left" class="pi-pd-left-24 pi-icon-add pi-fz-46 pi-primary" />
           </pi-navbar>
+          <pi-navbar :fixed="false">
+            <view slot="title">标题靠左</view>
+          </pi-navbar>
           <pi-navbar :fixed="false" title="右边插槽" :show-back="true">
             <view slot="right" class="pi-pd-right-24 pi-icon-add pi-fz-46 pi-primary" />
           </pi-navbar>
         </template>
       </pi-card>
-      <pi-card>
-        <pi-section slot="title" padding="0" title="示例" />
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" title="示例" />
         <template slot="body">
           <pi-navbar :fixed="false">
             <pi-search slot="title" show-action :action-style="{ paddingRight: '18rpx' }" />

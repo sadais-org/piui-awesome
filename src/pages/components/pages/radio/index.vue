@@ -3,7 +3,7 @@
     <pi-navbar title="radio 单选框" />
     <scroll-view class="pi-scroll" scroll-y>
       <pi-card>
-        <pi-section slot="title">基础用法</pi-section>
+        <pi-section slot="title" padding="0">基础用法</pi-section>
         <template slot="body">
           <pi-radio-group v-model="demo">
             <pi-radio name="a">备选项a</pi-radio>
@@ -14,7 +14,7 @@
       </pi-card>
 
       <pi-card>
-        <pi-section slot="title">
+        <pi-section slot="title" padding="0">
           禁用状态
           <pi-switch slot="right" v-model="demo5.disabled" size="40" active-color="#ff508a" />
         </pi-section>
@@ -28,7 +28,7 @@
       </pi-card>
 
       <pi-card>
-        <pi-section slot="title">纵向排列</pi-section>
+        <pi-section slot="title" padding="0">纵向排列</pi-section>
         <template slot="body">
           <pi-radio-group v-model="demo1" direction="vertical">
             <pi-radio name="a">备选项a</pi-radio>
@@ -39,7 +39,7 @@
       </pi-card>
 
       <pi-card>
-        <pi-section slot="title">不同形状</pi-section>
+        <pi-section slot="title" padding="0">不同形状</pi-section>
         <template slot="body">
           <pi-radio-group v-model="demo5.radioGroup" direction="vertical">
             <pi-radio :name="1" shape="square">备选项1</pi-radio>
@@ -51,7 +51,31 @@
       </pi-card>
 
       <pi-card>
-        <pi-section slot="title">激活模式</pi-section>
+        <pi-section slot="title" padding="0">按钮样式</pi-section>
+        <template slot="body">
+          <pi-radio-group v-model="buttonShape" shape="button">
+            <pi-radio :name="1">选项1</pi-radio>
+            <pi-radio :name="2">选项2</pi-radio>
+            <pi-radio :name="3">选项3</pi-radio>
+            <pi-radio :name="4">选项4</pi-radio>
+          </pi-radio-group>
+          <pi-radio-group
+            v-model="buttonShape"
+            shape="button"
+            stretch
+            active-mode="fill"
+            custom-class="pi-mg-top-24"
+          >
+            <pi-radio :name="1">备选项1</pi-radio>
+            <pi-radio :name="2">备选项2</pi-radio>
+            <pi-radio :name="3">备选项3</pi-radio>
+            <pi-radio :name="4">stretch较长的选项</pi-radio>
+          </pi-radio-group>
+        </template>
+      </pi-card>
+
+      <pi-card>
+        <pi-section slot="title" padding="0">激活模式</pi-section>
         <template slot="body">
           <pi-radio-group v-model="demo2" active-mode="line">
             线框：
@@ -60,7 +84,7 @@
             <pi-radio name="dot" shape="dot">圆点</pi-radio>
             <pi-radio name="text" shape="text">文字</pi-radio>
           </pi-radio-group>
-          <pi-radio-group v-model="demo2" active-mode="fill">
+          <pi-radio-group v-model="demo2" active-mode="fill" custom-class="pi-mg-top-24">
             填充：
             <pi-radio name="square" shape="square">方形</pi-radio>
             <pi-radio name="round" shape="round">圆形</pi-radio>
@@ -71,18 +95,18 @@
       </pi-card>
 
       <pi-card>
-        <pi-section slot="title">radioGroup 设置颜色</pi-section>
+        <pi-section slot="title" padding="0">radioGroup 设置颜色</pi-section>
         <template slot="body">
           <pi-radio-group v-model="demo3" direction="vertical">
-            <pi-radio :name="1" active-color="red">红色，代表热情</pi-radio>
-            <pi-radio :name="2" active-color="blue">蓝色，代表冷静</pi-radio>
-            <pi-radio :name="3" active-color="green">绿色，代表生活</pi-radio>
+            <pi-radio :name="1" active-color="red" shape="square">红色，代表热情</pi-radio>
+            <pi-radio :name="2" active-color="blue" shape="dot">蓝色，代表冷静</pi-radio>
+            <pi-radio :name="3" active-color="green" shape="text">绿色，代表生活</pi-radio>
           </pi-radio-group>
         </template>
       </pi-card>
 
       <pi-card>
-        <pi-section>radioGroup 设置尺寸: 60</pi-section>
+        <pi-section padding="0">radioGroup 设置尺寸: 60</pi-section>
         <template slot="body">
           <pi-radio-group v-model="demo6" direction="vertical" size="60" icon-size="40">
             <pi-radio :name="1" active-color="red">红色，代表热情</pi-radio>
@@ -91,26 +115,6 @@
           </pi-radio-group>
         </template>
       </pi-card>
-      <!-- <pi-radio-group v-model="type_pay" direction="vertical">
-          <template v-for="item in radioGroup">
-            <view
-              :key="item.payType"
-              class="pi-align-center pi-pd-tb-36 border-bottom"
-              @tap="showcase = item.payType"
-            >
-              <pi-img :src="item.icon" width="40" class="pi-mg-right-10" />
-              <view class="pi-w-100P pi-justify-between pi-align-center">
-                <text class="title">{{ item.title }}</text>
-                <pi-radio
-                  :disabled="item.show"
-                  :name="item.payType"
-                  :custom-style="{ margin: 0 }"
-                  active-mode="fill"
-                />
-              </view>
-            </view>
-          </template>
-        </pi-radio-group> -->
     </scroll-view>
   </view>
 </template>
@@ -130,6 +134,7 @@ export default {
       demo2: 1,
       demo3: 3,
       demo4: 1,
+      buttonShape: 1,
       demo5: {
         radioGroup: 1,
         disabled: true
