@@ -171,7 +171,7 @@
     </scroll-view>
     <!-- 吸底按钮 -->
     <pi-bottom-bar>
-      <pi-button width="100%" type="primary" size="medium" round>
+      <pi-button width="100%" type="primary" size="large" round>
         吸底按钮
       </pi-button>
     </pi-bottom-bar>

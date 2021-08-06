@@ -1,9 +1,24 @@
 <template>
-  <view class="pi-container">
-    <pi-button type="primary" @click="handleGetDeviceInfo">获取设备信息</pi-button>
-    <pi-button type="primary" @click="handleChooseImage">
-      选择图片
-    </pi-button>
+  <view class="pi-scroll-container">
+    <pi-navbar>标题栏</pi-navbar>
+    <pi-card title="我的" />
+    <pi-card>
+      <pi-section slot="title" title="图标颜色" />
+      <template slot="body">
+        <view class="pi-justify-around">
+          <pi-icon name="message-copy" color="red" size="16" />
+          <pi-icon name="bars" color="green" size="32" />
+          <pi-icon name="edit-line" color="blue" size="48" />
+          <pi-icon name="add" color="black" size="64" />
+        </view>
+      </template>
+    </pi-card>
+    <view class="pi-scroll pi-align-stretch pi-pd-left-24 pi-white ">
+      <view style="width: 200rpx;" class="pi-flex-column-center pi-bg-primary ">左侧</view>
+      <scroll-view scroll-y class="pi-scroll">
+        <pi-card v-for="item in 99" :key="item" :title="item + '. 标题'">{{ item }}</pi-card>
+      </scroll-view>
+    </view>
   </view>
 </template>
 
