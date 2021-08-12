@@ -64,6 +64,45 @@
           </pi-form>
         </template>
       </pi-card>
+
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" desc="startYear, endYear">
+          自定义年份范围
+        </pi-section>
+        <template slot="body">
+          <pi-form>
+            <pi-form-item label="年份范围" @click="form.self.show = !form.self.show">
+              <input
+                :value="form.self.value"
+                type="text"
+                class="input"
+                placeholder="请选择"
+                disabled
+              />
+            </pi-form-item>
+          </pi-form>
+        </template>
+      </pi-card>
+
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24" desc="format">日期格式</pi-section>
+        <template slot="body">
+          <pi-form>
+            <pi-form-item label="日期格式" @click="form.format.show = !form.format.show">
+              <input
+                :value="form.format.value"
+                type="text"
+                class="input"
+                placeholder="请选择"
+                disabled
+              />
+            </pi-form-item>
+            <pi-form-item label="YYYY年MM月DD日">
+              <div>{{ form.format.value }}</div>
+            </pi-form-item>
+          </pi-form>
+        </template>
+      </pi-card>
     </scroll-view>
     <pi-date-picker
       v-model="form.year.show"
@@ -107,6 +146,22 @@
       :default-value="form.second.value"
       @confirm="form.second.value = $event"
     />
+    <pi-date-picker
+      v-model="form.self.show"
+      field="second"
+      format="YYYY-MM-DD HH:mm:ss"
+      :start-year="form.self.startYear"
+      :end-year="form.self.endYear"
+      :default-value="form.self.value"
+      @confirm="form.self.value = $event"
+    />
+    <pi-date-picker
+      v-model="form.format.show"
+      field="second"
+      format="YYYY年MM月DD日"
+      :default-value="form.format.value"
+      @confirm="form.format.value = $event"
+    />
   </view>
 </template>
 
@@ -140,6 +195,16 @@ export default {
         second: {
           show: false,
           value: '2020-05-23 12:10:25'
+        },
+        self: {
+          show: false,
+          startYear: 2000,
+          endYear: new Date().getFullYear(),
+          value: '2020-05-23 12:10:25'
+        },
+        format: {
+          show: false,
+          value: '2020年05月23日'
         }
       }
     }
