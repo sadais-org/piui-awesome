@@ -116,7 +116,7 @@ export default {
           { id: 'product', text: '宝贝' },
           { id: 'evaluation', text: '评价' },
           { id: 'detail', text: '详情' },
-          { id: 'discover', text: '发现好物' },
+          { id: 'discover', text: '发现好物', disabled: true },
           { id: 'recommend', text: '推荐我的好宝贝' },
           { id: 'share', text: '分享' }
         ]

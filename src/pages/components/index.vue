@@ -180,6 +180,10 @@ export default {
         {
           name: 'card',
           zhName: '卡片'
+        },
+        {
+          name: 'upload-img',
+          zhName: '图片上传'
         }
       ]
     }

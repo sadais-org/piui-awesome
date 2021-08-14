@@ -320,6 +320,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "卡片"
           }
+        },
+        {
+          "path": "upload-img/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "图片上传"
+          }
         }
       ]
     },{
