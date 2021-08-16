@@ -79,14 +79,6 @@
       :items="pickerOptions.items"
       :type="pickerOptions.type"
       :default-value="pickerOptions.defaultValue"
-      :popup-select="
-        pickerOptions.popupSelect || {
-          showTitle: true,
-          title: pickerOptions.title,
-          borderRadius: '24rpx 24rpx 0 0',
-          appendToBody: true
-        }
-      "
       :confirm-btn="pickerOptions.confirmBtn"
       :cancel-btn="pickerOptions.cancelBtn"
       @confirm="handlePickerConfirm"
