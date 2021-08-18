@@ -72,12 +72,31 @@
         <pi-section slot="title" padding="0" title="填充模式" />
         <template slot="body">
           <pi-checkbox-group v-model="customFill" direction="vertical">
-            <pi-checkbox name="square" shape="square" active-mode="fill">
-              方形（默认）
+            <pi-checkbox name="square" shape="square" active-mode="line">
+              方形
             </pi-checkbox>
-            <pi-checkbox name="round" shape="round" active-mode="fill">圆形</pi-checkbox>
+            <pi-checkbox name="square-circle" shape="square" active-mode="line-circle">
+              方形（线环）
+            </pi-checkbox>
+            <pi-checkbox name="square-fill-circle" shape="square" active-mode="fill-circle">
+              方形（填充环）
+            </pi-checkbox>
+            <pi-checkbox name="round" shape="round" active-mode="line">
+              圆形
+            </pi-checkbox>
+            <pi-checkbox name="round-circle" shape="round" active-mode="line-circle">
+              圆形（线环）
+            </pi-checkbox>
+            <pi-checkbox name="round-fill-circle" shape="round" active-mode="fill-circle">
+              圆形（填充环）
+            </pi-checkbox>
             <pi-checkbox name="dot" shape="dot" active-mode="fill">圆点</pi-checkbox>
-            <pi-checkbox name="text" shape="text" active-mode="fill">文字</pi-checkbox>
+            <pi-checkbox name="dot-circle" shape="dot" active-mode="line-circle">
+              圆点（线环）
+            </pi-checkbox>
+            <pi-checkbox name="dot-fill-circle" shape="dot" active-mode="fill-circle">
+              圆点（填充环）
+            </pi-checkbox>
           </pi-checkbox-group>
         </template>
       </pi-card>

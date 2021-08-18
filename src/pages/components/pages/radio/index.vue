@@ -84,8 +84,22 @@
             <pi-radio name="dot" shape="dot">圆点</pi-radio>
             <pi-radio name="text" shape="text">文字</pi-radio>
           </pi-radio-group>
+          <pi-radio-group v-model="demo2" active-mode="line-circle" custom-class="pi-mg-top-24">
+            线环：
+            <pi-radio name="square" shape="square">方形</pi-radio>
+            <pi-radio name="round" shape="round">圆形</pi-radio>
+            <pi-radio name="dot" shape="dot">圆点</pi-radio>
+            <pi-radio name="text" shape="text">文字</pi-radio>
+          </pi-radio-group>
           <pi-radio-group v-model="demo2" active-mode="fill" custom-class="pi-mg-top-24">
             填充：
+            <pi-radio name="square" shape="square">方形</pi-radio>
+            <pi-radio name="round" shape="round">圆形</pi-radio>
+            <pi-radio name="dot" shape="dot">圆点</pi-radio>
+            <pi-radio name="text" shape="text">文字</pi-radio>
+          </pi-radio-group>
+          <pi-radio-group v-model="demo2" active-mode="fill-circle" custom-class="pi-mg-top-24">
+            填充环：
             <pi-radio name="square" shape="square">方形</pi-radio>
             <pi-radio name="round" shape="round">圆形</pi-radio>
             <pi-radio name="dot" shape="dot">圆点</pi-radio>
