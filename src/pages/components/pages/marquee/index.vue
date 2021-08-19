@@ -3,13 +3,13 @@
     <pi-navbar title="Marquee-跑马灯" />
     <scroll-view class="pi-scroll pi-flex-column" scroll-y>
       <pi-section>水平方向文本轮播</pi-section>
-      <pi-marquee :speed="0.1">
+      <pi-marquee :speed="0.06">
         <pi-marquee-item v-for="(text, index) in textList" :key="index">
           <span style="height: 44px; line-height: 44px; font-size: 28rpx">{{ text }}</span>
         </pi-marquee-item>
       </pi-marquee>
       <pi-section>水平方向Banner轮播</pi-section>
-      <pi-marquee :speed="0.2">
+      <pi-marquee :speed="0.1">
         <pi-marquee-item v-for="(url, index) in pics" :key="index">
           <pi-img
             width="100vw"
@@ -21,7 +21,7 @@
         </pi-marquee-item>
       </pi-marquee>
       <pi-section>垂直方向Banner轮播</pi-section>
-      <pi-marquee class="custom-height" :speed="0.2" direction="vertical">
+      <pi-marquee class="custom-height" :speed="0.1" direction="vertical">
         <pi-marquee-item v-for="(url, index) in pics" :key="index">
           <pi-img
             width="100vw"
