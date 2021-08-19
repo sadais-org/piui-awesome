@@ -184,6 +184,10 @@ export default {
         {
           name: 'upload-img',
           zhName: '图片上传'
+        },
+        {
+          name: 'marquee',
+          zhName: '跑马灯'
         }
       ]
     }
