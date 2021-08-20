@@ -1630,6 +1630,11 @@
   dependencies:
     mkdirp "^1.0.4"
 
+"@sadais/piui-tool@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/@sadais/piui-tool/-/piui-tool-0.0.2.tgz#14e139ee717c32083decb408e0096c82e696edd5"
+  integrity sha512-8Ac+og7Xq9nPla+r1+oSEedHpOj0+QN495umLTeGlAZxyR3I0CegPtRh/aTB8uDVY6yR2ZHNWwaHl2wQQngvng==
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
   resolved "https://registry.npmjs.org/@sinonjs/commons/-/commons-1.8.1.tgz#e7df00f98a203324f6dc7cc606cad9d4a8ab2217"

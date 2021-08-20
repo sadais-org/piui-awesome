@@ -13,7 +13,7 @@ module.exports = {
     hot: true,
     port: 31415
   },
-  transpileDependencies: ['sadais-piui', 'sadais-core', 'luch-request'],
+  transpileDependencies: ['@sadais/piui-tool', 'sadais-piui', 'sadais-core', 'luch-request'],
   configureWebpack: {
     plugins: [
       new CopyWebpackPlugin([
