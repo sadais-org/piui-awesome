@@ -32,9 +32,39 @@
       </pi-card>
       <!-- 垂直方向轮播 -->
       <pi-card>
-        <pi-section slot="title" padding="0" title="基础用法" desc="direction=vertical" />
+        <pi-section slot="title" padding="0" title="方向控制" desc="direction=bt(bottom to top)" />
         <template slot="body">
-          <pi-marquee direction="vertical">
+          <pi-marquee direction="bt" :speed="0.02" :custom-style="{ height: '14px' }">
+            <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
+              <span>{{ text }}</span>
+            </pi-marquee-item>
+          </pi-marquee>
+        </template>
+      </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="方向控制" desc="direction=tb(top to bottom)" />
+        <template slot="body">
+          <pi-marquee direction="tb" :speed="0.02" :custom-style="{ height: '14px' }">
+            <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
+              <span>{{ text }}</span>
+            </pi-marquee-item>
+          </pi-marquee>
+        </template>
+      </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="方向控制" desc="direction=rl(right to left)" />
+        <template slot="body">
+          <pi-marquee direction="rl" :speed="0.02">
+            <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
+              <span>{{ text }}</span>
+            </pi-marquee-item>
+          </pi-marquee>
+        </template>
+      </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="方向控制" desc="direction=lr(left to right)" />
+        <template slot="body">
+          <pi-marquee direction="lr" :speed="0.02">
             <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
               <span>{{ text }}</span>
             </pi-marquee-item>
@@ -43,9 +73,9 @@
       </pi-card>
       <!-- 图片垂直轮播 -->
       <pi-card>
-        <pi-section slot="title" padding="0" title="图片垂直轮播" desc="direction=vertical" />
+        <pi-section slot="title" padding="0" title="图片垂直轮播" desc="direction=bt" />
         <template slot="body">
-          <pi-marquee class="custom-height" :speed="0.1" direction="vertical">
+          <pi-marquee custom-class="custom-height" :speed="0.1" direction="bt">
             <pi-marquee-item v-for="(url, index) in pics" :key="index">
               <pi-img
                 width="100vw"
