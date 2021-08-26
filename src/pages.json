@@ -356,16 +356,16 @@
     "backgroundColor": "#f7f7f7",
     "list": [
       {
-        "pagePath": "pages/base-style/index",
-        "iconPath": "static/tabbar/barrage.png",
-        "selectedIconPath": "static/tabbar/barrage-fill.png",
-        "text": "基础样式"
-      },
-      {
         "pagePath": "pages/components/index",
         "iconPath": "static/tabbar/manage.png",
         "selectedIconPath": "static/tabbar/manage-fill.png",
         "text": "组件"
+      },
+      {
+        "pagePath": "pages/base-style/index",
+        "iconPath": "static/tabbar/barrage.png",
+        "selectedIconPath": "static/tabbar/barrage-fill.png",
+        "text": "基础样式"
       },
       {
         "pagePath": "pages/tools/index",
