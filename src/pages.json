@@ -334,6 +334,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "Marquee-跑马灯"
           }
+        },
+        {
+          "path": "pagination/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "Pagination-分页组件"
+          }
         }
       ]
     },{

@@ -141,6 +141,10 @@ export default {
             {
               name: 'skeleton',
               zhName: '骨架屏'
+            },
+            {
+              name: 'pagination',
+              zhName: '分页组件'
             }
           ]
         },

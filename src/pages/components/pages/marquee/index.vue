@@ -6,10 +6,10 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="基础用法" desc="slot text" />
         <template slot="body">
-          <pi-marquee :speed="60">
-            <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
-              <span>{{ text }}</span>
-            </pi-marquee-item>
+          <pi-marquee :speed="60" :items="baseUsed">
+            <view slot="item" slot-scope="{ item }">
+              {{ item }}
+            </view>
           </pi-marquee>
         </template>
       </pi-card>
@@ -17,16 +17,16 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="图片轮播" desc="slot img" />
         <template slot="body">
-          <pi-marquee :speed="60">
-            <pi-marquee-item v-for="(url, index) in pics" :key="index">
-              <pi-img
-                width="100vw"
-                height="440"
-                mode="aspectFill"
-                :custom-style="{ background: '#cccccc' }"
-                :src="url"
-              />
-            </pi-marquee-item>
+          <pi-marquee :speed="60" :items="pics">
+            <pi-img
+              slot="item"
+              slot-scope="{ item }"
+              width="100%"
+              height="440"
+              mode="aspectFill"
+              :custom-style="{ background: '#cccccc', width: 'calc(100vw - 52px)' }"
+              :src="item"
+            />
           </pi-marquee>
         </template>
       </pi-card>
@@ -34,40 +34,42 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="方向控制" desc="direction=bt(bottom to top)" />
         <template slot="body">
-          <pi-marquee direction="bt" :speed="20" :custom-style="{ height: '14px' }">
-            <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
-              <span>{{ text }}</span>
-            </pi-marquee-item>
+          <pi-marquee
+            direction="bt"
+            :speed="20"
+            :custom-style="{ height: '14px' }"
+            :items="baseUsed"
+          >
+            <view slot="item" slot-scope="{ item }">{{ item }}</view>
           </pi-marquee>
         </template>
       </pi-card>
       <pi-card>
         <pi-section slot="title" padding="0" title="方向控制" desc="direction=tb(top to bottom)" />
         <template slot="body">
-          <pi-marquee direction="tb" :speed="20" :custom-style="{ height: '14px' }">
-            <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
-              <span>{{ text }}</span>
-            </pi-marquee-item>
+          <pi-marquee
+            direction="tb"
+            :speed="20"
+            :custom-style="{ height: '14px' }"
+            :items="baseUsed"
+          >
+            <view slot="item" slot-scope="{ item }">{{ item }}</view>
           </pi-marquee>
         </template>
       </pi-card>
       <pi-card>
         <pi-section slot="title" padding="0" title="方向控制" desc="direction=rl(right to left)" />
         <template slot="body">
-          <pi-marquee direction="rl" :speed="20">
-            <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
-              <span>{{ text }}</span>
-            </pi-marquee-item>
+          <pi-marquee direction="rl" :speed="20" :items="baseUsed">
+            <view slot="item" slot-scope="{ item }">{{ item }}</view>
           </pi-marquee>
         </template>
       </pi-card>
       <pi-card>
         <pi-section slot="title" padding="0" title="方向控制" desc="direction=lr(left to right)" />
         <template slot="body">
-          <pi-marquee direction="lr" :speed="20">
-            <pi-marquee-item v-for="(text, index) in baseUsed" :key="index">
-              <span>{{ text }}</span>
-            </pi-marquee-item>
+          <pi-marquee direction="lr" :speed="20" :items="baseUsed">
+            <view slot="item" slot-scope="{ item }">{{ item }}</view>
           </pi-marquee>
         </template>
       </pi-card>
@@ -75,16 +77,16 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="图片垂直轮播" desc="direction=bt" />
         <template slot="body">
-          <pi-marquee custom-class="custom-height" :speed="100" direction="bt">
-            <pi-marquee-item v-for="(url, index) in pics" :key="index">
-              <pi-img
-                width="100vw"
-                height="440"
-                mode="aspectFill"
-                :custom-style="{ background: '#cccccc' }"
-                :src="url"
-              />
-            </pi-marquee-item>
+          <pi-marquee custom-class="custom-height" :speed="100" direction="bt" :items="pics">
+            <pi-img
+              slot="item"
+              slot-scope="{ item }"
+              width="100%"
+              height="440"
+              mode="aspectFill"
+              :custom-style="{ background: '#cccccc' }"
+              :src="item"
+            />
           </pi-marquee>
         </template>
       </pi-card>
@@ -113,7 +115,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.custom-height {
+::v-deep .custom-height {
   height: 880rpx !important;
 }
 </style>
