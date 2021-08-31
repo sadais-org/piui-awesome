@@ -43,7 +43,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="点击遮罩层不关闭" />
         <template slot="body">
-          <pi-button type="primary" @click="maskClosable.show = true">
+          <pi-button type="primary" @click="maskCloseable.show = true">
             显示蒙层
           </pi-button>
         </template>
@@ -66,14 +66,14 @@
       :animation-hide="animation.animationHide"
     />
     <pi-mask v-model="duration.show" duration="3000" />
-    <pi-mask ref="unClosableMask" v-model="maskClosable.show" :mask-closable="false">
+    <pi-mask ref="unCloseableMask" v-model="maskCloseable.show" :mask-closeable="false">
       <view class="pi-abso-center">
         <pi-button
           color="#5A8FFF"
           bg-color="#EEF2FF"
           width="250"
           round
-          @click="handleCloseUnClosableMask"
+          @click="handleCloseUnCloseableMask"
         >
           关闭蒙层
         </pi-button>
@@ -100,7 +100,7 @@ export default {
       duration: {
         show: false
       },
-      maskClosable: {
+      maskCloseable: {
         show: false
       },
       background: {
@@ -127,8 +127,8 @@ export default {
         ...positionAnimationMap[position]
       }
     },
-    handleCloseUnClosableMask() {
-      this.$refs.unClosableMask.closeMask()
+    handleCloseUnCloseableMask() {
+      this.$refs.unCloseableMask.closeMask()
     }
   }
 }

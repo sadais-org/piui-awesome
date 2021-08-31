@@ -85,6 +85,10 @@ export default {
               zhName: '瀑布流'
             },
             {
+              name: 'tabs',
+              zhName: '标签栏'
+            },
+            {
               name: 'marquee',
               zhName: '跑马灯'
             }
@@ -210,10 +214,7 @@ export default {
               name: 'radio',
               zhName: '单选框'
             },
-            {
-              name: 'tabs',
-              zhName: '标签栏'
-            },
+
             {
               name: 'switch',
               zhName: '开关'
@@ -234,7 +235,6 @@ export default {
               name: 'rate',
               zhName: '评分'
             },
-
             {
               name: 'number-keyboard',
               zhName: '数字键盘'
