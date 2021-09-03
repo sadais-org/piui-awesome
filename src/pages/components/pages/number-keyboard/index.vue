@@ -22,6 +22,9 @@
         >
           <pi-input v-model="form.keyBackgroundColor.value" />
         </pi-form-item>
+        <pi-form-item prop="customSlot" label="自定义插槽" @click="form.customSlot.show = true">
+          <pi-input v-model="form.customSlot.value" />
+        </pi-form-item>
       </pi-form>
     </scroll-view>
     <pi-number-keyboard
@@ -56,6 +59,20 @@
       :key-style="{ color: '#ffffff', backgroundColor: '#5a7dff' }"
       @close="form.keyBackgroundColor.show = false"
     />
+    <pi-number-keyboard
+      v-model="form.customSlot.value"
+      :show="form.customSlot.show"
+      :key-style="{ color: '#ffffff', backgroundColor: '#5a7dff' }"
+      :popup-select="{
+        showTitle: true,
+        title: '请输入验证码'
+      }"
+      @close="form.customSlot.show = false"
+    >
+      <view slot="header" class="pi-justify-center pi-mg-tb-20">
+        <pi-code-input v-model="form.customSlot.value" :length="6" align="center" />
+      </view>
+    </pi-number-keyboard>
   </view>
 </template>
 
@@ -85,6 +102,10 @@ export default {
         keyBackgroundColor: {
           show: false,
           value: 13415
+        },
+        customSlot: {
+          show: false,
+          value: 123
         }
       }
     }

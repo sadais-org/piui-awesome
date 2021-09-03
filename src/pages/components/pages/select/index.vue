@@ -34,13 +34,17 @@
       :is-multi="selectOptions.isMulti"
       :single-cancel="false"
       :default-value="selectOptions.defaultValue"
-      show-title
-      toolbar-position="bottom"
-      :title="selectOptions.title"
+      :popup-select="{
+        showTitle: true,
+        title: '请选择'
+      }"
       height="60vh"
       :item-height="150"
+      slot-toolbar
       @confirm="handleSelectConfirm"
-    />
+    >
+      <pi-code-input slot="header" :length="6" />
+    </pi-select>
   </view>
 </template>
 

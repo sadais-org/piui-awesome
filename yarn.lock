@@ -1065,10 +1065,10 @@
   resolved "https://registry.npmjs.org/@commitlint/types/-/types-11.0.0.tgz#719cf05fcc1abb6533610a2e0f5dd1e61eac14fe"
   integrity sha512-VoNqai1vR5anRF5Tuh/+SWDFk7xi7oMwHrHrbm1BprYXjB2RJsWLhUrStMssDxEl5lW/z3EUdg8RvH/IUBccSQ==
 
-"@dcloudio/types@^2.5.3":
-  version "2.5.3"
-  resolved "https://registry.npmjs.org/@dcloudio/types/-/types-2.5.3.tgz#56f064616d876ba672a343af538d88f8fcad4702"
-  integrity sha512-BmZtM9ohrR+iWbOKE5PplTEhikEeTt/K+ug1ARD4/L2Ssr/O+BPhoago87bKUsrhCKyyoMTUCGkdRQUYW98c+w==
+"@dcloudio/types@^2.5.6":
+  version "2.5.6"
+  resolved "https://registry.npmjs.org/@dcloudio/types/-/types-2.5.6.tgz#fba90cc0420e123eab09e895d5baceb0b73ebb21"
+  integrity sha512-SvJ2aRViG7aMn/Sf44FnKXcuqAnuYeG2X0NvU6iFiOnC/NKo1n8lWxGy88VnNINic0M1jRaeFKLOhosuAsTndQ==
 
 "@dcloudio/uni-app-plus@^2.0.0-32220210818002":
   version "2.0.0-32220210818002"
@@ -1630,10 +1630,10 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@sadais/piui-tool@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.npmjs.org/@sadais/piui-tool/-/piui-tool-0.0.2.tgz#14e139ee717c32083decb408e0096c82e696edd5"
-  integrity sha512-8Ac+og7Xq9nPla+r1+oSEedHpOj0+QN495umLTeGlAZxyR3I0CegPtRh/aTB8uDVY6yR2ZHNWwaHl2wQQngvng==
+"@sadais/piui-tool@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.npmjs.org/@sadais/piui-tool/-/piui-tool-0.0.9.tgz#ac393c6164ae2c9cb932774635364b969b7c18a7"
+  integrity sha512-cdEWFy4ohWFGx1xm7mZUlV5EKfmp6LkJs5VSQHIa7X636yBsiaCPQSR/OK16/O+eZGU8tMrJjya6m9pfOIc6Hg==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
@@ -4134,10 +4134,10 @@ core-js-compat@^3.6.2, core-js-compat@^3.6.5:
     browserslist "^4.14.6"
     semver "7.0.0"
 
-core-js@^3.16.4:
-  version "3.16.4"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.16.4.tgz#0fb1029a554fc2688c0963d7c900e188188a78e0"
-  integrity sha512-Tq4GVE6XCjE+hcyW6hPy0ofN3hwtLudz5ZRdrlCnsnD/xkm/PWQRudzYHiKgZKUcefV6Q57fhDHjZHJP5dpfSg==
+core-js@^3.17.2:
+  version "3.17.2"
+  resolved "https://registry.npmjs.org/core-js/-/core-js-3.17.2.tgz#f960eae710dc62c29cca93d5332e3660e289db10"
+  integrity sha512-XkbXqhcXeMHPRk2ItS+zQYliAMilea2euoMsnpRRdDad6b2VY6CQQcwz1K8AnWesfw4p165RzY0bTnr3UrbYiA==
 
 core-js@^3.6.1, core-js@^3.6.5:
   version "3.7.0"
@@ -11450,9 +11450,9 @@ rxjs@^6.4.0:
     tslib "^1.9.0"
 
 sadais-piui@^1.0.166:
-  version "1.0.166"
-  resolved "https://registry.npmjs.org/sadais-piui/-/sadais-piui-1.0.166.tgz#ea1c1f268b87bfe9d7de50c6b4d567216d5caf3d"
-  integrity sha512-VZOizWjxsSzCWaANqWm61cMnrSLSCGH86yuXHDpdphts4/QJx5QyFbg6dhn/A7w1D7MtHRr1vOTzp+M7oGXn7Q==
+  version "1.0.170"
+  resolved "https://registry.npmjs.org/sadais-piui/-/sadais-piui-1.0.170.tgz#01390a1184979a1d2fa0765c7e68350bb6f2208c"
+  integrity sha512-E3ckn7R+4iL6ZeXBK8msLUspzzHpr0T1ilUTBn0U48evQJ1VgLTk4J62HbB64w2lfNKwBuhIxoVpN+ypdmhknA==
 
 safe-area-insets@^1.4.1:
   version "1.4.1"

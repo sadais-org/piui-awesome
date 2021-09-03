@@ -73,10 +73,6 @@ export default {
               zhName: '轮播'
             },
             {
-              name: 'list',
-              zhName: '列表'
-            },
-            {
               name: 'card',
               zhName: '卡片'
             },
@@ -121,10 +117,6 @@ export default {
             {
               name: 'loading',
               zhName: '加载中'
-            },
-            {
-              name: 'img',
-              zhName: '图片'
             },
             {
               name: 'button',
