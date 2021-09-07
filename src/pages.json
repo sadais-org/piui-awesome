@@ -11,13 +11,6 @@
       }
     },
     {
-      "path": "pages/base-style/index",
-      "style": {
-        "disableScroll": true,
-        "navigationBarTitleText": "基础样式"
-      }
-    },
-    {
       "path": "pages/tools/index",
       "style": {
         "disableScroll": true,
@@ -27,7 +20,7 @@
   ],
   "subPackages": [
     {
-      "root": "pages/base-style/pages",
+      "root": "pages/components/pages",
       "pages": [
         {
           "path": "icon/index",
@@ -50,18 +43,6 @@
             "navigationBarTitleText": "宫格"
           }
         },
-        {
-          "path": "list/index",
-          "style": {
-            "disableScroll": true,
-            "navigationBarTitleText": "列表"
-          }
-        }
-      ]
-    },
-    {
-      "root": "pages/components/pages",
-      "pages": [
         {
           "path": "navbar/index",
           "style": {
@@ -362,12 +343,6 @@
     "borderStyle": "white",
     "backgroundColor": "#f7f7f7",
     "list": [
-      {
-        "pagePath": "pages/base-style/index",
-        "iconPath": "static/tabbar/barrage.png",
-        "selectedIconPath": "static/tabbar/barrage-fill.png",
-        "text": "基础样式"
-      },
       {
         "pagePath": "pages/components/index",
         "iconPath": "static/tabbar/manage.png",

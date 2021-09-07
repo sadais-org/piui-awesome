@@ -1,3 +1,6 @@
 [submodule "src/piui"]
 	path = src/piui
 	url = http://git.sadais.com:8080/r/piui/piui.git
+[submodule "src/piui-tool"]
+	path = src/piui-tool
+	url = http://git.sadais.com:8080/r/piui/piui-tool.git

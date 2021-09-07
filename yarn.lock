@@ -1630,10 +1630,10 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@sadais/piui-tool@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.npmjs.org/@sadais/piui-tool/-/piui-tool-0.0.9.tgz#ac393c6164ae2c9cb932774635364b969b7c18a7"
-  integrity sha512-cdEWFy4ohWFGx1xm7mZUlV5EKfmp6LkJs5VSQHIa7X636yBsiaCPQSR/OK16/O+eZGU8tMrJjya6m9pfOIc6Hg==
+"@sadais/piui-tool@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.npmjs.org/@sadais/piui-tool/-/piui-tool-0.0.11.tgz#05c11e466d68fcb73b8a9efe1a1ef8db8f06341e"
+  integrity sha512-K85tNZ8MGZzJad9MCTuClLXiJa3Aoy1W+10HIElHLcIVsuxG3uNcTrDCuOIwf1DpA4IWcoaEmQKtUlcqG0o92g==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
@@ -11450,9 +11450,9 @@ rxjs@^6.4.0:
     tslib "^1.9.0"
 
 sadais-piui@^1.0.166:
-  version "1.0.170"
-  resolved "https://registry.npmjs.org/sadais-piui/-/sadais-piui-1.0.170.tgz#01390a1184979a1d2fa0765c7e68350bb6f2208c"
-  integrity sha512-E3ckn7R+4iL6ZeXBK8msLUspzzHpr0T1ilUTBn0U48evQJ1VgLTk4J62HbB64w2lfNKwBuhIxoVpN+ypdmhknA==
+  version "1.0.171"
+  resolved "https://registry.npmjs.org/sadais-piui/-/sadais-piui-1.0.171.tgz#c44d190cb12c80d553194bcf9f80904e070f2634"
+  integrity sha512-eETRf5vlHmgo1iMXFoUoLImrK7ISlZ/gm3ZDQcRx3M2iiB+EJO8sqYWlQxViD9tXFt0hAkv2erLCnmWDM2oGkg==
 
 safe-area-insets@^1.4.1:
   version "1.4.1"

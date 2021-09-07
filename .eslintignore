@@ -3,4 +3,5 @@ build/*
 src/basic/*
 src/piui/plugins/*
 src/static/*
+src/piui-tool/tools/vhcheck.js
 

@@ -9,6 +9,15 @@
           <pi-checkbox v-model="base">复选框</pi-checkbox>
         </template>
       </pi-card>
+      <!-- 无边框 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="无边框" />
+        <template slot="body">
+          <pi-checkbox v-model="border" border="0" active-mode="line-circle" icon-size="40">
+            复选框
+          </pi-checkbox>
+        </template>
+      </pi-card>
       <!-- 搭配checkbox-group使用 -->
       <pi-card>
         <pi-section slot="title" padding="0" title="搭配checkbox-group使用" />
@@ -191,6 +200,7 @@ export default {
   data() {
     return {
       base: true, // 基础用法
+      border: true, // 边框
       checkboxGroup: ['A', 'C'], // 搭配checkbox-group使用
       customColor: [
         // 自定义颜色

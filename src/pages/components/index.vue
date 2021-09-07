@@ -11,14 +11,18 @@
               v-for="(component, index) in comp.components"
               :key="component.name"
               :index="index"
-              bg-color="#ffffff"
+              bg-color="#f5f5f5"
+              custom-class="pi-radius-22"
               square
             >
               <view
                 class="pi-h-100P pi-flex-column-center"
                 @tap.stop="handleNavigate(component.name)"
               >
-                {{ component.zhName }}
+                <view class="pi-fz-22 pi-text-center pi-light-gray">{{ component.name }}</view>
+                <view class="pi-fz-30 pi-text-center pi-gray pi-mg-top-12">
+                  {{ component.zhName }}
+                </view>
               </view>
             </pi-grid-item>
           </pi-grid>
