@@ -51,11 +51,9 @@
             action="https://api-canteen.sadaiscloud.com/api/canteen/file/uploadfile"
             :headers="headers"
             :item-style="{
-              padding: 0,
               borderRadius: '50%'
             }"
             :upload-btn-style="{
-              padding: 0,
               borderRadius: '50%'
             }"
           />
@@ -119,7 +117,7 @@ export default {
         }
       ],
       baseUsed: [],
-      avatar: '',
+      avatar: 'https://m.sadais.com/img/file/20210816/7eda5c19-6da8-4c99-965e-7403f6ee8169.png',
       uploadIcon: [],
       uploadBtnSlot: []
     }
