@@ -6,7 +6,7 @@
         <pi-section slot="title" padding="24">基础使用</pi-section>
         <template slot="body">
           <pi-form show-right-icon>
-            <pi-form-item label="地区（单列）" @tap="handleShowPicker('area')">
+            <pi-form-item label="地区（单列）" @click="handleShowPicker('area')">
               <input
                 :value="form.area.text"
                 type="text"
@@ -15,7 +15,7 @@
                 disabled
               />
             </pi-form-item>
-            <pi-form-item label="性别（多列）" @tap="handleShowPicker('gender')">
+            <pi-form-item label="性别（多列）" @click="handleShowPicker('gender')">
               <input
                 :value="form.gender.text"
                 type="text"
@@ -24,7 +24,7 @@
                 disabled
               />
             </pi-form-item>
-            <pi-form-item label="身份（多列联动）" @tap="handleShowPicker('identity')">
+            <pi-form-item label="身份（多列联动）" @click="handleShowPicker('identity')">
               <input
                 :value="form.identity.text"
                 type="text"
@@ -43,7 +43,7 @@
           <pi-form show-right-icon>
             <pi-form-item
               label="身份（多列联动）"
-              @tap="handleShowPicker('identity', 'popupSelect')"
+              @click="handleShowPicker('identity', 'popupSelect')"
             >
               <input
                 :value="form.identity.text"
@@ -61,7 +61,7 @@
         <pi-section slot="title" padding="24">自定义按钮</pi-section>
         <template slot="body">
           <pi-form show-right-icon>
-            <pi-form-item label="身份（多列联动）" @tap="handleShowBtnSelect">
+            <pi-form-item label="身份（多列联动）" @click="handleShowBtnSelect">
               <input
                 :value="form.area.text"
                 type="text"
