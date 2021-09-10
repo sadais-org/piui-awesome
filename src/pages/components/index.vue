@@ -6,7 +6,6 @@
         <pi-section slot="title" padding="0" :title="comp.title" />
         <template slot="body">
           <pi-grid square col="3" gap="24">
-            <!-- pi-grid-item square 是不用传的，但是头条小程序不支持provide inject，所以这里还是得传-->
             <pi-grid-item
               v-for="(component, index) in comp.components"
               :key="component.name"

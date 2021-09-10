@@ -1,28 +1,23 @@
 <template>
   <view class="pi-scroll-container">
     <pi-navbar title="骨架屏" />
-    <scroll-view class="pi-scroll" scroll-y="">
-      <view class="pi-content pi-skeleton">
+    <scroll-view class="pi-scroll pi-skeleton" scroll-y="">
+      <view class="pi-content">
         <view class="userinfo">
           <pi-img
-            class="pi-skeleton-rect pi-mg-bottom-32"
+            class="pi-skeleton-round pi-mg-bottom-32"
             width="100%"
             mode="widthFix"
             :src="userInfo.avatarUrl"
           />
-          <text class="pi-skeleton-round pi-fz-40 pi-fw-500">
-            {{ userInfo.nickName }}
-          </text>
         </view>
-        <view class="pi-w-100 pi-h-100 pi-circle pi-skeleton-circle pi-bg-fifth" />
-        <view class="pi-w-100 pi-h-50 pi-skeleton-round pi-bg-fifth" />
         <view class="pi-mg-top-32">
           <view v-for="(item, index) in lists" :key="index" class="pi-skeleton-rect lists">
             <view class=" pi-mg-bottom-12">{{ item }}</view>
           </view>
         </view>
       </view>
-      <pi-skeleton :show="loading" node-background="#c0ebd7" background="rgba(0,0,0,.07)" />
+      <pi-skeleton v-model="loading" />
     </scroll-view>
   </view>
 </template>
@@ -33,8 +28,7 @@ export default {
   data() {
     return {
       userInfo: {
-        avatarUrl: 'http://huozi.sadais.com/img/banner_bg.png',
-        nickName: 'piui'
+        avatarUrl: 'http://huozi.sadais.com/img/banner_bg.png'
       },
       lists: [
         '自主技术融合阿里云智慧云服务。',
@@ -48,8 +42,8 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.loading = true
-    }, 5000)
+      this.loading = false
+    }, 2000)
   }
 }
 </script>

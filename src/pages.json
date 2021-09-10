@@ -11,7 +11,7 @@
       }
     },
     {
-      "path": "pages/tools/index",
+      "path": "pages/template/index",
       "style": {
         "disableScroll": true,
         "navigationBarTitleText": "工具库"
@@ -324,14 +324,22 @@
           }
         }
       ]
-    },{
-      "root": "pages/template",
+    },
+    {
+      "root": "pages/template/pages",
       "pages": [
         {
-          "path": "profile",
+          "path": "scroll/sub-scroll",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "个人中心"
+            "navigationBarTitleText": "子区域滚动"
+          }
+        },
+        {
+          "path": "profile/form-profile",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "我的表单填写"
           }
         }
       ]
@@ -339,21 +347,21 @@
   ],
   "tabBar": {
     "color": "#333333",
-    "selectedColor": "#ff6a00",
+    "selectedColor": "#5a7dff",
     "borderStyle": "white",
-    "backgroundColor": "#f7f7f7",
+    "backgroundColor": "#f9f9f9",
     "list": [
       {
         "pagePath": "pages/components/index",
         "iconPath": "static/tabbar/manage.png",
-        "selectedIconPath": "static/tabbar/manage-fill.png",
+        "selectedIconPath": "static/tabbar/manage_fill.png",
         "text": "组件"
       },
       {
-        "pagePath": "pages/tools/index",
+        "pagePath": "pages/template/index",
         "iconPath": "static/tabbar/tasklist.png",
-        "selectedIconPath": "static/tabbar/tasklist-fill.png",
-        "text": "工具库"
+        "selectedIconPath": "static/tabbar/tasklist_fill.png",
+        "text": "模板"
       }
     ]
   },

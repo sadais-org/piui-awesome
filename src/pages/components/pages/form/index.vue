@@ -2,11 +2,10 @@
   <view class="pi-scroll-container">
     <pi-navbar title="表单form" />
     <scroll-view class="pi-scroll" scroll-y="">
-      <pi-card>
+      <pi-card padding="0">
         <pi-form
           slot="body"
           label-width="200"
-          input-align="right"
           :model="form"
           title="基础用法"
           border
@@ -33,13 +32,13 @@
               <pi-checkbox name="2">活动2</pi-checkbox>
             </pi-checkbox-group>
           </pi-form-item>
-          <pi-form-item prop="intro" label="自我介绍" wrap>
+          <pi-form-item prop="intro" label="自我介绍" wrap input-align="left">
             <pi-input v-model="form.intro" type="textarea" placeholder="请输入" />
           </pi-form-item>
         </pi-form>
       </pi-card>
 
-      <pi-card>
+      <pi-card padding="0">
         <pi-form slot="body" :model="form" title="title是标题" desc="desc是描述" border>
           <pi-form-item label="名称">
             <pi-input />
@@ -49,7 +48,7 @@
       </pi-card>
 
       <pi-card>
-        <pi-section slot="title" title="对齐方式和宽度" />
+        <pi-section slot="title" padding="0" title="对齐方式和宽度" />
         <template slot="body">
           <view class="pi-justify-between">
             <pi-radio-group
@@ -87,10 +86,9 @@
         </template>
       </pi-card>
 
-      <pi-card>
-        <pi-section slot="title" title="标签换行" />
+      <pi-card padding="0">
         <template slot="body">
-          <pi-form :model="form1" wrap>
+          <pi-form title="标签换行" :model="form1" wrap input-align="left">
             <pi-form-item required prop="name" label="姓名">
               <pi-input v-model="form1.name" />
             </pi-form-item>
@@ -104,10 +102,9 @@
         </template>
       </pi-card>
 
-      <pi-card>
-        <pi-section slot="title" title="表单校验" />
+      <pi-card padding="0">
         <template slot="body">
-          <pi-form ref="form" :model="form2" border error-type="message">
+          <pi-form ref="form" title="表单校验" :model="form2" border error-type="message">
             <pi-form-item prop="name" label="姓名">
               <pi-input v-model="form2.name" />
             </pi-form-item>
@@ -121,6 +118,7 @@
           </pi-form>
         </template>
       </pi-card>
+      <pi-gap />
     </scroll-view>
   </view>
 </template>
