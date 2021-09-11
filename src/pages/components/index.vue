@@ -72,6 +72,10 @@ export default {
               zhName: '列表'
             },
             {
+              name: 'skeleton',
+              zhName: '骨架屏'
+            },
+            {
               name: 'swiper',
               zhName: '轮播'
             },
@@ -136,10 +140,6 @@ export default {
             {
               name: 'swiper',
               zhName: '轮播图'
-            },
-            {
-              name: 'skeleton',
-              zhName: '骨架屏'
             },
             {
               name: 'pagination',

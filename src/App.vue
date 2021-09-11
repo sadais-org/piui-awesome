@@ -13,40 +13,13 @@ export default {
       'pages/tools/index': 3
     })
   ],
-  watch: {
-    '$route.path'(value) {
-      /**  此处无法使用 window.parent && window.parent.postMessage({ action: 'back' }, '*')来过
-       *  滤当页面不在iframe中的情况，因为涉及到跨域问题，iframe中的页面只能调用window.parent.postMessage
-       *  其他方法都会报跨域，即使是访问window.parent也会报跨域，只能window.parent.postMessage
-       */
-      if (this.$route.query.noSend === '1') {
-        return
-      }
-      window.parent.postMessage(
-        {
-          action: 'pathChange',
-          path: value
-        },
-        '*'
-      )
-    }
-  },
-  beforeDestroy() {
-    window.removeEventListener('message', this.customNavi)
-  },
-  methods: {
-    customNavi(e) {
-      if (!e.data.action || e.data.action !== 'changePath') {
-        return
-      }
-      this.$pi.navi.navigateTo(e.data.path)
-    }
-  },
-  onLaunch: function() {
-    window.addEventListener('message', this.customNavi)
-  },
   // #endif
-
+  methods: {},
+  onLaunch: function() {
+    // #ifdef MP
+    this.$pi.common.mpUpdate()
+    // #endif
+  },
   onShow: function() {},
   onHide: function() {}
 }

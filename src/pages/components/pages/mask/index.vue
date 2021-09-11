@@ -15,13 +15,13 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="过渡动画" />
         <template slot="body">
-          <pi-button type="primary" @click="handleShowAnimation('top')">
+          <pi-button type="primary" class="pi-mg-right-24" @click="handleShowAnimation('top')">
             顶部滑入滑出
           </pi-button>
           <pi-button type="primary" @click="handleShowAnimation('bottom')">
             下方滑入滑出
           </pi-button>
-          <pi-button type="primary" @click="handleShowAnimation('left')">
+          <pi-button type="primary" class="pi-mg-right-24" @click="handleShowAnimation('left')">
             左侧滑入滑出
           </pi-button>
 

@@ -278,7 +278,8 @@
           "path": "status-bar/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "status-bar 状态栏"
+            "navigationBarTitleText": "status-bar 状态栏",
+            "navigationBarTextStyle": "white"
           }
         },
         {

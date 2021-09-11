@@ -1630,10 +1630,10 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@sadais/piui-tool@^0.0.15":
-  version "0.0.15"
-  resolved "https://registry.npmjs.org/@sadais/piui-tool/-/piui-tool-0.0.15.tgz#7bb96e38f8feb185f404bed503527a5ea9db9c21"
-  integrity sha512-KC8j0T7DSRFdw4yOwPeQ7sLuJF0AOjV5hulM1p9NHJ3Ztlk2qcalN7A4G5hQNSoCsiC2F4Rru4Xea8Jmux0+hg==
+"@sadais/piui-tool@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.npmjs.org/@sadais/piui-tool/-/piui-tool-0.0.16.tgz#441d1d1b7b11e9e4373de442abcf21c13d032a4c"
+  integrity sha512-/JvVZC+txgjcGWY0DJmZTd5Quc9jhM5qv91CdpkohX/zvqCCSYm/eoRV9fsSdb6WFQWT2ZrnK0EEv2LTzMiq9g==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"

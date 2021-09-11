@@ -7,7 +7,11 @@
         <pi-section slot="title" padding="0" title="基础用法" desc="一行4列 col:4" />
         <template slot="body">
           <pi-grid square col="4" :gap="13">
-            <pi-grid-item v-for="index in 12" :key="index" :index="index - 1">
+            <pi-grid-item
+              v-for="index in $pi.common.generateArray(0, 11)"
+              :key="index"
+              :index="index"
+            >
               <view class="pi-h-100P pi-flex-column-center">{{ index }}</view>
             </pi-grid-item>
           </pi-grid>
@@ -18,7 +22,11 @@
         <pi-section slot="title" padding="0" title="九宫格" desc="col:3" />
         <template slot="body">
           <pi-grid square col="3">
-            <pi-grid-item v-for="index in 9" :key="index" :index="index - 1">
+            <pi-grid-item
+              v-for="index in $pi.common.generateArray(0, 8)"
+              :key="index"
+              :index="index"
+            >
               <view class="pi-h-100P pi-flex-column-center">{{ index }}</view>
             </pi-grid-item>
           </pi-grid>
@@ -29,7 +37,11 @@
         <pi-section slot="title" padding="0" title="每列间隔" desc="col:6 gap:20" />
         <template slot="body">
           <pi-grid square col="6" :gap="20">
-            <pi-grid-item v-for="index in 18" :key="index" :index="index - 1">
+            <pi-grid-item
+              v-for="index in $pi.common.generateArray(0, 17)"
+              :key="index"
+              :index="index"
+            >
               <view class="pi-h-100P pi-flex-column-center">{{ index }}</view>
             </pi-grid-item>
           </pi-grid>
@@ -40,7 +52,11 @@
         <pi-section slot="title" padding="0" title="隐藏边框" desc="border: false" />
         <template slot="body">
           <pi-grid :border="false" square col="5">
-            <pi-grid-item v-for="index in 15" :key="index" :index="index - 1">
+            <pi-grid-item
+              v-for="index in $pi.common.generateArray(0, 14)"
+              :key="index"
+              :index="index"
+            >
               <view class="pi-h-100P pi-flex-column-center">{{ index }}</view>
             </pi-grid-item>
           </pi-grid>

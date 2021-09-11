@@ -96,7 +96,7 @@
           >
             <view slot="item" slot-scope="{ item }">
               <view class="pi-align-center" @tap.stop="handleClickItem(item)">
-                <view>测试{{ test123 }}</view>
+                <view>{{ item.text }}</view>
                 <pi-badge color="#5a7dff" :content="item.num" class="pi-mg-left-6" />
               </view>
             </view>
@@ -112,7 +112,6 @@ export default {
   name: 'Tabs',
   data() {
     return {
-      test123: '123',
       baseUsed: {
         currentItem: { id: 'recommend' },
         tabItems: [

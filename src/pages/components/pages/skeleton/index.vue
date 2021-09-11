@@ -1,7 +1,7 @@
 <template>
   <view class="pi-scroll-container">
     <pi-navbar title="骨架屏" />
-    <scroll-view class="pi-scroll pi-skeleton" scroll-y="">
+    <scroll-view class="pi-scroll pi-skeleton" scroll-y>
       <view class="pi-content">
         <view class="userinfo">
           <pi-img
@@ -36,11 +36,12 @@ export default {
         '深入理解中小企业数字化难题',
         '数十个成功案例的高效实践，为企业实现客户、渠道、销售和员工的全面在线化，发掘商业新机遇'
       ],
-      loading: true, // 是否显示骨架屏组件
-      borderRadius: 10
+      loading: false // 是否显示骨架屏组件
     }
   },
   mounted() {
+    // 模拟数据加载
+    this.loading = true
     setTimeout(() => {
       this.loading = false
     }, 2000)
