@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangzhenfei
  * @Date: 2021-03-09 12:38:42
- * @LastEditTime: 2021-06-27 17:41:41
+ * @LastEditTime: 2021-09-14 09:56:04
  * @LastEditors: zhangzhenfei
  * @Description:
  * @FilePath: /piui-awesome/src/pages/components/pages/code-input/index.vue
@@ -63,6 +63,22 @@
           <pi-code-input v-model="autoFocus" :length="4" auto-focus />
         </template>
       </pi-card>
+      <!-- 验证码格式化 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="验证码格式化" />
+        <template slot="body">
+          <pi-code-input v-model="codeFormat" :length="4" code-format="@" />
+        </template>
+      </pi-card>
+      <!-- 密码样式 -->
+      <pi-card>
+        <pi-section slot="title" padding="0" title="密码样式" />
+        <template slot="body">
+          <pi-code-input v-model="password" :length="4">
+            <template slot="item" slot-scope="{ item }">{{ item ? '*' : '' }}</template>
+          </pi-code-input>
+        </template>
+      </pi-card>
     </scroll-view>
   </view>
 </template>
@@ -77,7 +93,9 @@ export default {
       stretch: '',
       styles: '',
       fillStyles: '',
-      autoFocus: ''
+      autoFocus: '',
+      codeFormat: '9',
+      password: '12'
     }
   }
 }
