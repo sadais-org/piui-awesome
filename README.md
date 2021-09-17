@@ -1,7 +1,38 @@
+# piui-awesome
 
-## 子模块初始化
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-git submodule update --init --recursive --remote
+piui演示库
 
-* 本分支主要针对华发+业务扩展
+演示piui的各种功能
+## Table of Contents
 
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [Maintainers](#maintainers)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Background
+
+## Install
+
+yarn or npm install
+
+## Usage
+
+
+## Maintainers
+
+[@zhangzhenfei](https://github.com/zhangzhenfei)
+
+## Contributing
+
+PRs accepted.
+
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## License
+
+MIT © 2021 zhangzhenfei
