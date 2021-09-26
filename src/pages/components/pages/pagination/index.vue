@@ -4,18 +4,18 @@
     <scroll-view class="pi-scroll pi-flex-column" scroll-y>
       <!-- 基础用法 -->
       <pi-card>
-        <pi-section slot="title" padding="0" title="基础用法" />
+        <pi-section slot="title" padding="0" title="基础用法" :desc="'当前页：' + baseUsed" />
         <template slot="body">
-          <pi-pagination :total="300" :limit="7" :page.sync="page" :page-size="20" />
+          <pi-pagination v-model="baseUsed" :total="300" />
         </template>
       </pi-card>
       <pi-card>
         <pi-section slot="title" padding="0" title="填充模式" desc="fill" />
         <template slot="body">
           <pi-pagination
+            v-model="fill"
             :total="300"
             :limit="5"
-            :page.sync="page1"
             :page-size="20"
             active-mode="fill"
           />
@@ -25,9 +25,9 @@
         <pi-section slot="title" padding="0" title="填充模式+右对齐" desc="align=right" />
         <template slot="body">
           <pi-pagination
+            v-model="fillAlign"
             :total="300"
             :limit="5"
-            :page.sync="page2"
             :page-size="20"
             active-mode="fill"
             align="right"
@@ -37,7 +37,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="item插槽" desc="slot=item" />
         <template slot="body">
-          <pi-pagination :total="300" :page.sync="page3" :page-size="20">
+          <pi-pagination v-model="itemSlot" :total="300" :page-size="20">
             <template slot="item" slot-scope="{ item, active }">
               <view class="pi-fz-32" :class="active ? 'pi-fz-40 pi-fz-500 pi-solid-bottom-6' : ''">
                 {{ item }}
@@ -55,9 +55,9 @@
         />
         <template slot="body">
           <pi-pagination
+            v-model="prevSlot"
             :total="300"
             :limit="5"
-            :page.sync="page4"
             :page-size="20"
             active-mode="fill"
             align="left"
@@ -76,11 +76,11 @@ export default {
   name: 'PiPaginationDemo',
   data() {
     return {
-      page: 2,
-      page1: 1,
-      page2: 1,
-      page3: 3,
-      page4: 8
+      baseUsed: 2,
+      fill: 1,
+      fillAlign: 1,
+      itemSlot: 3,
+      prevSlot: 8
     }
   }
 }

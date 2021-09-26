@@ -143,7 +143,7 @@ export default {
             },
             {
               name: 'pagination',
-              zhName: '分页组件'
+              zhName: '分页'
             }
           ]
         },

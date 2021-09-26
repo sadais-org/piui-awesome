@@ -6,11 +6,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="基础用法" desc="slot text" />
         <template slot="body">
-          <pi-marquee :speed="60" :items="baseUsed">
-            <view slot="item" slot-scope="{ item }">
-              {{ item }}
-            </view>
-          </pi-marquee>
+          <pi-marquee :speed="60" :items="marqueeTexts" />
         </template>
       </pi-card>
       <!-- 图片轮播 -->
@@ -38,10 +34,8 @@
             direction="bt"
             :speed="20"
             :custom-style="{ height: '14px' }"
-            :items="baseUsed"
-          >
-            <view slot="item" slot-scope="{ item }">{{ item }}</view>
-          </pi-marquee>
+            :items="marqueeTexts"
+          />
         </template>
       </pi-card>
       <pi-card>
@@ -51,26 +45,20 @@
             direction="tb"
             :speed="20"
             :custom-style="{ height: '14px' }"
-            :items="baseUsed"
-          >
-            <view slot="item" slot-scope="{ item }">{{ item }}</view>
-          </pi-marquee>
+            :items="marqueeTexts"
+          />
         </template>
       </pi-card>
       <pi-card>
         <pi-section slot="title" padding="0" title="方向控制" desc="direction=rl(right to left)" />
         <template slot="body">
-          <pi-marquee direction="rl" :speed="20" :items="baseUsed">
-            <view slot="item" slot-scope="{ item }">{{ item }}</view>
-          </pi-marquee>
+          <pi-marquee direction="rl" :speed="20" :items="marqueeTexts" />
         </template>
       </pi-card>
       <pi-card>
         <pi-section slot="title" padding="0" title="方向控制" desc="direction=lr(left to right)" />
         <template slot="body">
-          <pi-marquee direction="lr" :speed="20" :items="baseUsed">
-            <view slot="item" slot-scope="{ item }">{{ item }}</view>
-          </pi-marquee>
+          <pi-marquee direction="lr" :speed="20" :items="marqueeTexts" />
         </template>
       </pi-card>
       <!-- 图片垂直轮播 -->
@@ -99,7 +87,7 @@ export default {
   name: 'MarqueeDemo',
   data() {
     return {
-      baseUsed: [
+      marqueeTexts: [
         '江山如此多娇，引无数英雄竞折腰。惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。一代天骄，成吉思汗，只识弯弓射大雕。俱往矣，数风流人物，还看今朝。'
       ],
       pics: [
