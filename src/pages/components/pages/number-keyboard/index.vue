@@ -4,26 +4,26 @@
     <scroll-view class="pi-scroll" scroll-y>
       <pi-form ref="form" :model="form" title="数字键盘" border error-type="toast">
         <pi-form-item prop="baseUsed" label="默认数字键盘" @click="form.baseUsed.show = true">
-          <pi-input v-model="form.baseUsed.value" />
+          {{ form.baseUsed.value }}
         </pi-form-item>
         <pi-form-item prop="showTitle" label="显示标题" @click="form.showTitle.show = true">
-          <pi-input v-model="form.showTitle.value" />
+          {{ form.showTitle.value }}
         </pi-form-item>
         <pi-form-item prop="demo3" label="身份证号键盘" @click="form.extraKey.show = true">
-          <pi-input v-model="form.extraKey.value" />
+          {{ form.extraKey.value }}
         </pi-form-item>
         <pi-form-item prop="grayKeyboard" label="灰底键盘" @click="form.grayKeyboard.show = true">
-          <pi-input v-model="form.grayKeyboard.value" />
+          {{ form.grayKeyboard.value }}
         </pi-form-item>
         <pi-form-item
           prop="keyBackgroundColor"
           label="自定义键盘颜色"
           @click="form.keyBackgroundColor.show = true"
         >
-          <pi-input v-model="form.keyBackgroundColor.value" />
+          {{ form.keyBackgroundColor.value }}
         </pi-form-item>
         <pi-form-item prop="customSlot" label="自定义插槽" @click="form.customSlot.show = true">
-          <pi-input v-model="form.customSlot.value" />
+          {{ form.customSlot.value }}
         </pi-form-item>
       </pi-form>
     </scroll-view>
