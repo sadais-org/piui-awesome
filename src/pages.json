@@ -323,6 +323,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "Pagination-分页组件"
           }
+        },
+        {
+          "path": "dropdown/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "Dropdown-下拉筛选"
+          }
         }
       ]
     },
