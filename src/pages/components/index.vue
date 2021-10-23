@@ -144,6 +144,10 @@ export default {
             {
               name: 'pagination',
               zhName: '分页'
+            },
+            {
+              name: 'dropdown',
+              zhName: '下拉筛选'
             }
           ]
         },
