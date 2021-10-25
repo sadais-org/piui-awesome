@@ -4,18 +4,27 @@
     <scroll-view class="pi-scroll" scroll-y>
       <pi-divider />
       <!-- zIndex 处理当前页有多个时，能够不被互相覆盖 -->
-      <pi-card class="pi-rela" :style="{ zIndex: zIndex === 0 ? 1 : 0 }" @click="handleClick(0)">
-        <pi-section slot="title">基础用法</pi-section>
-        <template slot="body">
+      <!-- 多个下拉组件时，不能放到pi-card里面，在小程序z-index无效！！ -->
+      <view
+        class="pi-rela card pi-mg-24"
+        :style="{ zIndex: zIndex === 0 ? 1 : 0 }"
+        @click="handleClick(0)"
+      >
+        <view class="pi-pd-lr-24 pi-solid-bottom-2"><pi-section title="基础用法" /></view>
+        <view class="pi-pd-24">
           <pi-dropdown ref="dropdown" v-model="dropdownVal" active-color="#f90">
             <pi-dropdown-item name="综合" icon="order" :option="options1" />
             <pi-dropdown-item name="温度" :option="options2" />
           </pi-dropdown>
-        </template>
-      </pi-card>
-      <pi-card class="pi-rela" :style="{ zIndex: zIndex === 1 ? 1 : 0 }" @click="handleClick(1)">
-        <pi-section slot="title">自定义样式</pi-section>
-        <template slot="body">
+        </view>
+      </view>
+      <view
+        class="pi-rela card pi-mg-24"
+        :style="{ zIndex: zIndex === 1 ? 1 : 0 }"
+        @click="handleClick(1)"
+      >
+        <view class="pi-pd-lr-24 pi-solid-bottom-2"><pi-section title="自定义样式" /></view>
+        <view class="pi-pd-24">
           <pi-dropdown
             ref="dropdown"
             v-model="dropdownVal1"
@@ -29,11 +38,15 @@
             <pi-dropdown-item name="尺寸大小" :option="options3" />
             <pi-dropdown-item name="其它选项" :option="options4" />
           </pi-dropdown>
-        </template>
-      </pi-card>
-      <pi-card class="pi-rela" :style="{ zIndex: zIndex === 2 ? 1 : 0 }" @click="handleClick(2)">
-        <pi-section slot="title">插槽使用</pi-section>
-        <template slot="body">
+        </view>
+      </view>
+      <view
+        class="pi-rela card pi-mg-24"
+        :style="{ zIndex: zIndex === 2 ? 1 : 0 }"
+        @click="handleClick(2)"
+      >
+        <view class="pi-pd-lr-24 pi-solid-bottom-2"><pi-section title="插槽使用" /></view>
+        <view class="pi-pd-24">
           <pi-dropdown
             ref="dropdown"
             v-model="dropdownVal2"
@@ -58,8 +71,8 @@
               </view>
             </pi-dropdown-item>
           </pi-dropdown>
-        </template>
-      </pi-card>
+        </view>
+      </view>
     </scroll-view>
   </view>
 </template>
@@ -159,3 +172,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0 2rpx 16rpx 0 #edeef1;
+}
+</style>
