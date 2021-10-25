@@ -37,6 +37,13 @@
           }
         },
         {
+          "path": "steps/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "步骤条"
+          }
+        },
+        {
           "path": "grid/index",
           "style": {
             "disableScroll": true,

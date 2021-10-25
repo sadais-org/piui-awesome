@@ -146,8 +146,8 @@ export default {
               zhName: '分页'
             },
             {
-              name: 'dropdown',
-              zhName: '下拉筛选'
+              name: 'steps',
+              zhName: '步骤条'
             }
           ]
         },
@@ -192,8 +192,8 @@ export default {
               zhName: '选择器'
             },
             {
-              name: 'notify',
-              zhName: '顶部通知'
+              name: 'dropdown',
+              zhName: '下拉筛选'
             }
           ]
         },
