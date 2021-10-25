@@ -7,12 +7,7 @@
       <pi-card class="pi-rela" :style="{ zIndex: zIndex === 0 ? 1 : 0 }" @click="handleClick(0)">
         <pi-section slot="title">基础用法</pi-section>
         <template slot="body">
-          <pi-dropdown
-            ref="dropdown"
-            v-model="dropdownVal"
-            active-color="#f90"
-            @change="handleChangeVal"
-          >
+          <pi-dropdown ref="dropdown" v-model="dropdownVal" active-color="#f90">
             <pi-dropdown-item name="综合" icon="order" :option="options1" />
             <pi-dropdown-item name="温度" :option="options2" />
           </pi-dropdown>
@@ -146,8 +141,7 @@ export default {
       contentStyle: {
         background: '#f5f5f5',
         borderRadius: '14rpx',
-        overflow: 'hidden',
-        borderBottom: '1px solid #ddd'
+        overflow: 'hidden'
       }
     }
   },
