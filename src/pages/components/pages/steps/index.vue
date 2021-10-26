@@ -9,6 +9,48 @@
             :list="list"
             direction="row"
             :current="current"
+            mode="dot"
+            icon="check"
+            size="40"
+          />
+        </template>
+      </pi-card>
+
+      <pi-card padding="24">
+        <pi-section slot="title" padding="0" title="方向" />
+        <template slot="body">
+          <pi-steps
+            :list="list"
+            direction="column"
+            :current="current"
+            mode="dot"
+            icon="check"
+            size="40"
+          />
+        </template>
+      </pi-card>
+
+      <pi-card padding="24">
+        <pi-section slot="title" padding="0" title="数字" />
+        <template slot="body">
+          <pi-steps
+            :list="list"
+            direction="row"
+            :current="current"
+            mode="number"
+            icon="check"
+            size="40"
+          />
+        </template>
+      </pi-card>
+
+      <pi-card padding="24">
+        <pi-section slot="title" padding="0" title="图标" />
+        <template slot="body">
+          <pi-steps
+            :list="list"
+            direction="row"
+            :current="current"
             mode="icon"
             icon="check"
             size="40"
