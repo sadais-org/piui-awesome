@@ -73,19 +73,19 @@ export default {
     list() {
       return [
         {
-          name: 'IU',
+          name: '编辑',
           icon: 'bianji1'
         },
         {
-          name: '赵丽颖',
+          name: '审核',
           icon: 'timefill'
         },
         {
-          name: '董明珠',
+          name: '结果',
           icon: 'roundcheckfill'
         },
         {
-          name: '孟美岐',
+          name: '留言',
           icon: 'liuyanfill'
         }
       ]
