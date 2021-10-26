@@ -219,6 +219,13 @@
           }
         },
         {
+          "path": "notify/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "顶部通知"
+          }
+        },
+        {
           "path": "stepper/index",
           "style": {
             "disableScroll": true,

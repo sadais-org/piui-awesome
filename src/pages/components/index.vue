@@ -190,6 +190,10 @@ export default {
             {
               name: 'picker',
               zhName: '选择器'
+            },
+            {
+              name: 'notify',
+              zhName: '顶部通知'
             }
           ]
         },
