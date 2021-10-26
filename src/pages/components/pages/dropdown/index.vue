@@ -59,9 +59,16 @@
             <pi-dropdown-item name="综合" :option="options1" />
             <pi-dropdown-item name="温度" :option="options2" />
             <pi-dropdown-item name="自定义项">
+              <!-- 插槽内容 -->
               <pi-grid :border="false" col="3" class="pi-mg-top-20">
                 <pi-grid-item v-for="index in 6" :key="index" :index="index - 1">
-                  <view class="pi-h-100P pi-flex-column-center pi-pd-tb-20">选项{{ index }}</view>
+                  <view
+                    class="pi-h-100P pi-flex-column-center pi-pd-tb-20"
+                    :class="{ 'pi-bg-fourth pi-white': index === chooseIndex }"
+                    @tap="handleSelect('选项', index)"
+                  >
+                    选项{{ index }}
+                  </view>
                 </pi-grid-item>
               </pi-grid>
               <view class="pi-pd-30 pi-text-right">
@@ -69,6 +76,7 @@
                   确定
                 </pi-button>
               </view>
+              <!-- 插槽内容 End -->
             </pi-dropdown-item>
           </pi-dropdown>
         </view>
@@ -86,6 +94,7 @@ export default {
       dropdownVal: [], // 绑定默认值
       dropdownVal1: [1, 3, ''], // 绑定默认值
       dropdownVal2: ['', 2, ''], // 绑定默认值
+      // option 数据
       options1: [
         {
           name: '默认排序',
@@ -155,19 +164,31 @@ export default {
         background: '#f5f5f5',
         borderRadius: '14rpx',
         overflow: 'hidden'
-      }
+      },
+      // 插槽内容
+      chooseIndex: '',
+      selectVal: ''
     }
   },
   methods: {
+    // 操作变更结果
     handleChangeVal(val) {
       console.log('选择结果', val)
     },
-    // 自定义插槽内容触发关闭事件
-    handleCloseDropdown() {
-      this.$refs.dropdown.closeMask()
-    },
+    // 设置父窗口层高，解决页面多个时覆盖问题
     handleClick(val) {
       this.zIndex = val
+    },
+    // 选择对应的select项
+    handleSelect(text, index) {
+      this.selectVal = text + index
+      this.chooseIndex = index
+    },
+    // 自定义插槽内容触发关闭事件
+    handleCloseDropdown() {
+      // 找到对应的下标插入
+      this.selectVal && this.$pi.toast.info(this.selectVal)
+      this.$refs.dropdown.closeMask()
     }
   }
 }
