@@ -2,6 +2,7 @@
   <view class="pi-scroll-container">
     <pi-navbar title="steps 步骤条" />
     <scroll-view class="pi-scroll" scroll-y>
+      <!-- 圆点 -->
       <pi-card padding="24">
         <pi-section slot="title" padding="0" title="基础用法" />
         <template slot="body">
@@ -16,6 +17,7 @@
         </template>
       </pi-card>
 
+      <!-- 方向 -->
       <pi-card padding="24">
         <pi-section slot="title" padding="0" title="方向" />
         <template slot="body">
@@ -30,6 +32,7 @@
         </template>
       </pi-card>
 
+      <!-- 数字 -->
       <pi-card padding="24">
         <pi-section slot="title" padding="0" title="数字" />
         <template slot="body">
@@ -44,6 +47,7 @@
         </template>
       </pi-card>
 
+      <!-- 图标 -->
       <pi-card padding="24">
         <pi-section slot="title" padding="0" title="图标" />
         <template slot="body">
@@ -74,19 +78,23 @@ export default {
       return [
         {
           name: '编辑',
-          icon: 'bianji1'
+          icon: 'bianji1',
+          desc: ''
         },
         {
           name: '审核',
-          icon: 'timefill'
+          icon: 'timefill',
+          desc: ''
         },
         {
           name: '结果',
-          icon: 'roundcheckfill'
+          icon: 'roundcheckfill',
+          desc: ''
         },
         {
           name: '留言',
-          icon: 'liuyanfill'
+          icon: 'liuyanfill',
+          desc: '描述文字'
         }
       ]
     }
