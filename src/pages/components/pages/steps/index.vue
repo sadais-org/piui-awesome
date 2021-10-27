@@ -12,7 +12,7 @@
             :current="current"
             mode="dot"
             icon="check"
-            size="40"
+            size="24"
           />
         </template>
       </pi-card>
@@ -27,7 +27,7 @@
             :current="current"
             mode="dot"
             icon="check"
-            size="40"
+            size="24"
           />
         </template>
       </pi-card>
@@ -79,22 +79,26 @@ export default {
         {
           name: '编辑',
           icon: 'bianji1',
-          desc: ''
+          desc: '',
+          url: 'http://platform.xd0760.com/static/img/home_ic_shuju.fb5fb274.png'
         },
         {
           name: '审核',
           icon: 'timefill',
-          desc: ''
+          desc: '',
+          url: 'http://platform.xd0760.com/static/img/home_ic_shuju.fb5fb274.png'
         },
         {
           name: '结果',
           icon: 'roundcheckfill',
-          desc: ''
+          desc: '',
+          url: 'http://platform.xd0760.com/static/img/home_ic_shuju.fb5fb274.png'
         },
         {
           name: '留言',
           icon: 'liuyanfill',
-          desc: '描述文字'
+          desc: '描述文字',
+          url: 'http://platform.xd0760.com/static/img/home_ic_shuju.fb5fb274.png'
         }
       ]
     }
