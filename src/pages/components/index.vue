@@ -148,6 +148,10 @@ export default {
             {
               name: 'steps',
               zhName: '步骤条'
+            },
+            {
+              name: 'img-cropper',
+              zhName: '图片裁剪'
             }
           ]
         },

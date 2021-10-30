@@ -344,6 +344,13 @@
             "disableScroll": true,
             "navigationBarTitleText": "Dropdown-下拉筛选"
           }
+        },
+        {
+          "path": "img-cropper/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "ImgCropper-图片裁剪"
+          }
         }
       ]
     },
