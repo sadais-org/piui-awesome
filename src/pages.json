@@ -229,7 +229,7 @@
           "path": "notify/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "顶部通知"
+            "navigationBarTitleText": "消息通知"
           }
         },
         {

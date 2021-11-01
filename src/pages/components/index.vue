@@ -152,6 +152,10 @@ export default {
             {
               name: 'img-cropper',
               zhName: '图片裁剪'
+            },
+            {
+              name: 'notify',
+              zhName: '消息通知'
             }
           ]
         },
