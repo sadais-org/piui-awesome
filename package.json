@@ -59,7 +59,7 @@
     "core-js": "^3.17.2",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
-    "sadais-piui": "^1.0.166",
+    "sadais-piui": "^1.1.1",
     "vue": "^2.6.14",
     "vuex": "^3.6.2"
   },
