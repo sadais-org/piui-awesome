@@ -7,9 +7,10 @@
         <pi-section slot="title" padding="0" title="基础用法" />
         <template slot="body">
           <pi-steps
-            :list="list"
-            direction="row"
+            v-model="current"
             :current="current"
+            :items="items"
+            direction="row"
             mode="dot"
             icon="check"
             size="24"
@@ -22,9 +23,9 @@
         <pi-section slot="title" padding="0" title="方向" />
         <template slot="body">
           <pi-steps
-            :list="list"
+            v-model="current"
+            :items="items"
             direction="column"
-            :current="current"
             mode="dot"
             icon="check"
             size="24"
@@ -37,9 +38,9 @@
         <pi-section slot="title" padding="0" title="数字" />
         <template slot="body">
           <pi-steps
-            :list="list"
+            v-model="current"
+            :items="items"
             direction="row"
-            :current="current"
             mode="number"
             icon="check"
             size="40"
@@ -52,9 +53,9 @@
         <pi-section slot="title" padding="0" title="图标" />
         <template slot="body">
           <pi-steps
-            :list="list"
+            v-model="current"
+            :items="items"
             direction="row"
-            :current="current"
             mode="icon"
             icon="check"
             size="40"
@@ -74,31 +75,27 @@ export default {
     }
   },
   computed: {
-    list() {
+    items() {
       return [
         {
           name: '编辑',
           icon: 'bianji1',
-          desc: '',
-          url: 'http://platform.xd0760.com/static/img/home_ic_shuju.fb5fb274.png'
+          desc: ''
         },
         {
           name: '审核',
           icon: 'timefill',
-          desc: '',
-          url: 'http://platform.xd0760.com/static/img/home_ic_shuju.fb5fb274.png'
+          desc: ''
         },
         {
           name: '结果',
           icon: 'roundcheckfill',
-          desc: '',
-          url: 'http://platform.xd0760.com/static/img/home_ic_shuju.fb5fb274.png'
+          desc: ''
         },
         {
           name: '留言',
           icon: 'liuyanfill',
-          desc: '描述文字',
-          url: 'http://platform.xd0760.com/static/img/home_ic_shuju.fb5fb274.png'
+          desc: '描述文字'
         }
       ]
     }
