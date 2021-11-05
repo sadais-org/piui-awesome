@@ -1,19 +1,20 @@
 <template>
   <view class="pi-scroll-container">
-    <pi-navbar title="消息通知" />
     <pi-notify
       ref="notify"
       :message="notifyMsg[itemClick]"
       :type="itemClick"
       :color="customConfig.color"
       :bg-color="customConfig.bgColor"
+      :custom-style="{ marginTop }"
     />
+    <pi-navbar title="消息通知" />
     <scroll-view class="pi-scroll" scroll-y>
       <!-- 基础用法 -->
       <pi-card padding="0">
         <pi-section slot="title" padding="24" title="基础用法" />
         <template slot="body">
-          <pi-list-item @click="baseNotifyClick()">
+          <pi-list-item @click="baseNotifyClick">
             基础用法
           </pi-list-item>
         </template>
@@ -35,10 +36,10 @@
       <pi-card padding="0">
         <pi-section slot="title" padding="24" title="通知类型" />
         <template slot="body">
-          <pi-list-item @click="customNotifyClick()">
+          <pi-list-item @click="customNotifyClick">
             自定义字体颜色和背景色
           </pi-list-item>
-          <pi-list-item @click="customDurationClick()">
+          <pi-list-item @click="customDurationClick">
             自定义显示时长
           </pi-list-item>
         </template>
@@ -59,13 +60,14 @@ export default {
   computed: {
     notifyMsg() {
       return {
-        base: '这是一条消息通知',
-        primary: '床前明月光，疑是地上霜',
-        success: '恭喜你，答对了✔',
-        danger: '危险，请勿靠近！',
-        warning: '劳逸结合，休息一下⏰',
-        info: '坐太久了，出去走走吧~',
-        customDuration: '这是一条很长很长很长很长......'
+        'base': '这是一条消息通知',
+        'primary': '床前明月光，疑是地上霜',
+        'success': '恭喜你，答对了✔',
+        'danger': '危险，请勿靠近！',
+        'warning': '劳逸结合，休息一下⏰',
+        'info': '坐太久了，出去走走吧~',
+        'customDuration': '这是一条很长很长很长很长......',
+        '': '可以自定义设置你喜欢的颜色和背景色'
       }
     },
     itemNotifies() {
@@ -82,6 +84,27 @@ export default {
         color: this.customClick ? 'purple' : '',
         bgColor: this.customClick ? 'pink' : ''
       }
+    },
+    marginTop() {
+      let marginTop = ''
+      const modelList = [
+        'iPhone X',
+        'iPhone XR',
+        'iPhone XS Max',
+        'iPhone 12/13 mini',
+        'iPhone 12/13 (Pro)',
+        'iPhone 12/13 Pro Max'
+      ]
+
+      uni.getSystemInfo({
+        success(res) {
+          modelList.includes(res.model) ? (marginTop = '80rpx') : (marginTop = '40rpx')
+        }
+      })
+      // #ifdef H5
+      marginTop = '0'
+      // #endif
+      return marginTop
     }
   },
   methods: {
@@ -98,7 +121,6 @@ export default {
     customNotifyClick() {
       this.customClick = true
       this.itemClick = ''
-      this.notifyMsg[this.itemClick] = '可以自定义设置你喜欢的颜色和背景色'
       this.$refs.notify.showNotify()
     },
     customDurationClick() {
