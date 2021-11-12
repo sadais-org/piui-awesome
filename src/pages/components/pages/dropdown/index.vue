@@ -25,7 +25,7 @@
       >
         <view class="pi-pd-lr-24 pi-solid-bottom-2"><pi-section title="基础用法" /></view>
         <view class="pi-pd-24">
-          <pi-dropdown ref="dropdown" v-model="dropdownVal" active-color="#f90">
+          <pi-dropdown ref="dropdown" v-model="demo1" active-color="#f90">
             <pi-dropdown-item name="综合" icon="order" :option="options1" />
             <pi-dropdown-item name="折扣" :option="options2" />
           </pi-dropdown>
@@ -40,7 +40,7 @@
         <view class="pi-pd-24">
           <pi-dropdown
             ref="dropdown"
-            v-model="dropdownVal1"
+            v-model="demo2"
             active-color="#f90"
             :custom-style="customStyle"
             :content-style="contentStyle"
@@ -62,7 +62,7 @@
         <view class="pi-pd-24">
           <pi-dropdown
             ref="dropdown"
-            v-model="dropdownVal2"
+            v-model="demo3"
             active-color="#f90"
             :custom-style="customStyle"
             :content-style="contentStyle"
@@ -104,9 +104,9 @@ export default {
   data() {
     return {
       zIndex: 0, // 页面存在多个时，需要把外层容器设置层高
-      dropdownVal: [], // 绑定默认值
-      dropdownVal1: [1, 3, ''], // 绑定默认值
-      dropdownVal2: ['', 2, ''], // 绑定默认值
+      demo1: [], // 绑定默认值
+      demo2: [1, 3, ''], // 绑定默认值
+      demo3: ['', 2, ''], // 绑定默认值
       // option 数据
       options1: [
         {
