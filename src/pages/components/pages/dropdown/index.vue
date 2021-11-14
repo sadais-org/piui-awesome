@@ -25,9 +25,9 @@
       >
         <view class="pi-pd-lr-24 pi-solid-bottom-2"><pi-section title="基础用法" /></view>
         <view class="pi-pd-24">
-          <pi-dropdown ref="dropdown" v-model="dropdownVal" active-color="#f90">
+          <pi-dropdown ref="dropdown" v-model="demo1" active-color="#f90">
             <pi-dropdown-item name="综合" icon="order" :option="options1" />
-            <pi-dropdown-item name="温度" :option="options2" />
+            <pi-dropdown-item name="折扣" :option="options2" />
           </pi-dropdown>
         </view>
       </view>
@@ -40,14 +40,14 @@
         <view class="pi-pd-24">
           <pi-dropdown
             ref="dropdown"
-            v-model="dropdownVal1"
+            v-model="demo2"
             active-color="#f90"
             :custom-style="customStyle"
             :content-style="contentStyle"
             @change="handleChangeVal"
           >
             <pi-dropdown-item name="综合" icon="list" :option="options1" />
-            <pi-dropdown-item name="温度" :option="options2" />
+            <pi-dropdown-item name="折扣" :option="options2" />
             <pi-dropdown-item name="尺寸大小" :option="options3" />
             <pi-dropdown-item name="其它选项" :option="options4" />
           </pi-dropdown>
@@ -62,7 +62,7 @@
         <view class="pi-pd-24">
           <pi-dropdown
             ref="dropdown"
-            v-model="dropdownVal2"
+            v-model="demo3"
             active-color="#f90"
             :custom-style="customStyle"
             :content-style="contentStyle"
@@ -70,7 +70,7 @@
             @change="handleChangeVal"
           >
             <pi-dropdown-item name="综合" :option="options1" />
-            <pi-dropdown-item name="温度" :option="options2" />
+            <pi-dropdown-item name="折扣" :option="options2" />
             <pi-dropdown-item name="自定义项">
               <!-- 插槽内容 -->
               <pi-grid :border="false" col="3" class="pi-mg-top-20">
@@ -104,9 +104,9 @@ export default {
   data() {
     return {
       zIndex: 0, // 页面存在多个时，需要把外层容器设置层高
-      dropdownVal: [], // 绑定默认值
-      dropdownVal1: [1, 3, ''], // 绑定默认值
-      dropdownVal2: ['', 2, ''], // 绑定默认值
+      demo1: [], // 绑定默认值
+      demo2: [1, 3, ''], // 绑定默认值
+      demo3: ['', 2, ''], // 绑定默认值
       // option 数据
       options1: [
         {
@@ -114,7 +114,7 @@ export default {
           id: 1
         },
         {
-          name: '距离优先',
+          name: '信用',
           id: 2
         },
         {
@@ -124,23 +124,23 @@ export default {
       ],
       options2: [
         {
-          name: '去冰',
+          name: '包邮',
           id: 1
         },
         {
-          name: '加冰',
+          name: '全球购',
           id: 2
         },
         {
-          name: '正常温',
+          name: '半折',
           id: 3
         },
         {
-          name: '加热',
+          name: '免费包邮',
           id: 4
         },
         {
-          name: '极寒风暴',
+          name: '折扣排序',
           id: 5
         }
       ],
