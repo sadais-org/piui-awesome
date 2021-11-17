@@ -42,12 +42,13 @@
         </template>
       </pi-card>
       <pi-card>
-        <pi-section slot="title" desc="max-count: 1">上传头像</pi-section>
+        <pi-section slot="title" desc="max-count: 1">上传头像【剪裁】</pi-section>
         <template slot="body">
           <pi-upload-img
             v-model="avatar"
             size="120"
             max-count="1"
+            crop
             action="https://api-canteen.sadaiscloud.com/api/canteen/file/uploadfile"
             :headers="headers"
             :item-style="{
