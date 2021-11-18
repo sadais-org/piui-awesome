@@ -182,6 +182,12 @@
             "disableScroll": true,
             "navigationBarTitleText": "线型进度条"
           }
+        }, {
+          "path": "circle-progress/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "环形进度条"
+          }
         },
         {
           "path": "gap/index",

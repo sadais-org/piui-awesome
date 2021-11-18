@@ -134,6 +134,10 @@ export default {
               zhName: '线型进度条'
             },
             {
+              name: 'circle-progress',
+              zhName: '环形进度条'
+            },
+            {
               name: 'count-down',
               zhName: '倒计时'
             },
