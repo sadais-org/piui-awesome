@@ -67,12 +67,43 @@
           </view>
         </template>
       </pi-card>
+      <pi-card padding="0">
+        <pi-section slot="title" padding="24">
+          关闭自动滚动
+        </pi-section>
+        <template slot="body">
+          <view class="pi-pd-24">
+            <pi-count-up ref="countUP" start-num="0" end-num="999" :autoplay="false" />
+          </view>
+          <view class="btn-wrapper pi-justify-between pi-pd-bottom-32">
+            <pi-button size="small" @click="handleControl('start')">开始</pi-button>
+            <pi-button size="small" @click="handleControl('stop')">暂停</pi-button>
+            <pi-button size="small" @click="handleControl('reset')">复原</pi-button>
+          </view>
+        </template>
+      </pi-card>
     </scroll-view>
   </view>
 </template>
 
 <script>
 export default {
-  name: 'CountUp'
+  name: 'CountUp',
+  methods: {
+    handleControl(action) {
+      const el = this.$refs.countUP
+      switch (action) {
+        case 'start':
+          el.start()
+          break
+        case 'stop':
+          el.stop()
+          break
+        case 'reset':
+          el.reset()
+          break
+      }
+    }
+  }
 }
 </script>
