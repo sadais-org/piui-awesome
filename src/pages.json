@@ -30,6 +30,13 @@
           }
         },
         {
+          "path": "count-up/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "数字滚动"
+          }
+        },
+        {
           "path": "badge/index",
           "style": {
             "disableScroll": true,

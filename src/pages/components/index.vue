@@ -110,6 +110,10 @@ export default {
               zhName: '徽标'
             },
             {
+              name: 'count-up',
+              zhName: '数字滚动'
+            },
+            {
               name: 'img',
               zhName: '图片'
             },
