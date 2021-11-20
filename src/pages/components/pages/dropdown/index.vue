@@ -17,7 +17,8 @@
             <pi-dropdown-item v-model="baseUsed.size" title="尺寸" :options="sizes" />
             <pi-dropdown-item
               v-model="baseUsed.region"
-              icon="list"
+              show-icon
+              :icon-option="{ name: 'list' }"
               title="地区"
               :options="regions"
             />
@@ -51,7 +52,8 @@
             <pi-dropdown-item v-model="customSlot.size" title="尺寸" :options="sizes" />
             <pi-dropdown-item
               v-model="customSlot.region"
-              icon="list"
+              show-icon
+              :icon-option="{ name: 'list' }"
               title="地区"
               :options="regions"
             />
