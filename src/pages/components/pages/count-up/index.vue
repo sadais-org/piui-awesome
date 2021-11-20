@@ -17,7 +17,7 @@
       </pi-card>
       <pi-card padding="0">
         <pi-section slot="title" padding="24">
-          设置滚动时间
+          设置滚动动画时间
         </pi-section>
         <template slot="body">
           <view class="pi-pd-24">
@@ -48,9 +48,6 @@
         <template slot="body">
           <view class="pi-pd-24">
             <pi-count-up start-num="0" end-num="999" is-ease />
-          </view>
-          <view class="pi-pd-24">
-            <pi-count-up start-num="0" end-num="999" :is-ease="false" />
           </view>
         </template>
       </pi-card>
