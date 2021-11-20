@@ -173,7 +173,7 @@
           "path": "switch/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "switch开关"
+            "navigationBarTitleText": "开关"
           }
         },
         {
@@ -305,7 +305,7 @@
           "path": "status-bar/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "status-bar 状态栏",
+            "navigationBarTitleText": "状态栏",
             "navigationBarTextStyle": "white"
           }
         },
@@ -341,28 +341,28 @@
           "path": "marquee/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "Marquee-跑马灯"
+            "navigationBarTitleText": "跑马灯"
           }
         },
         {
           "path": "pagination/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "Pagination-分页组件"
+            "navigationBarTitleText": "分页组件"
           }
         },
         {
           "path": "dropdown/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "Dropdown-下拉筛选"
+            "navigationBarTitleText": "下拉筛选"
           }
         },
         {
           "path": "img-cropper/index",
           "style": {
             "disableScroll": true,
-            "navigationBarTitleText": "ImgCropper-图片裁剪"
+            "navigationBarTitleText": "图片裁剪"
           }
         }
       ]

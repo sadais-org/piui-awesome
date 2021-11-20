@@ -60,7 +60,6 @@
             "urlCheck" : false,
             "es6" : true
         },
-        "scopedSlotsCompiler": "legacy",
         "usingComponents" : true
     },
     "mp-alipay" : {
