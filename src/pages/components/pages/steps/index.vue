@@ -12,7 +12,6 @@
             :items="items"
             direction="row"
             mode="dot"
-            icon="check"
             size="24"
           />
         </template>
@@ -22,14 +21,7 @@
       <pi-card padding="24">
         <pi-section slot="title" padding="0" title="方向" />
         <template slot="body">
-          <pi-steps
-            v-model="current"
-            :items="items"
-            direction="column"
-            mode="dot"
-            icon="check"
-            size="24"
-          />
+          <pi-steps v-model="current" :items="items" direction="column" mode="dot" size="24" />
         </template>
       </pi-card>
 
@@ -37,14 +29,7 @@
       <pi-card padding="24">
         <pi-section slot="title" padding="0" title="数字" />
         <template slot="body">
-          <pi-steps
-            v-model="current"
-            :items="items"
-            direction="row"
-            mode="number"
-            icon="check"
-            size="40"
-          />
+          <pi-steps v-model="current" :items="items" direction="row" mode="number" size="40" />
         </template>
       </pi-card>
 
@@ -52,14 +37,30 @@
       <pi-card padding="24">
         <pi-section slot="title" padding="0" title="图标" />
         <template slot="body">
+          <pi-steps v-model="current" :items="items" direction="row" mode="icon" size="40" />
+        </template>
+      </pi-card>
+
+      <!-- 快递信息 -->
+      <pi-card padding="24">
+        <pi-section slot="title" padding="0" title="快递信息" />
+        <template slot="body">
           <pi-steps
             v-model="current"
-            :items="items"
-            direction="row"
-            mode="icon"
-            icon="check"
-            size="40"
-          />
+            :items="express"
+            direction="column"
+            color="#999999"
+            current-color="#999999"
+            mode="dot"
+            size="12"
+          >
+            <template slot="item" slot-scope="{ item }">
+              <view class="pi-dashed-bottom-2 pi-pd-20">
+                <view>{{ item.name }}</view>
+                <view>{{ item.desc }}</view>
+              </view>
+            </template>
+          </pi-steps>
         </template>
       </pi-card>
     </scroll-view>
@@ -79,23 +80,59 @@ export default {
       return [
         {
           name: '编辑',
-          icon: 'bianji1',
+          icon: { name: 'bianji1' },
           desc: ''
         },
         {
-          name: '审核',
-          icon: 'timefill',
+          name: '审核中',
+          icon: { name: 'timefill' },
           desc: ''
         },
         {
           name: '结果',
-          icon: 'roundcheckfill',
+          icon: { name: 'roundcheckfill' },
           desc: ''
         },
         {
           name: '留言',
-          icon: 'liuyanfill',
+          icon: { name: 'liuyanfill' },
           desc: '描述文字'
+        }
+      ]
+    },
+    express() {
+      return [
+        {
+          name: '运输中',
+          time: '11-10 09:20',
+          icon: { name: 'bianji1' },
+          desc: '离开【珠海前山处理中心】，下一站【北京集散中心】'
+        },
+        {
+          name: '已揽件',
+          time: '11-10 08:20',
+          icon: { name: 'bianji1' },
+          desc: '您的包裹已出库'
+        },
+        {
+          name: '已发货',
+          time: '11-09 20:20',
+          icon: { name: 'bianji1' },
+          desc: '等待揽收中'
+        },
+        {
+          name: '已出库',
+          time: '11-09 15:20',
+          mode: 'icon',
+          icon: { name: 'bianji1' },
+          desc: '您的订单开始处理'
+        },
+        {
+          name: '已下单',
+          time: '11-09 08:20',
+          mode: 'icon',
+          icon: { name: 'activity-fill' },
+          desc: '您的包裹已出库'
         }
       ]
     }
