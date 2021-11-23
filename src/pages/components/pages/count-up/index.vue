@@ -41,6 +41,14 @@
           </view>
         </template>
       </pi-card>
+      <pi-card>
+        <pi-section slot="title">
+          显示千分位分隔符
+        </pi-section>
+        <template slot="body">
+          <pi-count-up start-num="0" end-num="19288585993" decimals="2" thousands="," />
+        </template>
+      </pi-card>
       <pi-card padding="0">
         <pi-section slot="title" padding="24">
           缓动效果
