@@ -26,7 +26,7 @@
           <pi-form-item required label-width="300" prop="notice" label="自动通知">
             <pi-switch v-model="form.notice" />
           </pi-form-item>
-          <pi-form-item label="参与活动" prop="" activity>
+          <pi-form-item label="参与活动" prop="activity">
             <pi-checkbox-group v-model="form.activity" shape="text" active-mode="fill">
               <pi-checkbox name="1">活动1</pi-checkbox>
               <pi-checkbox name="2">活动2</pi-checkbox>
@@ -39,7 +39,7 @@
       </pi-card>
 
       <pi-card padding="0">
-        <pi-form slot="body" :model="form" title="title是标题" desc="desc是描述" border>
+        <pi-form slot="body" :model="form" title="表单标题：禁用" desc="表单描述" border disabled>
           <pi-form-item label="名称">
             <pi-input />
             <view slot="right">秒</view>
@@ -48,30 +48,21 @@
       </pi-card>
 
       <pi-card>
-        <pi-section slot="title" padding="0" title="对齐方式和宽度" />
+        <pi-section slot="title" padding="0" title="label参数设置" />
         <template slot="body">
-          <view class="pi-justify-between">
-            <pi-radio-group
-              v-model="labelAlign"
-              shape="dot"
-              class="pi-justify-center"
-              direction="vertical"
-            >
-              <pi-radio name="left">左对齐</pi-radio>
-              <pi-radio name="center">居中对齐</pi-radio>
-              <pi-radio name="right">右对齐</pi-radio>
-            </pi-radio-group>
-            <pi-radio-group
-              v-model="labelWidth"
-              shape="dot"
-              class="pi-justify-center"
-              direction="vertical"
-            >
-              <pi-radio :name="120">宽度120</pi-radio>
-              <pi-radio :name="200">宽度200</pi-radio>
-              <pi-radio :name="300">宽度300</pi-radio>
-            </pi-radio-group>
-          </view>
+          <view class="pi-mg-bottom-24">对齐方式</view>
+          <pi-radio-group v-model="labelAlign" shape="dot">
+            <pi-radio name="left">左对齐</pi-radio>
+            <pi-radio name="center">居中对齐</pi-radio>
+            <pi-radio name="right">右对齐</pi-radio>
+          </pi-radio-group>
+          <view class="pi-mg-tb-24">宽度</view>
+          <pi-radio-group v-model="labelWidth" shape="dot">
+            <pi-radio :name="120">宽度120</pi-radio>
+            <pi-radio :name="200">宽度200</pi-radio>
+            <pi-radio :name="300">宽度300</pi-radio>
+          </pi-radio-group>
+
           <pi-form :model="form" :label-align="labelAlign" :label-width="labelWidth">
             <pi-form-item required prop="name" label="姓名">
               <pi-input v-model="form.name" />
