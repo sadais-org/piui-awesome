@@ -189,12 +189,6 @@
             "disableScroll": true,
             "navigationBarTitleText": "线型进度条"
           }
-        }, {
-          "path": "circle-progress/index",
-          "style": {
-            "disableScroll": true,
-            "navigationBarTitleText": "环形进度条"
-          }
         },
         {
           "path": "gap/index",
@@ -285,13 +279,6 @@
           "style": {
             "disableScroll": true,
             "navigationBarTitleText": "评分"
-          }
-        },
-        {
-          "path": "waterfall/index",
-          "style": {
-            "disableScroll": true,
-            "navigationBarTitleText": "瀑布流"
           }
         },
         {
