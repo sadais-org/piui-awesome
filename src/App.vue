@@ -29,6 +29,8 @@ export default {
 /* 每个页面公共css */
 
 @import '~@/piui/scss/index.scss';
+@import '~@/assets/scss/theme.scss';
+
 .pi-content {
   background: transparent;
 }

@@ -1,7 +1,8 @@
 <template>
-  <view class="pi-scroll-container">
+  <view class="pi-scroll-container" :class="theme">
     <pi-navbar title="徽标" />
     <scroll-view class="pi-scroll" scroll-y>
+      <pi-button type="primary" @click="handleChangeTheme">切换主题</pi-button>
       <pi-card>
         <pi-section slot="title" title="基础用法" />
         <template slot="body">
@@ -162,6 +163,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
@@ -1172,7 +1174,12 @@ export default {
     }
   },
   onLoad() {},
-  methods: {}
+  methods: {
+    ...mapMutations(['changeTheme']),
+    handleChangeTheme() {
+      this.changeTheme('dark')
+    }
+  }
 }
 </script>
 

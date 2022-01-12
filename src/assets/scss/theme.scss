@@ -1,0 +1,9 @@
+.pi-scroll-container {
+  &.dark {
+    background-color: #343434;
+    .pi-button[type='primary'] {
+      background-color: #999;
+      color: #fff;
+    }
+  }
+}
