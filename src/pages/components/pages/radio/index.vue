@@ -12,6 +12,16 @@
           </pi-radio-group>
         </template>
       </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0">可取消勾选</pi-section>
+        <template slot="body">
+          <pi-radio-group v-model="canCancel" can-cancel>
+            <pi-radio name="a">备选项a</pi-radio>
+            <pi-radio name="b">备选项b</pi-radio>
+            <pi-radio name="c">备选项c</pi-radio>
+          </pi-radio-group>
+        </template>
+      </pi-card>
 
       <pi-card>
         <pi-section slot="title" padding="0">
@@ -138,7 +148,7 @@ export default {
   name: 'Radio',
   data() {
     return {
-      showcase: 'trueDisabled',
+      canCancel: 'a',
       demo: 'a',
       demo1: 'a',
       demo01: 'a',
