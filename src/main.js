@@ -1,7 +1,7 @@
 /*
  * @Author: zhangzhenfei
  * @Date: 2020-11-13 10:25:49
- * @LastEditTime: 2021-09-11 09:31:03
+ * @LastEditTime: 2022-03-16 14:28:57
  * @LastEditors: zhangzhenfei
  * @Description:
  * @FilePath: /piui-awesome/src/main.js
@@ -29,6 +29,14 @@ Vue.use(piui, {
 import utils from '@/utils'
 Vue.prototype.$utils = utils
 console.log('已安装$utils，使用方式：this.$utils', utils)
+
+Vue.mixin({
+  onShareAppMessage() {
+    return {
+      title: 'piui'
+    }
+  }
+})
 
 Vue.config.productionTip = false
 

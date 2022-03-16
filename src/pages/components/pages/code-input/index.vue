@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangzhenfei
  * @Date: 2021-03-09 12:38:42
- * @LastEditTime: 2021-09-14 09:56:04
+ * @LastEditTime: 2022-03-16 14:21:15
  * @LastEditors: zhangzhenfei
  * @Description:
  * @FilePath: /piui-awesome/src/pages/components/pages/code-input/index.vue
@@ -60,7 +60,7 @@
       <pi-card>
         <pi-section slot="title" padding="0" title="自动拉起键盘输入" />
         <template slot="body">
-          <pi-code-input v-model="autoFocus" :length="4" auto-focus />
+          <pi-code-input v-model="autoFocus" :length="4" />
         </template>
       </pi-card>
       <!-- 验证码格式化 -->
@@ -79,6 +79,15 @@
           </pi-code-input>
         </template>
       </pi-card>
+      <pi-card>
+        <pi-section slot="title" padding="0" title="弹窗输入" />
+        <template slot="body">
+          <pi-button @click="modalInputShow = true">打开弹窗</pi-button>
+        </template>
+      </pi-card>
+      <pi-modal v-model="modalInputShow" title="请输入验证码">
+        <pi-code-input v-if="modalInputShow" v-model="modalInput" :length="4" auto-focus />
+      </pi-modal>
     </scroll-view>
   </view>
 </template>
@@ -95,7 +104,9 @@ export default {
       fillStyles: '',
       autoFocus: '',
       codeFormat: '9',
-      password: '12'
+      password: '12',
+      modalInputShow: false,
+      modalInput: ''
     }
   }
 }
