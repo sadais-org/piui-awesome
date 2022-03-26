@@ -233,6 +233,13 @@
           }
         },
         {
+          "path": "action-sheet/index",
+          "style": {
+            "disableScroll": true,
+            "navigationBarTitleText": "动作面板"
+          }
+        },
+        {
           "path": "notify/index",
           "style": {
             "disableScroll": true,

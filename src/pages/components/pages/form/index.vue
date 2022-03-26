@@ -95,11 +95,19 @@
 
       <pi-card padding="0">
         <template slot="body">
-          <pi-form ref="form" title="表单校验" :model="form2" border error-type="message">
+          <pi-form
+            ref="form"
+            title="表单校验"
+            :model="form2"
+            border
+            error-type="message"
+            :wrap="false"
+            input-align="right"
+          >
             <pi-form-item prop="name" label="姓名">
               <pi-input v-model="form2.name" />
             </pi-form-item>
-            <pi-form-item prop="intro" label="简介">
+            <pi-form-item prop="intro" label="简介" wrap input-align="left">
               <pi-input v-model="form2.intro" type="textarea" placeholder="请输入简介" />
             </pi-form-item>
             <pi-form-item>

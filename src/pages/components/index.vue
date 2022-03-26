@@ -208,6 +208,10 @@ export default {
               zhName: '选择器'
             },
             {
+              name: 'action-sheet',
+              zhName: '动作面板'
+            },
+            {
               name: 'dropdown',
               zhName: '下拉筛选'
             }

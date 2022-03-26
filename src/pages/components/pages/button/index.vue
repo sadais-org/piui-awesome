@@ -17,6 +17,8 @@
           <pi-button type="secondary">次要按钮</pi-button>
           <pi-button type="warn">警告按钮</pi-button>
           <pi-button type="line">线框按钮</pi-button>
+          <pi-button type="text">文字按钮</pi-button>
+          <pi-button type="text" custom-class="pi-primary">主色文字按钮</pi-button>
         </template>
       </pi-card>
       <!-- 按钮尺寸 -->
